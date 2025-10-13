@@ -26,11 +26,19 @@
                   <div class="sewing-form__group group-tabs">
                     <div class="sewing-form__field field-tab">
                       <input type="radio" name="product" id="product-1" checked>
-                      <label for="product-1" class="sewing-form__label label-tab">Дублёнки</label>
+                      <label for="product-1" class="sewing-form__label label-tab">Дублёнки и шубы</label>
                     </div>
                     <div class="sewing-form__field field field-tab">
                       <input type="radio" name="product" id="product-2">
                       <label for="product-2" class="sewing-form__label label-tab">Кожаное изделие</label>
+                    </div>
+                    <div class="sewing-form__field field field-tab">
+                      <input type="radio" name="product" id="product-2">
+                      <label for="product-2" class="sewing-form__label label-tab">Косухи</label>
+                    </div>
+                    <div class="sewing-form__field field field-tab">
+                      <input type="radio" name="product" id="product-2">
+                      <label for="product-2" class="sewing-form__label label-tab">Плащи</label>
                     </div>
                   </div>
                   <input type="text" name="sewing-search" class="sewing-form__search" placeholder="Введите название товара">
@@ -71,10 +79,12 @@
                     <div class="sewing-form__field field field-default">
                       <input type="radio" name="color" id="color-2">
                       <label for="color-2" class="sewing-form__label label-default">Бордовый</label>
+                      <img src="@img/color-1.png" alt="">
                     </div>
                     <div class="sewing-form__field field field-default">
                       <input type="radio" name="color" id="color-3">
                       <label for="color-3" class="sewing-form__label label-default">Белый</label>
+                      <img src="@img/color-2.png" alt="">
                     </div>
                     <div class="sewing-form__field field field-default">
                       <input type="radio" name="color" id="color-4">
@@ -84,12 +94,323 @@
                 </div>
                 <div class="sewing-form__wrap">
                   <div class="sewing-form__caption text-l">Длина (см)</div>
-                  <div class="sewing-form__group group-default">
+                  <div class="sewing-form__group group-col col-1">
                     <div class="sewing-form__field field field-default">
                       <input type="radio" name="lenght" id="lenght-1" checked>
                       <label for="lenght-1" class="sewing-form__label label-default">Оригинал</label>
                     </div>
+                    <div class="sewing-form__field field field-range range" data-value="0">
+                      <div class="label">
+                        <div class="value">0</div>
+                        <div class="drop"></div>		
+                      </div>
+                      <div class="input-box">
+                        <input id="input-range" type="range" min="-10" max="10" value="0"/>
+                        <div class="bar"></div>
+                      </div>
+                    </div>
                   </div>
+                </div>
+                <div class="sewing-form__wrap">
+                  <div class="sewing-form__caption text-l">Варианты карманов</div>
+                  <div class="sewing-form__group group-default col-3">
+                    <div class="sewing-form__field field field-default">
+                      <input type="radio" name="pocket" id="pocket-1" checked>
+                      <label for="pocket-1" class="sewing-form__label label-default">Двухсторонний прорезной</label>
+                    </div>
+                    <div class="sewing-form__field field field-default">
+                      <input type="radio" name="pocket" id="pocket-2">
+                      <label for="pocket-2" class="sewing-form__label label-default">Накладной</label>
+                    </div>
+                    <div class="sewing-form__field field field-default">
+                      <input type="radio" name="pocket" id="pocket-3">
+                      <label for="pocket-3" class="sewing-form__label label-default">Широкий прорезной <br>(только для одностороннего изделия)</label>
+                    </div>
+                    <div class="sewing-form__field field field-default">
+                      <input type="radio" name="pocket" id="pocket-4">
+                      <label for="pocket-4" class="sewing-form__label label-default">Накладной <br>(только для одностороннего изделия)</label>
+                    </div>
+                    <div class="sewing-form__field field field-default">
+                      <input type="radio" name="pocket" id="pocket-5">
+                      <label for="pocket-5" class="sewing-form__label label-default">Тонкий прорезной <br>(только для одностороннего изделия)</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="sewing-form__wrap">
+                  <div class="sewing-form__caption text-l">Варианты манжет</div>
+                  <div class="sewing-form__group group-default col-3">
+                    <div class="sewing-form__field field field-default">
+                      <input type="radio" name="cuffs" id="cuffs-1" checked>
+                      <label for="cuffs-1" class="sewing-form__label label-default">Двухсторонний прорезной</label>
+                    </div>
+                    <div class="sewing-form__field field field-default">
+                      <input type="radio" name="cuffs" id="cuffs-2">
+                      <label for="cuffs-2" class="sewing-form__label label-default">Накладной</label>
+                    </div>
+                    <div class="sewing-form__field field field-default">
+                      <input type="radio" name="cuffs" id="cuffs-3">
+                      <label for="cuffs-3" class="sewing-form__label label-default">Широкий прорезной <br>(только для одностороннего изделия)</label>
+                    </div>
+                    <div class="sewing-form__field field field-default">
+                      <input type="radio" name="cuffs" id="cuffs-4">
+                      <label for="cuffs-4" class="sewing-form__label label-default">Накладной <br>(только для одностороннего изделия)</label>
+                    </div>
+                    <div class="sewing-form__field field field-default">
+                      <input type="radio" name="cuffs" id="cuffs-5">
+                      <label for="cuffs-5" class="sewing-form__label label-default">Тонкий прорезной <br>(только для одностороннего изделия)</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="sewing-form__wrap">
+                  <div class="sewing-form__caption text-l">Пояс</div>
+                  <div class="sewing-form__group group-default col-3">
+                    <div class="sewing-form__field field field-default">
+                      <input type="radio" name="belt" id="belt-1" checked>
+                      <label for="belt-1" class="sewing-form__label label-default">Оригинал</label>
+                    </div>
+                    <div class="sewing-form__field field field-default">
+                      <input type="radio" name="belt" id="belt-2">
+                      <label for="belt-2" class="sewing-form__label label-default">Кожаный пояс</label>
+                    </div>
+                    <div class="sewing-form__field field field-default">
+                      <input type="radio" name="belt" id="belt-3">
+                      <label for="belt-3" class="sewing-form__label label-default">Меховой пояс</label>
+                    </div>
+                    <div class="sewing-form__field field field-default">
+                      <input type="radio" name="belt" id="belt-4">
+                      <label for="belt-4" class="sewing-form__label label-default">Без ремня</label>
+                    </div>
+                    <div class="sewing-form__field field field-default">
+                      <input type="radio" name="belt" id="belt-5">
+                      <label for="belt-5" class="sewing-form__label label-default">Комбинированный пояс(мех+кожа)</label>
+                    </div>
+                    <div class="sewing-form__field field field-default">
+                      <input type="radio" name="belt" id="belt-6">
+                      <label for="belt-6" class="sewing-form__label label-default">Кожаный пояс в контраст <br> (детальное уточнение с менеджером)</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="sewing-form__wrap">
+                  <div class="sewing-form__caption text-l">Разрезы для комфорта</div>
+                  <div class="sewing-form__group group-default col-3">
+                    <div class="sewing-form__field field field-default">
+                      <input type="radio" name="size" id="size-1" checked>
+                      <label for="size-1" class="sewing-form__label label-default">Оригинал</label>
+                    </div>
+                    <div class="sewing-form__field field field-default">
+                      <input type="radio" name="size" id="size-2">
+                      <label for="size-2" class="sewing-form__label label-default">Убрать боковой разрез</label>
+                    </div>
+                    <div class="sewing-form__field field field-default">
+                      <input type="radio" name="size" id="size-3">
+                      <label for="size-3" class="sewing-form__label label-default">Добавить боковой разрез</label>
+                    </div>
+                    <div class="sewing-form__field field field-default">
+                      <input type="radio" name="size" id="size-4">
+                      <label for="size-4" class="sewing-form__label label-default">Убрать задний разрез</label>
+                    </div>
+                    <div class="sewing-form__field field field-default">
+                      <input type="radio" name="size" id="size-5">
+                      <label for="size-5" class="sewing-form__label label-default">Добавить задний разрез</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="sewing-form__wrap">
+                  <div class="sewing-form__caption text-l">Защита от ветра и холода</div>
+                  <div class="sewing-form__group group-default col-3">
+                    <div class="sewing-form__field field field-default">
+                      <input type="radio" name="protection" id="protection-1" checked>
+                      <label for="protection-1" class="sewing-form__label label-default">Оригинал</label>
+                    </div>
+                    <div class="sewing-form__field field field-default">
+                      <input type="radio" name="protection" id="protection-2">
+                      <label for="protection-2" class="sewing-form__label label-default">Пуговица с петелькой на лацкан</label>
+                    </div>
+                    <div class="sewing-form__field field field-default">
+                      <input type="radio" name="protection" id="protection-3">
+                      <label for="protection-3" class="sewing-form__label label-default">Одинарный ремешок с метал.пряжкой на ворот</label>
+                    </div>
+                    <div class="sewing-form__field field field-default">
+                      <input type="radio" name="protection" id="protection-4">
+                      <label for="protection-4" class="sewing-form__label label-default">Двойной ремешок с метал.пряжкой на ворот</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="sewing-form__wrap">
+                  <div class="sewing-form__caption text-l">Погоны на плечах</div>
+                  <div class="sewing-form__group group-default col-3">
+                    <div class="sewing-form__field field field-default">
+                      <input type="radio" name="shoulder" id="shoulder-1" checked>
+                      <label for="shoulder-1" class="sewing-form__label label-default">Оригинал</label>
+                    </div>
+                    <div class="sewing-form__field field field-default">
+                      <input type="radio" name="shoulder" id="shoulder-2">
+                      <label for="shoulder-2" class="sewing-form__label label-default">Добавить погоны</label>
+                    </div>
+                    <div class="sewing-form__field field field-default">
+                      <input type="radio" name="shoulder" id="shoulder-3">
+                      <label for="shoulder-3" class="sewing-form__label label-default">Убрать погоны</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="sewing-form__wrap">
+                  <div class="sewing-form__caption text-l">Фурнитура</div>
+                  <div class="sewing-form__group group-default col-3">
+                    <div class="sewing-form__field field field-default">
+                      <input type="radio" name="fittings" id="fittings-1" checked>
+                      <label for="fittings-1" class="sewing-form__label label-default">Название №1</label>
+                    </div>
+                    <div class="sewing-form__field field field-default">
+                      <input type="radio" name="fittings" id="fittings-2">
+                      <label for="fittings-2" class="sewing-form__label label-default">Название №2</label>
+                    </div>
+                    <div class="sewing-form__field field field-default">
+                      <input type="radio" name="fittings" id="fittings-3">
+                      <label for="fittings-3" class="sewing-form__label label-default">Название №3</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="sewing-form__wrap">
+                  <div class="sewing-form__caption text-l">Количество пуговиц</div>
+                  <div class="sewing-form__group group-default col-3">
+                    <div class="sewing-form__field field field-default">
+                      <input type="radio" name="stud" id="stud-1" checked>
+                      <label for="stud-1" class="sewing-form__label label-default">10</label>
+                    </div>
+                    <div class="sewing-form__field field field-default">
+                      <input type="radio" name="stud" id="stud-2">
+                      <label for="stud-2" class="sewing-form__label label-default">11</label>
+                    </div>
+                    <div class="sewing-form__field field field-default">
+                      <input type="radio" name="stud" id="stud-3">
+                      <label for="stud-3" class="sewing-form__label label-default">12</label>
+                    </div>
+                    <div class="sewing-form__field field field-default">
+                      <input type="radio" name="stud" id="stud-4">
+                      <label for="stud-4" class="sewing-form__label label-default">13</label>
+                    </div>
+                    <div class="sewing-form__field field field-default">
+                      <input type="radio" name="stud" id="stud-5">
+                      <label for="stud-5" class="sewing-form__label label-default">14</label>
+                    </div>
+                    <div class="sewing-form__field field field-default">
+                      <input type="radio" name="stud" id="stud-6">
+                      <label for="stud-6" class="sewing-form__label label-default">15</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="sewing-form__wrap">
+                  <div class="sewing-form__caption text-l">Вид пуговиц</div>
+                  <div class="sewing-form__group group-cards col-3">
+                    <div class="sewing-form__field field">
+                      <label class="sewing-form__label label-card">
+                        <img src="@img/holder.png" alt="">
+                        <input type="radio" name="view-stud" id="view-stud-1" checked> 
+                        №1
+                      </label>
+                    </div>
+                    <div class="sewing-form__field field">
+                      <label class="sewing-form__label label-card">
+                        <img src="@img/holder.png" alt="">
+                        <input type="radio" name="view-stud" id="view-stud-2"> 
+                        №2
+                      </label>
+                    </div>
+                    <div class="sewing-form__field field">
+                      <label class="sewing-form__label label-card">
+                        <img src="@img/holder.png" alt="">
+                        <input type="radio" name="view-stud" id="view-stud-3"> 
+                        №3
+                      </label>
+                    </div>
+                    <div class="sewing-form__field field">
+                      <label class="sewing-form__label label-card">
+                        <img src="@img/holder.png" alt="">
+                        <input type="radio" name="view-stud" id="view-stud-4"> 
+                        №4
+                      </label>
+                    </div>
+                    <div class="sewing-form__field field">
+                      <label class="sewing-form__label label-card">
+                        <img src="@img/holder.png" alt="">
+                        <input type="radio" name="view-stud" id="view-stud-5"> 
+                        №5
+                      </label>
+                    </div>
+                    <div class="sewing-form__field field">
+                      <label class="sewing-form__label label-card">
+                        <img src="@img/holder.png" alt="">
+                        <input type="radio" name="view-stud" id="view-stud-6"> 
+                        №6
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="sewing-form__wrap">
+                  <div class="sewing-form__caption text-l">Укажите параметры вашей фигуры:</div>
+                  <div class="sewing-form__group group-col col-1">
+                    <div class="sewing-form__field field">
+                      <input type="text" name="" placeholder="Обхват груди *(см):">
+                    </div>
+                    <div class="sewing-form__field field">
+                      <input type="text" name="" placeholder="Обхват бедер: *(см):">
+                    </div>
+                    <div class="sewing-form__field field">
+                      <input type="text" name="" placeholder="Ваш рост: *(см):">
+                    </div>
+                    <div class="sewing-form__field field">
+                      <select name="" id="">
+                        <option value="">Ваш размер</option>
+                        <option value="">Ваш размер 1</option>
+                        <option value="">Ваш размер 2</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="sewing-form__wrap">
+                  <div class="sewing-form__caption text-l">Ваш дополнительный комментарий к Дизайн-листу COAT:</div>
+                  <div class="sewing-form__group group-col col-1">
+                    <div class="sewing-form__field field">
+                      <textarea name="" id="" placeholder="Введите комментарий"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="sewing-form__wrap sewing-form__bottom">
+                  <div class="sewing-form__heading">
+                    <div class="sewing-form__caption text-l">Ваш дизайн лист с итоговой стоимостью изделия будет направлен на почту для этого введите следующие данные</div>
+                    <div class="sewing-form__socials">
+                      <a href="#" target="_blank">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12 0C5.38292 0 0 5.38292 0 12C0 14.2574 0.627231 16.4488 1.81708 18.3517C1.34308 20.0123 0.486923 23.1535 0.477692 23.1863C0.433385 23.3488 0.480923 23.5223 0.602308 23.6391C0.723692 23.7558 0.899077 23.7974 1.05877 23.7485L5.81538 22.2854C7.67862 23.4078 9.81231 24 12 24C18.6171 24 24 18.6171 24 12C24 5.38292 18.6171 0 12 0ZM12 23.0769C9.91431 23.0769 7.88262 22.494 6.12415 21.3918C6.04985 21.3452 5.96446 21.3217 5.87908 21.3217C5.83338 21.3217 5.78769 21.3286 5.74338 21.342L1.59 22.6205C1.89508 21.5068 2.44338 19.5148 2.76138 18.4066C2.79831 18.2783 2.77754 18.1398 2.70508 18.0277C1.53923 16.2337 0.923077 14.1494 0.923077 12C0.923077 5.89246 5.89246 0.923077 12 0.923077C18.1075 0.923077 23.0769 5.89246 23.0769 12C23.0769 18.1075 18.1075 23.0769 12 23.0769Z" fill="#151515"/>
+                          <path d="M19.8393 14.8273C18.9873 14.3542 18.2618 13.8797 17.7324 13.5336C17.3281 13.2696 17.0359 13.079 16.8218 12.9714C16.2231 12.6728 15.7694 12.8837 15.5968 13.0582C15.5751 13.0799 15.5558 13.1034 15.5391 13.1284C14.9174 14.0611 14.1056 14.9533 13.8679 15.0013C13.5933 14.9584 12.3079 14.2277 11.0304 13.1639C9.72606 12.077 8.90544 11.0362 8.78498 10.3273C9.62175 9.46606 9.92314 8.92421 9.92314 8.3076C9.92314 7.67206 8.44068 5.01867 8.17252 4.75052C7.90344 4.4819 7.29744 4.4399 6.37114 4.62452C6.28206 4.64252 6.19991 4.68636 6.13529 4.75052C6.02314 4.86267 3.39883 7.53821 4.64591 10.781C6.01483 14.3399 9.52852 18.4767 14.0082 19.1487C14.5173 19.2248 14.9945 19.2627 15.4413 19.2627C18.0767 19.2627 19.6321 17.9367 20.0701 15.3064C20.1028 15.1139 20.0101 14.9219 19.8393 14.8273ZM14.1453 18.2358C9.40806 17.5254 6.42421 12.8321 5.5076 10.4496C4.59837 8.08652 6.27514 5.9796 6.69606 5.50329C7.03852 5.44513 7.39898 5.42067 7.54944 5.44421C7.86375 5.88129 8.95206 7.93744 9.00006 8.3076C9.00006 8.5499 8.92114 8.88729 7.98144 9.82744C7.89468 9.91375 7.84621 10.031 7.84621 10.1537C7.84621 12.5704 12.9434 15.923 13.8462 15.923C14.6313 15.923 15.655 14.6034 16.2379 13.7436C16.2716 13.745 16.3284 13.7565 16.4091 13.7971C16.5753 13.8807 16.8633 14.0685 17.2274 14.3067C17.7084 14.621 18.3471 15.0382 19.1013 15.4707C18.7588 17.1184 17.8016 18.785 14.1453 18.2358Z" fill="#151515"/>
+                        </svg>
+                      </a>
+                      <a href="#" target="_blank">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.25 23.25H6.75C3.45 23.25 0.75 20.55 0.75 17.25V6.75C0.75 3.45 3.45 0.75 6.75 0.75H17.25C20.55 0.75 23.25 3.45 23.25 6.75V17.25C23.25 20.55 20.55 23.25 17.25 23.25Z" stroke="#151515" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M12 17.25C14.8995 17.25 17.25 14.8995 17.25 12C17.25 9.10051 14.8995 6.75 12 6.75C9.10051 6.75 6.75 9.10051 6.75 12C6.75 14.8995 9.10051 17.25 12 17.25Z" stroke="#151515" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M18 6C18.4142 6 18.75 5.66421 18.75 5.25C18.75 4.83579 18.4142 4.5 18 4.5C17.5858 4.5 17.25 4.83579 17.25 5.25C17.25 5.66421 17.5858 6 18 6Z" stroke="#151515" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="sewing-form__group group-col col-2">
+                    <div class="sewing-form__field field error">
+                      <input type="text" placeholder="Имя*" required>
+                      <span>Пожалуйства введите имя</span>
+                    </div>
+                    <div class="sewing-form__field field">
+                      <input type="text" placeholder="Фамилия*" required>
+                    </div>
+                    <div class="sewing-form__field field">
+                      <input type="email" placeholder="Электронная почта*" required>
+                    </div>
+                  </div>
+                  <div class="sewing-form__desc">
+                    <div class="sewing-form__note">*После отправки Дизайн-листа с вами свяжется персональный менеджер COAT. Вы сможете обсудить все детали и внести финальные уточнения.</div>
+                    <button class="sewing-form__reset">Сбросить</button>
+                  </div>
+                  <button type="submit" class="sewing-form__button button button-dark text-up">Отправить</button>
                 </div>
               </form>
             </div>

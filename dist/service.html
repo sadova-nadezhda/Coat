@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Каталог</title>
+  <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20251013172514" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/cferdinandi/tabby/dist/css/tabby-ui.min.css?_v=20251013172514">
+  <link rel="stylesheet" href="css/style.css?_v=20251013172514" />
+</head>
+
+  <body>
+    
+
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <header class="header">
+  <div class="header__marquee marquee__wrap">
+    <div class="marquee__row marquee">
+      <div class="marquee__item">Бесплатная доставка по Казахстану при заказе от 100 000 ₸</div>
+      <div class="marquee__item">Индивидуальный пошив — выбери мех, кожу и детали сам</div>
+      <div class="marquee__item">Новая коллекция FW25 уже в продаже</div>
+      <div class="marquee__item">-20% на кожаные куртки до конца сентября</div>
+      <div class="marquee__item">COAT — премиальная кожа и мех </div>
+      <div class="marquee__item">Сделано в Казахстане</div>
+    </div>
+    <div aria-hidden="true" class="marquee__row marquee">
+      <div class="marquee__item">Бесплатная доставка по Казахстану при заказе от 100 000 ₸</div>
+      <div class="marquee__item">Индивидуальный пошив — выбери мех, кожу и детали сам</div>
+      <div class="marquee__item">Новая коллекция FW25 уже в продаже</div>
+      <div class="marquee__item">-20% на кожаные куртки до конца сентября</div>
+      <div class="marquee__item">COAT — премиальная кожа и мех </div>
+      <div class="marquee__item">Сделано в Казахстане</div>
+    </div>
+  </div>
+  <div class="secondary-menu">
+    <div class="container">
+      <div class="secondary-menu__container">
+        <div class="header__social">
+          <span>Instagram:</span>
+          <a href="" target="_blank">@coat.official</a>
+        </div>
+        <select name="currency" class="header__currency select-currency">
+          <option value="">USD</option>
+          <option value="">KZT</option>
+          <option value="">RUB</option>
+        </select>
+        <form role="search" method="get" action="">
+            <input type="text" value="" name="search" id="search" class="header__search">
+        </form>
+        <div class="header__group">
+          <a class="header__icon header__compare" href="">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 6.52498L9.66934 2V22H8.25509V5.34338L5.98254 7.5457L5 6.52498ZM15.7449 18.6566V2H14.3307V22L19 17.475L18.0175 16.4543L15.7449 18.6566Z" fill="#151515"/>
+            </svg>
+          </a>
+          <a class="header__icon header__favorites" href="">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="black"/>
+            </svg>
+          </a>
+          <a class="header__icon header__basket" href="">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7.75 8.23809C7.75 8.23809 6.5772 1 11.5 1C16.4228 1 15.25 8.23809 15.25 8.23809M4 7.33333H19V20H4V7.33333Z" stroke="black"/>
+            </svg>
+          </a>
+          <a class="header__icon header__profile" href="">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.2903 5.07195C15.2903 7.32082 13.4706 9.14389 11.2258 9.14389C8.98104 9.14389 7.16129 7.32082 7.16129 5.07195C7.16129 2.82307 8.98104 1 11.2258 1C13.4706 1 15.2903 2.82307 15.2903 5.07195Z" stroke="black"/>
+              <path d="M4 16.8353C4 16.8353 7.80299 11.754 11.2258 11.8585C14.5049 11.9586 18 16.8353 18 16.8353C18 16.8353 14.3097 19.9115 11.2258 19.9981C7.98943 20.089 4 16.8353 4 16.8353Z" stroke="black"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="primary-menu">
+    <div class="container">
+      <div class="primary-menu__container">
+        <a class="header__logo" href="/"><img src="img/logo.svg" alt=""></a>
+        <nav class="header__nav">
+          <ul class="header__menu">
+            <li class="button-dropdown">
+              <a href="javascript:void(0)" class="dropdown-toggle">Каталог</a>
+              <div class="dropdown-menu">
+                <div class="dropdown-inner">
+                  <div class="header__col">
+                    <div class="header__caption">Дублёнки и шубы</div>
+                    <ul class="header__submenu">
+                      <li>
+                        <a href="">Oversize / свободный крой</a>
+                        <img src="img/image-1.jpg" alt="">
+                      </li>
+                      <li>
+                        <a href="">С капюшоном</a>
+                        <img src="img/image-2.jpg" alt="">
+                      </li>
+                      <li>
+                        <a href="">Укороченные модели</a>
+                        <img src="img/image-3.jpg" alt="">
+                      </li>
+                      <li><a href="">Длинные модели</a></li>
+                      <li><a href="">Toscana / Merino / Curly</a></li>
+                    </ul>
+                  </div>
+                  <div class="header__col">
+                    <div class="header__caption">Кожаные куртки</div>
+                    <ul class="header__submenu">
+                      <li><a href="">Классические кожанки</a></li>
+                      <li><a href="">Бомберы</a></li>
+                      <li><a href="">Укороченные</a></li>
+                      <li><a href="">Длинные (пальто из кожи)</a></li>
+                      <li><a href="">С утеплителем (зимние)</a></li>
+                      <li><a href="">Без утеплителя (демисезонные)</a></li>
+                    </ul>
+                  </div>
+                  <div class="header__col">
+                    <div class="header__caption">Косухи</div>
+                    <ul class="header__submenu">
+                      <li><a href="">Классическая косуха (чёрная)</a></li>
+                      <li><a href="">Oversize</a></li>
+                      <li><a href="">Укороченные</a></li>
+                      <li><a href="">Из гладкой кожи</a></li>
+                    </ul>
+                  </div>
+                  <div class="header__col">
+                    <div class="header__caption">Плащи</div>
+                    <ul class="header__submenu">
+                      <li><a href="">Кожаные плащи</a></li>
+                      <li><a href="">С поясом</a></li>
+                      <li><a href="">Длинные плащи</a></li>
+                      <li><a href="">Укороченные</a></li>
+                      <li><a href="">Демисезонные</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li><a href="">Индивидуальный пошив</a></li>
+            <li><a href="">О компании</a></li>
+            <li><a href="">Клиентский сервис</a></li>
+            <li><a href="">Материалы COAT</a></li>
+          </ul>
+        </nav>
+        <div class="header__burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+        <main>
+          <section class="service section-pad-bottom">
+            <div class="container">
+              <div class="service__container">
+                <h1 class="service__title title-indent text-up">Клиентский сервис</h1>
+                <div class="service__wrap sticky-box">
+                  <ul class="service__aside my-sticky">
+                    <li><a href="#payment" class="active">Оплата и доставка</a></li>
+                    <li><a href="#questions">Вопросы и ответы</a></li>
+                    <li><a href="#wares">Уход за изделиями</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                  </ul>
+                  <div class="service__box">
+                    <div id="payment" class="service__group">
+                      <div class="service__block">
+                        <div class="service__caption">Оплата</div>
+                        <div class="service__desc">Мы принимаем оплату онлайн и при получении. Для удобства клиентов доступны рассрочки и быстрые платежи.</div>
+                        <div class="service__cards">
+                          <div class="service__card">
+                            <div class="service__images">
+                              <img src="img/visa.png" alt="">
+                              <img src="img/master.png" alt="">
+                              <img src="img/express.png" alt="">
+                              <img src="img/jcb.png" alt="">
+                              <img src="img/unionPay.png" alt="">
+                            </div>
+                            <div class="service__txt">
+                              <p>Банковская карта <br> (Visa, Master Card, Amex, Union Pay, Diners Club, Discover, JCB)</p>
+                            </div>
+                          </div>
+                          <div class="service__card">
+                            <div class="service__images">
+                              <img src="img/bank-1.png" alt="">
+                              <img src="img/bank-2.png" alt="">
+                              <img src="img/bank-3.png" alt="">
+                            </div>
+                            <div class="service__txt">
+                              <p>Вы можете произвести оплату в рассрочку <br> через Halyk или Kaspi банк, обратившись к менеджеру COAT.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="service__block">
+                        <div class="service__caption">Доставка</div>
+                        <div class="service__desc">Все заказы отправляются в фирменной упаковке COAT. После оформления мы предоставляем трек-номер для отслеживания.</div>
+                        <div class="service__tabs">
+                          <ul data-tabs class="tabs">
+                            <li><a data-tabby-default href="#tab-1">СНГ</a></li>
+                            <li><a href="#tab-2">Европа</a></li>
+                            <li><a href="#tab-3">США</a></li>
+                            <li><a href="#tab-4">Азия</a></li>
+                          </ul>
+
+                          <div id="tab-1">
+                            <div>(Казахстан, Узбекистан, Россия, Беларусь)</div>
+                            <ul class="service__list">
+                              <li>Сроки: 5–14 рабочих дней.</li>
+                              <li>Доставка: курьером или почтой.</li>
+                              <li>Оплата: онлайн</li>
+                            </ul>
+                          </div>
+                          <div id="tab-2">
+                            <div>Европа</div>
+                            <ul class="service__list">
+                              <li>Сроки: 5–14 рабочих дней.</li>
+                              <li>Доставка: курьером или почтой.</li>
+                              <li>Оплата: онлайн</li>
+                            </ul>
+                          </div>
+                          <div id="tab-3">
+                            <div>США</div>
+                            <ul class="service__list">
+                              <li>Сроки: 5–14 рабочих дней.</li>
+                              <li>Доставка: курьером или почтой.</li>
+                              <li>Оплата: онлайн</li>
+                            </ul>
+                          </div>
+                          <div id="tab-4">
+                            <div>Азия</div>
+                            <ul class="service__list">
+                              <li>Сроки: 5–14 рабочих дней.</li>
+                              <li>Доставка: курьером или почтой.</li>
+                              <li>Оплата: онлайн</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="questions" class="service__group">
+                      <div class="service__caption title-indent">Вопросы и ответы</div>
+                      <div class="faq__accordion">
+                        <div class="faq__item">
+                          <button class="faq__header text-l">
+                            Как проходит индивидуальный пошив?
+                            <span class="icon">
+                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 8L11 13.5L16.5 8" stroke="black"/>
+                              </svg>
+                            </span>
+                          </button>
+                          <div class="faq__content">
+                            <div class="faq__txt">
+                              <p>COAT — премиальная верхняя одежда из натурального меха и кожи. В нашем каталоге представлены дублёнки, кожаные куртки, косухи, бомберы, пиджаки и плащи. Каждая модель создаётся вручную из тщательно отобранных материалов: Toscana, Merino, Curly, Teddy и других. Мы предлагаем широкий выбор силуэтов, оттенков и фасонов, чтобы каждая вещь подчеркивала индивидуальность владельца.</p>
+                              <p>Дублёнки и кожаные изделия COAT можно купить в Астане и с доставкой по всему Казахстану, России, Беларуси, Кыргызстану, Европе и США. Для клиентов доступен не только готовый ассортимент, но и индивидуальный пошив: вы сами выбираете фасон, длину, материал и детали будущего изделия. Это позволяет создать одежду, которая идеально сидит по фигуре и остаётся актуальной многие годы.</p>
+                              <p>COAT сочетает мировые fashion-стандарты с локальными особенностями. Наши коллекции объединяют элегантность, комфорт и долговечность. Мы делаем ставку на ручное производство и внимание к каждой детали, чтобы каждая дублёнка или кожаная куртка стала частью вашей истории.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="faq__item">
+                          <button class="faq__header text-l">
+                            Как определить свой размер?
+                            <span class="icon">
+                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 8L11 13.5L16.5 8" stroke="black"/>
+                              </svg>
+                            </span>
+                          </button>
+                          <div class="faq__content">
+                            <div class="faq__txt">
+                              <p>COAT — премиальная верхняя одежда из натурального меха и кожи. В нашем каталоге представлены дублёнки, кожаные куртки, косухи, бомберы, пиджаки и плащи. Каждая модель создаётся вручную из тщательно отобранных материалов: Toscana, Merino, Curly, Teddy и других. Мы предлагаем широкий выбор силуэтов, оттенков и фасонов, чтобы каждая вещь подчеркивала индивидуальность владельца.</p>
+                              <p>Дублёнки и кожаные изделия COAT можно купить в Астане и с доставкой по всему Казахстану, России, Беларуси, Кыргызстану, Европе и США. Для клиентов доступен не только готовый ассортимент, но и индивидуальный пошив: вы сами выбираете фасон, длину, материал и детали будущего изделия. Это позволяет создать одежду, которая идеально сидит по фигуре и остаётся актуальной многие годы.</p>
+                              <p>COAT сочетает мировые fashion-стандарты с локальными особенностями. Наши коллекции объединяют элегантность, комфорт и долговечность. Мы делаем ставку на ручное производство и внимание к каждой детали, чтобы каждая дублёнка или кожаная куртка стала частью вашей истории.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="faq__item">
+                          <button class="faq__header text-l">
+                            А если не подойдет размер при индивидуальном пошиве?
+                            <span class="icon">
+                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 8L11 13.5L16.5 8" stroke="black"/>
+                              </svg>
+                            </span>
+                          </button>
+                          <div class="faq__content">
+                            <div class="faq__txt">
+                              <p>COAT — премиальная верхняя одежда из натурального меха и кожи. В нашем каталоге представлены дублёнки, кожаные куртки, косухи, бомберы, пиджаки и плащи. Каждая модель создаётся вручную из тщательно отобранных материалов: Toscana, Merino, Curly, Teddy и других. Мы предлагаем широкий выбор силуэтов, оттенков и фасонов, чтобы каждая вещь подчеркивала индивидуальность владельца.</p>
+                              <p>Дублёнки и кожаные изделия COAT можно купить в Астане и с доставкой по всему Казахстану, России, Беларуси, Кыргызстану, Европе и США. Для клиентов доступен не только готовый ассортимент, но и индивидуальный пошив: вы сами выбираете фасон, длину, материал и детали будущего изделия. Это позволяет создать одежду, которая идеально сидит по фигуре и остаётся актуальной многие годы.</p>
+                              <p>COAT сочетает мировые fashion-стандарты с локальными особенностями. Наши коллекции объединяют элегантность, комфорт и долговечность. Мы делаем ставку на ручное производство и внимание к каждой детали, чтобы каждая дублёнка или кожаная куртка стала частью вашей истории.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="faq__item">
+                          <button class="faq__header text-l">
+                            Вы шьете изделие точно по моим меркам, “впритык”?
+                            <span class="icon">
+                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 8L11 13.5L16.5 8" stroke="black"/>
+                              </svg>
+                            </span>
+                          </button>
+                          <div class="faq__content">
+                            <div class="faq__txt">
+                              <p>COAT — премиальная верхняя одежда из натурального меха и кожи. В нашем каталоге представлены дублёнки, кожаные куртки, косухи, бомберы, пиджаки и плащи. Каждая модель создаётся вручную из тщательно отобранных материалов: Toscana, Merino, Curly, Teddy и других. Мы предлагаем широкий выбор силуэтов, оттенков и фасонов, чтобы каждая вещь подчеркивала индивидуальность владельца.</p>
+                              <p>Дублёнки и кожаные изделия COAT можно купить в Астане и с доставкой по всему Казахстану, России, Беларуси, Кыргызстану, Европе и США. Для клиентов доступен не только готовый ассортимент, но и индивидуальный пошив: вы сами выбираете фасон, длину, материал и детали будущего изделия. Это позволяет создать одежду, которая идеально сидит по фигуре и остаётся актуальной многие годы.</p>
+                              <p>COAT сочетает мировые fashion-стандарты с локальными особенностями. Наши коллекции объединяют элегантность, комфорт и долговечность. Мы делаем ставку на ручное производство и внимание к каждой детали, чтобы каждая дублёнка или кожаная куртка стала частью вашей истории.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="faq__item">
+                          <button class="faq__header text-l">
+                            Где и кем производится одежда COAT?
+                            <span class="icon">
+                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 8L11 13.5L16.5 8" stroke="black"/>
+                              </svg>
+                            </span>
+                          </button>
+                          <div class="faq__content">
+                            <div class="faq__txt">
+                              <p>COAT — премиальная верхняя одежда из натурального меха и кожи. В нашем каталоге представлены дублёнки, кожаные куртки, косухи, бомберы, пиджаки и плащи. Каждая модель создаётся вручную из тщательно отобранных материалов: Toscana, Merino, Curly, Teddy и других. Мы предлагаем широкий выбор силуэтов, оттенков и фасонов, чтобы каждая вещь подчеркивала индивидуальность владельца.</p>
+                              <p>Дублёнки и кожаные изделия COAT можно купить в Астане и с доставкой по всему Казахстану, России, Беларуси, Кыргызстану, Европе и США. Для клиентов доступен не только готовый ассортимент, но и индивидуальный пошив: вы сами выбираете фасон, длину, материал и детали будущего изделия. Это позволяет создать одежду, которая идеально сидит по фигуре и остаётся актуальной многие годы.</p>
+                              <p>COAT сочетает мировые fashion-стандарты с локальными особенностями. Наши коллекции объединяют элегантность, комфорт и долговечность. Мы делаем ставку на ручное производство и внимание к каждой детали, чтобы каждая дублёнка или кожаная куртка стала частью вашей истории.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="faq__item">
+                          <button class="faq__header text-l">
+                            Это натуральная кожа и мех?
+                            <span class="icon">
+                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 8L11 13.5L16.5 8" stroke="black"/>
+                              </svg>
+                            </span>
+                          </button>
+                          <div class="faq__content">
+                            <div class="faq__txt">
+                              <p>COAT — премиальная верхняя одежда из натурального меха и кожи. В нашем каталоге представлены дублёнки, кожаные куртки, косухи, бомберы, пиджаки и плащи. Каждая модель создаётся вручную из тщательно отобранных материалов: Toscana, Merino, Curly, Teddy и других. Мы предлагаем широкий выбор силуэтов, оттенков и фасонов, чтобы каждая вещь подчеркивала индивидуальность владельца.</p>
+                              <p>Дублёнки и кожаные изделия COAT можно купить в Астане и с доставкой по всему Казахстану, России, Беларуси, Кыргызстану, Европе и США. Для клиентов доступен не только готовый ассортимент, но и индивидуальный пошив: вы сами выбираете фасон, длину, материал и детали будущего изделия. Это позволяет создать одежду, которая идеально сидит по фигуре и остаётся актуальной многие годы.</p>
+                              <p>COAT сочетает мировые fashion-стандарты с локальными особенностями. Наши коллекции объединяют элегантность, комфорт и долговечность. Мы делаем ставку на ручное производство и внимание к каждой детали, чтобы каждая дублёнка или кожаная куртка стала частью вашей истории.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="faq__item">
+                          <button class="faq__header text-l">
+                            Сколько весят изделия?
+                            <span class="icon">
+                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 8L11 13.5L16.5 8" stroke="black"/>
+                              </svg>
+                            </span>
+                          </button>
+                          <div class="faq__content">
+                            <div class="faq__txt">
+                              <p>COAT — премиальная верхняя одежда из натурального меха и кожи. В нашем каталоге представлены дублёнки, кожаные куртки, косухи, бомберы, пиджаки и плащи. Каждая модель создаётся вручную из тщательно отобранных материалов: Toscana, Merino, Curly, Teddy и других. Мы предлагаем широкий выбор силуэтов, оттенков и фасонов, чтобы каждая вещь подчеркивала индивидуальность владельца.</p>
+                              <p>Дублёнки и кожаные изделия COAT можно купить в Астане и с доставкой по всему Казахстану, России, Беларуси, Кыргызстану, Европе и США. Для клиентов доступен не только готовый ассортимент, но и индивидуальный пошив: вы сами выбираете фасон, длину, материал и детали будущего изделия. Это позволяет создать одежду, которая идеально сидит по фигуре и остаётся актуальной многие годы.</p>
+                              <p>COAT сочетает мировые fashion-стандарты с локальными особенностями. Наши коллекции объединяют элегантность, комфорт и долговечность. Мы делаем ставку на ручное производство и внимание к каждой детали, чтобы каждая дублёнка или кожаная куртка стала частью вашей истории.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="wares" class="service__group">
+                      <div class="service__caption title-indent">Инструкция к изделию</div>
+                      <div class="service__block service__desc">
+                        <div class="service__caption_s">Общая информация</div>
+                        <p>Благодарим вас за выбор нашего изделия. Оно изготовлено из качественных материалов и при правильном уходе прослужит вам долгие годы.</p>
+                        <div class="service__caption_s">Подготовка к использованию</div>
+                        <ul>
+                          <li>Убедитесь, что изделие не имеет видимых повреждений.</li>
+                          <li>Ознакомьтесь с условиями эксплуатации, указанными в паспорте изделия или на упаковке.</li>
+                          <li>Перед первым использованием очистите изделие мягкой сухой или слегка влажной тканью.</li>
+                        </ul>
+                        <div class="service__caption_s">Правила эксплуатации</div>
+                        <ul>
+                          <li>Используйте изделие строго по назначению.</li>
+                          <li>Избегайте воздействия прямых солнечных лучей и высокой влажности, если это может повредить изделие.</li>
+                          <li>Не допускайте механических ударов и чрезмерных нагрузок.</li>
+                          <li>Храните изделие вдали от источников открытого огня и высоких температур.</li>
+                        </ul>
+                        <div class="service__caption_s">Уход и чистка</div>
+                        <ul>
+                          <li>Для регулярного ухода используйте мягкую ткань или щётку.</li>
+                          <li>При необходимости допускается применение нейтральных моющих средств без абразивов.</li>
+                          <li>Запрещается использовать агрессивные химические вещества (растворители, кислоты, щёлочи).</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div id="contacts" class="service__group service__bottom">
+                      <div class="service__caption text-up">Стамбул</div>
+                      <div class="service__row">
+                        <span>Улица:</span>
+                        <div>ул. Абая, 25</div>
+                      </div>
+                      <div class="service__row">
+                        <span>Время работы:</span>
+                        <div>Пн–Сб: 10:00 – 20:00</div>
+                      </div>
+                      <div class="service__row">
+                        <span>Номер:</span>
+                        <a href="tel:+77000000000">+7 (700) 000-00-00</a>
+                      </div>
+                      <div class="service__row">
+                        <span>Почта:</span>
+                        <a href="mailto:info@coat.kz" class="text-up">info@coat.kz</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+        <footer class="footer">
+  <div class="container">
+    <div class="footer__container">
+      <div class="footer__wrap">
+        <div class="footer__row">
+          <div class="footer__col">
+            <a href="" class="footer__logo"><img src="img/logo.svg" alt=""></a>
+            <div class="footer__qr"><img src="img/qr.png" alt=""></div>
+          </div>
+          <div class="footer__col">
+            <div class="footer__caption">Навигация</div>
+            <ul class="footer__menu">
+              <li><a href="">О компании</a></li>
+              <li><a href="">Новости</a></li>
+              <li><a href="">Клиентский сервис</a></li>
+              <li><a href="">Вопросы и ответы</a></li>
+              <li><a href="">Каталог</a></li>
+              <li><a href="">Индивидуальный пошив</a></li>
+              <li><a href="">Коллекции</a></li>
+              <li><a href="">Материалы COAT</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <div class="footer__caption">Контакты</div>
+            <div class="footer__box">
+              <div class="footer__group">
+                <span>Адрес шоурума:</span>
+                <span>г. Стамбул</span>
+              </div>
+              <div class="footer__group">
+                <span>Телефон:</span>
+                <a href="tel:+7 (XXX) XXX-XX-XX">+7 (XXX) XXX-XX-XX</a>
+              </div>
+              <div class="footer__group">
+                <span>Телефон:</span>
+                <a href="tel:+7 (XXX) XXX-XX-XX">+7 (XXX) XXX-XX-XX</a>
+              </div>
+              <div class="footer__group">
+                <span>Email:</span>
+                <a href="mailto:info@coat.kz">info@coat.kz</a>
+              </div>
+              <div class="footer__group">
+                <span>Время работы:</span>
+                <span>Пн–Вс, 10:00–20:00</span>
+              </div>
+            </div>
+          </div>
+          <div class="footer__col">
+            <div class="footer__caption">Социальные сети</div>
+            <div class="footer__box">
+              <a href="" target="_blank">Instagram</a>
+              <a href="" target="_blank">Telegram</a>
+              <a href="" target="_blank">WhatsApp</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__policy text-center text-s">
+          <a href="">Политика конфиденциальности и условия использования</a>
+        </div>
+      </div>
+      <div class="footer__copy">
+        <span>© 2025 COAT. Все права защищены.</span>
+        <a href="" class="">Сайт разработан Factum</a>
+      </div>
+    </div>
+  </div>
+</footer>
+ 
+      </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20251013172514"></script>
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/tabby/dist/js/tabby.polyfills.min.js?_v=20251013172514"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js?_v=20251013172514"></script>
+<script src="https://cdn.prod.website-files.com/622b0a8557cc790ca01b97bb/66005a0997fdea31bc68d664_ScrollSmoother.min.js.txt?_v=20251013172514"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js?_v=20251013172514"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollToPlugin.min.js?_v=20251013172514"></script>
+<script src="js/app.js?_v=20251013172514"></script>
+  </body>
+</html>

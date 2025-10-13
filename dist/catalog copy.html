@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Поиск</title>
+  <title>Каталог</title>
   <link rel="shortcut icon" href="img/favicon.png" type="image/png">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20251013172514" />
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/cferdinandi/tabby/dist/css/tabby-ui.min.css?_v=20251013172514">
-  <link rel="stylesheet" href="css/style.css?_v=20251013172514" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20251013153004" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/cferdinandi/tabby/dist/css/tabby-ui.min.css?_v=20251013153004">
+  <link rel="stylesheet" href="css/style.css?_v=20251013153004" />
 </head>
 
   <body>
@@ -155,154 +155,65 @@
 </header>
 
         <main>
-          <section class="search section-pad-bottom section-hidden">
+          <section class="catalog section-pad-bottom section-hidden">
             <div class="container">
-              <div class="search__container">
-                <div class="search__top">
-                  <h1 class="search__title text-up">Дублёнки</h1>
-                  <span>32 товара</span>
+              <div class="catalog__container">
+                <h1 class="catalog__title title-indent text-center text-up">Каталог</h1>
+                <div class="catalog__cards">
+                  <a class="catalog__card catalog-card" href="">
+                    <div class="catalog-card__img"><img src="img/image-1.jpg" alt=""></div>
+                    <div class="catalog-card__bottom text-up">
+                      <div class="catalog-card__caption text-l">Дублёнки и шубы</div>
+                      <div class="catalog-card__link">Перейти</div>
+                    </div>
+                  </a>
+                  <a class="catalog__card catalog-card" href="">
+                    <div class="catalog-card__img"><img src="img/image-1.jpg" alt=""></div>
+                    <div class="catalog-card__bottom text-up">
+                      <div class="catalog-card__caption text-l">Кожаные куртки</div>
+                      <div class="catalog-card__link">Перейти</div>
+                    </div>
+                  </a>
+                  <a class="catalog__card catalog-card" href="">
+                    <div class="catalog-card__img"><img src="img/image-1.jpg" alt=""></div>
+                    <div class="catalog-card__bottom text-up">
+                      <div class="catalog-card__caption text-l">Косухи</div>
+                      <div class="catalog-card__link">Перейти</div>
+                    </div>
+                  </a>
+                  <a class="catalog__card catalog-card" href="">
+                    <div class="catalog-card__img"><img src="img/image-1.jpg" alt=""></div>
+                    <div class="catalog-card__bottom text-up">
+                      <div class="catalog-card__caption text-l">Плащи</div>
+                      <div class="catalog-card__link">Перейти</div>
+                    </div>
+                  </a>
                 </div>
-                <form action="" id="search-form" class="search__form">
-                  <input type="text" placeholder="Поиск" class="search-input">
-                </form>
-                <div class="search__cards product__cards grid-1">
-                  <div class="search__card product-card card">
-                    <a class="product-card__img" href="product.html">
-                      <img src="img/image-4.jpg" alt="">
-                      <div class="product-card__plate">NEW</div>
-                    </a>
-                    <div class="product-card__bottom">
-                      <a class="product-card__caption" href="product.html">Название товара</a>
-                      <div class="product-card__price">55 000 ₸</div>
-                      <div class="product-card__favorite">
+              </div>
+            </div>
+          </section>
+          <section class="faq section-pad-bottom section-hidden">
+            <div class="container">
+              <div class="faq__container">
+                <div class="faq__accordion">
+                  <div class="faq__item">
+                    <button class="faq__header text-l">
+                      Купить дублёнки и кожаные куртки COAT в Астане и с доставкой по всему миру
+                      <span class="icon">
                         <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="#151515"/>
+                          <path d="M5 8L11 13.5L16.5 8" stroke="black"/>
                         </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="search__card product-card card">
-                    <a class="product-card__img" href="product.html">
-                      <img src="img/image-3.jpg" alt="">
-                      <div class="product-card__plate">NEW</div>
-                    </a>
-                    <div class="product-card__bottom">
-                      <a class="product-card__caption" href="product.html">Название товара</a>
-                      <div class="product-card__price">55 000 ₸</div>
-                      <div class="product-card__favorite active">
-                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="#151515"/>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="search__card product-card card">
-                    <a class="product-card__img" href="product.html">
-                      <img src="img/image-1.jpg" alt="">
-                      <div class="product-card__plate">NEW</div>
-                    </a>
-                    <div class="product-card__bottom">
-                      <a class="product-card__caption" href="product.html">Название товара</a>
-                      <div class="product-card__price">55 000 ₸</div>
-                      <div class="product-card__favorite">
-                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="#151515"/>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="search__card product-card card">
-                    <a class="product-card__img" href="product.html">
-                      <img src="img/image-5.jpg" alt="">
-                      <div class="product-card__plate">NEW</div>
-                    </a>
-                    <div class="product-card__bottom">
-                      <a class="product-card__caption" href="product.html">Название товара</a>
-                      <div class="product-card__price">55 000 ₸</div>
-                      <div class="product-card__favorite">
-                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="#151515"/>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="search__card product-card card">
-                    <a class="product-card__img" href="product.html">
-                      <img src="img/image-6.jpg" alt="">
-                      <div class="product-card__plate">NEW</div>
-                    </a>
-                    <div class="product-card__bottom">
-                      <a class="product-card__caption" href="product.html">Название товара</a>
-                      <div class="product-card__price">55 000 ₸</div>
-                      <div class="product-card__favorite">
-                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="#151515"/>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="search__card product-card card">
-                    <a class="product-card__img" href="product.html">
-                      <img src="img/image-2.jpg" alt="">
-                      <div class="product-card__plate">NEW</div>
-                    </a>
-                    <div class="product-card__bottom">
-                      <a class="product-card__caption" href="product.html">Название товара</a>
-                      <div class="product-card__price">55 000 ₸</div>
-                      <div class="product-card__favorite">
-                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="#151515"/>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="search__card product-card card">
-                    <a class="product-card__img" href="product.html">
-                      <img src="img/image-7.jpg" alt="">
-                      <div class="product-card__plate">NEW</div>
-                    </a>
-                    <div class="product-card__bottom">
-                      <a class="product-card__caption" href="product.html">Название товара</a>
-                      <div class="product-card__price">55 000 ₸</div>
-                      <div class="product-card__favorite">
-                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="#151515"/>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="search__card product-card card">
-                    <a class="product-card__img" href="product.html">
-                      <img src="img/image-8.jpg" alt="">
-                      <div class="product-card__plate">NEW</div>
-                    </a>
-                    <div class="product-card__bottom">
-                      <a class="product-card__caption" href="product.html">Название товара</a>
-                      <div class="product-card__price">55 000 ₸</div>
-                      <div class="product-card__favorite">
-                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="#151515"/>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="search__card product-card card">
-                    <a class="product-card__img" href="product.html">
-                      <img src="img/image-9.jpg" alt="">
-                      <div class="product-card__plate">NEW</div>
-                    </a>
-                    <div class="product-card__bottom">
-                      <a class="product-card__caption" href="product.html">Название товара</a>
-                      <div class="product-card__price">55 000 ₸</div>
-                      <div class="product-card__favorite">
-                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="#151515"/>
-                        </svg>
+                      </span>
+                    </button>
+                    <div class="faq__content">
+                      <div class="faq__txt">
+                        <p>COAT — премиальная верхняя одежда из натурального меха и кожи. В нашем каталоге представлены дублёнки, кожаные куртки, косухи, бомберы, пиджаки и плащи. Каждая модель создаётся вручную из тщательно отобранных материалов: Toscana, Merino, Curly, Teddy и других. Мы предлагаем широкий выбор силуэтов, оттенков и фасонов, чтобы каждая вещь подчеркивала индивидуальность владельца.</p>
+                        <p>Дублёнки и кожаные изделия COAT можно купить в Астане и с доставкой по всему Казахстану, России, Беларуси, Кыргызстану, Европе и США. Для клиентов доступен не только готовый ассортимент, но и индивидуальный пошив: вы сами выбираете фасон, длину, материал и детали будущего изделия. Это позволяет создать одежду, которая идеально сидит по фигуре и остаётся актуальной многие годы.</p>
+                        <p>COAT сочетает мировые fashion-стандарты с локальными особенностями. Наши коллекции объединяют элегантность, комфорт и долговечность. Мы делаем ставку на ручное производство и внимание к каждой детали, чтобы каждая дублёнка или кожаная куртка стала частью вашей истории.</p>
                       </div>
                     </div>
                   </div>
                 </div>
-                <a href="" class="search__button button button-border text-up">Перейти в каталог</a>
               </div>
             </div>
           </section>
@@ -379,12 +290,11 @@
     </div>
 
     
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20251013172514"></script>
-<script src="https://cdn.jsdelivr.net/gh/cferdinandi/tabby/dist/js/tabby.polyfills.min.js?_v=20251013172514"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js?_v=20251013172514"></script>
-<script src="https://cdn.prod.website-files.com/622b0a8557cc790ca01b97bb/66005a0997fdea31bc68d664_ScrollSmoother.min.js.txt?_v=20251013172514"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js?_v=20251013172514"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollToPlugin.min.js?_v=20251013172514"></script>
-<script src="js/app.js?_v=20251013172514"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20251013153004"></script>
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/tabby/dist/js/tabby.polyfills.min.js?_v=20251013153004"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js?_v=20251013153004"></script>
+<script src="https://cdn.prod.website-files.com/622b0a8557cc790ca01b97bb/66005a0997fdea31bc68d664_ScrollSmoother.min.js.txt?_v=20251013153004"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js?_v=20251013153004"></script>
+<script src="js/app.js?_v=20251013153004"></script>
   </body>
 </html>
