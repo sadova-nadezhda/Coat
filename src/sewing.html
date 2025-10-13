@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "Каталог" })
+  <body>
+    
+
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        @@include('html/header.html')
+        <main>
+          <section class="sewing-hero section-hidden">
+            <div class="sewing-hero__container">
+              <picture class="sewing-hero__img">
+                <source srcset="@img/main-hero-mb-2.png" media="(max-width: 767px)">
+                <img src="@img/main-hero-2.png" alt="">
+              </picture>
+              <h1 class="sewing-hero__title l text-up">Индивидуальный пошив COAT</h1>
+              <div class="sewing-hero__desc text-l text-up">В COAT каждое изделие можно адаптировать под вас. Мы сохраняем фирменный стиль, но даем вам свободу в деталях, от материала до фурнитуры.</div>
+            </div>
+          </section>
+          <section class="sewing-form section-pad section-hidden">
+            <div class="container">
+              <form class="sewing-form__container">
+                <div class="sewing-form__wrap">
+                  <div class="sewing-form__caption text-l">Выбор товара</div>
+                  <div class="sewing-form__group group-tabs">
+                    <div class="sewing-form__field field-tab">
+                      <input type="radio" name="product" id="product-1" checked>
+                      <label for="product-1" class="sewing-form__label label-tab">Дублёнки</label>
+                    </div>
+                    <div class="sewing-form__field field field-tab">
+                      <input type="radio" name="product" id="product-2">
+                      <label for="product-2" class="sewing-form__label label-tab">Кожаное изделие</label>
+                    </div>
+                  </div>
+                  <input type="text" name="sewing-search" class="sewing-form__search" placeholder="Введите название товара">
+                </div>
+                <div class="sewing-form__wrap">
+                  <div class="sewing-form__caption text-l">Вид</div>
+                  <div class="sewing-form__group group-cards col-3">
+                    <div class="sewing-form__field field">
+                      <label class="sewing-form__label label-card">
+                        <img src="@img/holder.png" alt="">
+                        <input type="radio" name="view" id="view-1" checked> 
+                        Мерино
+                      </label>
+                    </div>
+                    <div class="sewing-form__field field">
+                      <label class="sewing-form__label label-card">
+                        <img src="@img/holder.png" alt="">
+                        <input type="radio" name="view" id="view-2"> 
+                        Керли
+                      </label>
+                    </div>
+                    <div class="sewing-form__field field">
+                      <label class="sewing-form__label label-card">
+                        <img src="@img/holder.png" alt="">
+                        <input type="radio" name="view" id="view-3"> 
+                        Тоскана
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="sewing-form__wrap">
+                  <div class="sewing-form__caption text-l">Оттенок материала</div>
+                  <div class="sewing-form__group group-default">
+                    <div class="sewing-form__field field field-default">
+                      <input type="radio" name="color" id="color-1" checked>
+                      <label for="color-1" class="sewing-form__label label-default">Оригинал</label>
+                    </div>
+                    <div class="sewing-form__field field field-default">
+                      <input type="radio" name="color" id="color-2">
+                      <label for="color-2" class="sewing-form__label label-default">Бордовый</label>
+                    </div>
+                    <div class="sewing-form__field field field-default">
+                      <input type="radio" name="color" id="color-3">
+                      <label for="color-3" class="sewing-form__label label-default">Белый</label>
+                    </div>
+                    <div class="sewing-form__field field field-default">
+                      <input type="radio" name="color" id="color-4">
+                      <label for="color-4" class="sewing-form__label label-default">Зеленый</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="sewing-form__wrap">
+                  <div class="sewing-form__caption text-l">Длина (см)</div>
+                  <div class="sewing-form__group group-default">
+                    <div class="sewing-form__field field field-default">
+                      <input type="radio" name="lenght" id="lenght-1" checked>
+                      <label for="lenght-1" class="sewing-form__label label-default">Оригинал</label>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </section>
+          <section class="sewing-feedback section-pad-bottom section-hidden">
+            <div class="container">
+              <div class="sewing-feedback__container">
+                <div class="sewing-feedback__info">
+                  <div class="sewing-feedback__caption">Создать своё изделие</div>
+                  <div class="sewing-feedback__txt text-up">Наши мастера свяжутся с вами, чтобы обсудить детали пошива.</div>
+                  <div class="sewing-feedback__buttons">
+                    <a href="" class="sewing-feedback__button button button-light" target="_blank">Связаться с менеджером</a>
+                    <a  class="sewing-feedback__button button button-border_light">Оставить заявку</a>
+                  </div>
+                </div>
+                <div class="sewing-feedback__img"><img src="@img/image-4.jpg" alt=""></div>
+              </div>
+            </div>
+          </section>
+          <section class="process section-pad-bottom section-hidden">
+            <div class="container">
+              <div class="process__container">
+                <h2 class="process__title title-indent">Как проходит процесс пошива</h2>
+                <div class="process__cards grid-4">
+                  <div class="process__card process-card card">
+                    <div class="process-card__img"><img src="@img/image-1.jpg" alt=""></div>
+                    <div class="process-card__step">Шаг №1</div>
+                    <div class="process-card__caption text-l">Консультация (вы обсуждаете модель, материал и детали).</div>
+                  </div>
+                  <div class="process__card process-card card">
+                    <div class="process-card__img"><img src="@img/image-2.jpg" alt=""></div>
+                    <div class="process-card__step">Шаг №2</div>
+                    <div class="process-card__caption text-l">Выбор и утверждение (примеры материалов, фото, фурнитуры).</div>
+                  </div>
+                  <div class="process__card process-card card">
+                    <div class="process-card__img"><img src="@img/image-3.jpg" alt=""></div>
+                    <div class="process-card__step">Шаг №3</div>
+                    <div class="process-card__caption text-l">Снятие мерок (онлайн или в шоуруме).</div>
+                  </div>
+                  <div class="process__card process-card card">
+                    <div class="process-card__img"><img src="@img/image-4.jpg" alt=""></div>
+                    <div class="process-card__step">Шаг №4</div>
+                    <div class="process-card__caption text-l">Изготовление (мастера создают изделие вручную).</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="faq section-pad-bottom section-hidden">
+            <div class="container">
+              <div class="faq__container">
+                <h2 class="faq__title text-up title-indent">Вопросы и ответы</h2>
+                <div class="faq__accordion">
+                  <div class="faq__item">
+                    <button class="faq__header text-l">
+                      Сколько времени занимает пошив?
+                      <span class="icon">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5 8L11 13.5L16.5 8" stroke="black"/>
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="faq__content">
+                      <div class="faq__txt">
+                        <p>COAT — премиальная верхняя одежда из натурального меха и кожи. В нашем каталоге представлены дублёнки, кожаные куртки, косухи, бомберы, пиджаки и плащи. Каждая модель создаётся вручную из тщательно отобранных материалов: Toscana, Merino, Curly, Teddy и других. Мы предлагаем широкий выбор силуэтов, оттенков и фасонов, чтобы каждая вещь подчеркивала индивидуальность владельца.</p>
+                        <p>Дублёнки и кожаные изделия COAT можно купить в Астане и с доставкой по всему Казахстану, России, Беларуси, Кыргызстану, Европе и США. Для клиентов доступен не только готовый ассортимент, но и индивидуальный пошив: вы сами выбираете фасон, длину, материал и детали будущего изделия. Это позволяет создать одежду, которая идеально сидит по фигуре и остаётся актуальной многие годы.</p>
+                        <p>COAT сочетает мировые fashion-стандарты с локальными особенностями. Наши коллекции объединяют элегантность, комфорт и долговечность. Мы делаем ставку на ручное производство и внимание к каждой детали, чтобы каждая дублёнка или кожаная куртка стала частью вашей истории.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="faq__item">
+                    <button class="faq__header text-l">
+                      Можно ли вносить изменения после старта?
+                      <span class="icon">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5 8L11 13.5L16.5 8" stroke="black"/>
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="faq__content">
+                      <div class="faq__txt">
+                        <p>COAT — премиальная верхняя одежда из натурального меха и кожи. В нашем каталоге представлены дублёнки, кожаные куртки, косухи, бомберы, пиджаки и плащи. Каждая модель создаётся вручную из тщательно отобранных материалов: Toscana, Merino, Curly, Teddy и других. Мы предлагаем широкий выбор силуэтов, оттенков и фасонов, чтобы каждая вещь подчеркивала индивидуальность владельца.</p>
+                        <p>Дублёнки и кожаные изделия COAT можно купить в Астане и с доставкой по всему Казахстану, России, Беларуси, Кыргызстану, Европе и США. Для клиентов доступен не только готовый ассортимент, но и индивидуальный пошив: вы сами выбираете фасон, длину, материал и детали будущего изделия. Это позволяет создать одежду, которая идеально сидит по фигуре и остаётся актуальной многие годы.</p>
+                        <p>COAT сочетает мировые fashion-стандарты с локальными особенностями. Наши коллекции объединяют элегантность, комфорт и долговечность. Мы делаем ставку на ручное производство и внимание к каждой детали, чтобы каждая дублёнка или кожаная куртка стала частью вашей истории.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="faq__item">
+                    <button class="faq__header text-l">
+                      Чем индивидуальный пошив отличается от готовой коллекции?
+                      <span class="icon">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5 8L11 13.5L16.5 8" stroke="black"/>
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="faq__content">
+                      <div class="faq__txt">
+                        <p>COAT — премиальная верхняя одежда из натурального меха и кожи. В нашем каталоге представлены дублёнки, кожаные куртки, косухи, бомберы, пиджаки и плащи. Каждая модель создаётся вручную из тщательно отобранных материалов: Toscana, Merino, Curly, Teddy и других. Мы предлагаем широкий выбор силуэтов, оттенков и фасонов, чтобы каждая вещь подчеркивала индивидуальность владельца.</p>
+                        <p>Дублёнки и кожаные изделия COAT можно купить в Астане и с доставкой по всему Казахстану, России, Беларуси, Кыргызстану, Европе и США. Для клиентов доступен не только готовый ассортимент, но и индивидуальный пошив: вы сами выбираете фасон, длину, материал и детали будущего изделия. Это позволяет создать одежду, которая идеально сидит по фигуре и остаётся актуальной многие годы.</p>
+                        <p>COAT сочетает мировые fashion-стандарты с локальными особенностями. Наши коллекции объединяют элегантность, комфорт и долговечность. Мы делаем ставку на ручное производство и внимание к каждой детали, чтобы каждая дублёнка или кожаная куртка стала частью вашей истории.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="faq__item">
+                    <button class="faq__header text-l">
+                      Какая гарантия на изделие?
+                      <span class="icon">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5 8L11 13.5L16.5 8" stroke="black"/>
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="faq__content">
+                      <div class="faq__txt">
+                        <p>COAT — премиальная верхняя одежда из натурального меха и кожи. В нашем каталоге представлены дублёнки, кожаные куртки, косухи, бомберы, пиджаки и плащи. Каждая модель создаётся вручную из тщательно отобранных материалов: Toscana, Merino, Curly, Teddy и других. Мы предлагаем широкий выбор силуэтов, оттенков и фасонов, чтобы каждая вещь подчеркивала индивидуальность владельца.</p>
+                        <p>Дублёнки и кожаные изделия COAT можно купить в Астане и с доставкой по всему Казахстану, России, Беларуси, Кыргызстану, Европе и США. Для клиентов доступен не только готовый ассортимент, но и индивидуальный пошив: вы сами выбираете фасон, длину, материал и детали будущего изделия. Это позволяет создать одежду, которая идеально сидит по фигуре и остаётся актуальной многие годы.</p>
+                        <p>COAT сочетает мировые fashion-стандарты с локальными особенностями. Наши коллекции объединяют элегантность, комфорт и долговечность. Мы делаем ставку на ручное производство и внимание к каждой детали, чтобы каждая дублёнка или кожаная куртка стала частью вашей истории.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="faq__item">
+                    <button class="faq__header text-l">
+                      Доставка и примерка в других городах.
+                      <span class="icon">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5 8L11 13.5L16.5 8" stroke="black"/>
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="faq__content">
+                      <div class="faq__txt">
+                        <p>COAT — премиальная верхняя одежда из натурального меха и кожи. В нашем каталоге представлены дублёнки, кожаные куртки, косухи, бомберы, пиджаки и плащи. Каждая модель создаётся вручную из тщательно отобранных материалов: Toscana, Merino, Curly, Teddy и других. Мы предлагаем широкий выбор силуэтов, оттенков и фасонов, чтобы каждая вещь подчеркивала индивидуальность владельца.</p>
+                        <p>Дублёнки и кожаные изделия COAT можно купить в Астане и с доставкой по всему Казахстану, России, Беларуси, Кыргызстану, Европе и США. Для клиентов доступен не только готовый ассортимент, но и индивидуальный пошив: вы сами выбираете фасон, длину, материал и детали будущего изделия. Это позволяет создать одежду, которая идеально сидит по фигуре и остаётся актуальной многие годы.</p>
+                        <p>COAT сочетает мировые fashion-стандарты с локальными особенностями. Наши коллекции объединяют элегантность, комфорт и долговечность. Мы делаем ставку на ручное производство и внимание к каждой детали, чтобы каждая дублёнка или кожаная куртка стала частью вашей истории.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+        @@include('html/footer.html') 
+      </div>
+    </div>
+
+    
+    @@include('html/foot.html')
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "Оформление заказа" })
+  <body>
+    
+
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        @@include('html/header.html')
+        <main>
+          <section class="order section-pad-bottom section-hidden">
+            <div class="container">
+              <div class="order__container">
+                <h1 class="order__title title-indent text-up">Оформление заказа</h1>
+                <div class="order__row">
+                  <div class="order__wrap">
+                    <div class="order__box">
+                      <div class="order__caption">Введите данные получателя</div>
+                      <div class="order__radio">
+                        <input type="checkbox" name="person-save" id="radio-1">
+                        <label for="radio-1">Выбрать сохранённый профиль</label>
+                      </div>
+                      <div class="order__fields">
+                        <div class="order__field field error">
+                          <input type="text" placeholder="Имя*" required>
+                          <span>Пожалуйства введите имя</span>
+                        </div>
+                        <div class="order__field field">
+                        <input type="text" placeholder="Фамилия*" required>
+                        </div>
+                        <div class="order__field field">
+                        <input type="tel" placeholder="Номер телефона*" required>
+                        </div>
+                        <div class="order__field field">
+                        <input type="email" placeholder="Электронная почта*" required>
+                        </div>
+                        <div class="order__field field">
+                        <input type="text" placeholder="Ваш рост, см*" required>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="order__box">
+                      <div class="order__caption">Адрес доставки</div>
+                      <div class="order__fields">
+                        <div class="order__field field">
+                        <input type="text" placeholder="Страна*" required>
+                        </div>
+                        <div class="order__field field">
+                        <input type="text" placeholder="Город*" required>
+                        </div>
+                        <div class="order__field field">
+                        <input type="tel" placeholder="Улица*" required>
+                        </div>
+                        <div class="order__field field">
+                        <input type="email" placeholder="Дом*" required>
+                        </div>
+                        <div class="order__field field s">
+                        <input type="text" placeholder="Подъезд*"required>
+                        </div>
+                        <div class="order__field field s">
+                        <input type="text" placeholder="Этаж*"required>
+                        </div>
+                        <div class="order__field field s">
+                        <input type="text" placeholder="Квартиру*"required>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="order__box">
+                      <div class="order__caption_s">Срок доставки:</div>
+                      <div class="order__info">
+                        Будет доставлено до вашего региона через 5-7 рабочих дней
+                      </div>
+                    </div>
+                  </div>
+                  <div class="order__right order-result">
+                    <div class="order-result__top">
+                      <div class="order-result__caption">Ваш заказ</div>
+                      <div class="order-result__img">
+                        <img src="@img/image-4.jpg" alt="">
+                        <img src="@img/image-5.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="order-result__sum">
+                      <span>2 товар(а)</span>
+                      <div class="order-result__price">110 000 ₸</div>
+                    </div>
+                    <div class="order-result__sale">
+                      <span>Скидка</span>
+                      <div class="order-result__price">51 000 ₸</div>
+                    </div>
+                    <div class="order-result__total">
+                      <span>Итого</span>
+                      <div class="order-result__price">59 000 ₸</div>
+                    </div>
+                    <div class="order-result__bottom">
+                      <button class="order-result__button button button-dark text-up">Перейти к оплате</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+        @@include('html/footer.html') 
+      </div>
+    </div>
+
+    
+    @@include('html/foot.html')
+  </body>
+</html>

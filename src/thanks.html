@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "Каталог" })
+  <body>
+    
+
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        @@include('html/header.html')
+        <main>
+          <section class="thanks section-hidden">
+            <div class="thanks__container">
+              <img class="thanks-img" src="@img/image-1.jpg" alt="">
+              <div class="thanks__box">
+                <h1 class="thanks__title">Спасибо за заявку!</h1>
+                <div class="thanks__note">Ваша заявка успешно отправлена. Совсем скоро наш менеджер свяжется с вами, чтобы уточнить детали и помочь с решением.</div>
+                <a href="/" class="thanks__button button button-dark text-up">На главную страницу</a>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    
+    @@include('html/foot.html')
+  </body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "Категории" })
+  <body>
+    
+
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        @@include('html/header.html')
+        <main>
+          <section class="category section-pad-bottom section-hidden">
+            <div class="container">
+              <div class="category__container">
+                <div class="category__top">
+                  <h1 class="category__title text-center text-up">Дублёнки и шубы</h1>
+                  <span>32 товара</span>
+                </div>
+                <div class="category__tabs">
+                  <a class="category__item" href="">Кожаные куртки</a>
+                  <a class="category__item" href="">Косухи</a>
+                  <a class="category__item" href="">Плащи</a>
+                  <div class="category__view">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M13.6464 17.8536C13.8417 18.0488 14.1583 18.0488 14.3536 17.8536L17.5355 14.6716C17.7308 14.4763 17.7308 14.1597 17.5355 13.9645C17.3403 13.7692 17.0237 13.7692 16.8284 13.9645L14 16.7929L11.1716 13.9645C10.9763 13.7692 10.6597 13.7692 10.4645 13.9645C10.2692 14.1597 10.2692 14.4763 10.4645 14.6716L13.6464 17.8536ZM4.35355 0.146447C4.15829 -0.0488155 3.84171 -0.0488155 3.64645 0.146447L0.464466 3.32843C0.269204 3.52369 0.269204 3.84027 0.464466 4.03553C0.659728 4.2308 0.976311 4.2308 1.17157 4.03553L4 1.20711L6.82843 4.03553C7.02369 4.2308 7.34027 4.2308 7.53553 4.03553C7.7308 3.84027 7.7308 3.52369 7.53553 3.32843L4.35355 0.146447ZM14 0.5L13.5 0.5L13.5 17.5H14H14.5L14.5 0.5L14 0.5ZM4 17.5H4.5V0.5H4H3.5V17.5H4Z" fill="black"/>
+                    </svg>
+                  </div>
+                </div>
+                <div class="category__filter">
+                  <div class="category__choice">
+                    <select name="silhouette">
+                      <option value="">Силуэт</option>
+                    </select>
+                    <select name="length">
+                      <option value="">Длина</option>
+                    </select>
+                    <select name="collar">
+                      <option value="">Тип воротника</option>
+                    </select>
+                    <select name="fastening">
+                      <option value="">Тип застегивания</option>
+                    </select>
+                    <select name="material">
+                      <option value="">Материал</option>
+                    </select>
+                    <select name="peculiarities">
+                      <option value="">Особенности</option>
+                    </select>
+                  </div>
+                  <div class="category__box">
+                    <div class="category__grids">
+                      <div class="category__grid active" data-grid="1">
+                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="-0.5" y="0.5" width="9" height="21" transform="matrix(-1 0 0 1 30 7)" stroke="#151515"/>
+                          <rect x="-0.5" y="0.5" width="5" height="9" transform="matrix(-1 0 0 1 18 7)" stroke="#151515"/>
+                          <rect x="-0.5" y="0.5" width="5" height="9" transform="matrix(-1 0 0 1 18 19)" stroke="#151515"/>
+                          <rect x="-0.5" y="0.5" width="5" height="9" transform="matrix(-1 0 0 1 10 7)" stroke="#151515"/>
+                          <rect x="-0.5" y="0.5" width="5" height="9" transform="matrix(-1 0 0 1 10 19)" stroke="#151515"/>
+                        </svg>
+                      </div>
+                      <div class="category__grid" data-grid="2">
+                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="36" height="36" fill="white"/>
+                          <rect x="-0.5" y="0.5" width="5" height="9" transform="matrix(-1 0 0 1 12.3638 7)" stroke="#151515"/>
+                          <rect x="-0.5" y="0.5" width="5" height="9" transform="matrix(-1 0 0 1 20.3638 7)" stroke="#151515"/>
+                          <rect x="-0.5" y="0.5" width="5" height="9" transform="matrix(-1 0 0 1 28.3638 7)" stroke="#151515"/>
+                          <rect x="-0.5" y="0.5" width="5" height="9" transform="matrix(-1 0 0 1 12.3638 19)" stroke="#151515"/>
+                          <rect x="-0.5" y="0.5" width="5" height="9" transform="matrix(-1 0 0 1 20.3638 19)" stroke="#151515"/>
+                          <rect x="-0.5" y="0.5" width="5" height="9" transform="matrix(-1 0 0 1 28.3638 19)" stroke="#151515"/>
+                        </svg>
+                      </div>
+                      <div class="category__grid" data-grid="3">
+                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="36" height="36" fill="white"/>
+                          <rect x="-0.5" y="0.5" width="9" height="21" transform="matrix(-1 0 0 1 16.3638 7)" stroke="#151515" />
+                          <rect x="-0.5" y="0.5" width="9" height="21" transform="matrix(-1 0 0 1 28.3638 7)" stroke="#151515" />
+                        </svg>
+                      </div>
+                    </div>
+                    <select name="popular">
+                      <option value="">Популярное</option>
+                      <option value="">Дешевле</option>
+                      <option value="">Дороже</option>
+                      <option value="">Новинки</option>
+                      <option value="">Выгодные</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="category__cards product__cards grid-1">
+                  <div class="category__card product-card card">
+                    <a class="product-card__img" href="product.html">
+                      <img src="@img/image-4.jpg" alt="">
+                      <div class="product-card__plate unavailable">Нет в наличии</div>
+                    </a>
+                    <div class="product-card__bottom">
+                      <a class="product-card__caption" href="product.html">Название товара</a>
+                      <div class="product-card__price">55 000 ₸</div>
+                      <div class="product-card__favorite">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="#151515"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="category__card product-card card">
+                    <a class="product-card__img" href="product.html">
+                      <img src="@img/image-3.jpg" alt="">
+                      <div class="product-card__plate">NEW</div>
+                    </a>
+                    <div class="product-card__bottom">
+                      <a class="product-card__caption" href="product.html">Название товара</a>
+                      <div class="product-card__price">55 000 ₸</div>
+                      <div class="product-card__favorite active">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="#151515"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="category__card product-card card">
+                    <a class="product-card__img" href="product.html">
+                      <img src="@img/image-1.jpg" alt="">
+                      <div class="product-card__plate">NEW</div>
+                    </a>
+                    <div class="product-card__bottom">
+                      <a class="product-card__caption" href="product.html">Название товара</a>
+                      <div class="product-card__price">55 000 ₸</div>
+                      <div class="product-card__favorite">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="#151515"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="category__card product-card card">
+                    <a class="product-card__img" href="product.html">
+                      <img src="@img/image-5.jpg" alt="">
+                      <div class="product-card__plate">NEW</div>
+                    </a>
+                    <div class="product-card__bottom">
+                      <a class="product-card__caption" href="product.html">Название товара</a>
+                      <div class="product-card__price">55 000 ₸</div>
+                      <div class="product-card__favorite">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="#151515"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="category__card product-card card">
+                    <a class="product-card__img" href="product.html">
+                      <img src="@img/image-6.jpg" alt="">
+                      <div class="product-card__plate">NEW</div>
+                    </a>
+                    <div class="product-card__bottom">
+                      <a class="product-card__caption" href="product.html">Название товара</a>
+                      <div class="product-card__price">55 000 ₸</div>
+                      <div class="product-card__favorite">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="#151515"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="category__card product-card card">
+                    <a class="product-card__img" href="product.html">
+                      <img src="@img/image-2.jpg" alt="">
+                      <div class="product-card__plate">NEW</div>
+                    </a>
+                    <div class="product-card__bottom">
+                      <a class="product-card__caption" href="product.html">Название товара</a>
+                      <div class="product-card__price">55 000 ₸</div>
+                      <div class="product-card__favorite">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="#151515"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="category__card product-card card">
+                    <a class="product-card__img" href="product.html">
+                      <img src="@img/image-7.jpg" alt="">
+                      <div class="product-card__plate">NEW</div>
+                    </a>
+                    <div class="product-card__bottom">
+                      <a class="product-card__caption" href="product.html">Название товара</a>
+                      <div class="product-card__price">55 000 ₸</div>
+                      <div class="product-card__favorite">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="#151515"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="category__card product-card card">
+                    <a class="product-card__img" href="product.html">
+                      <img src="@img/image-8.jpg" alt="">
+                      <div class="product-card__plate">NEW</div>
+                    </a>
+                    <div class="product-card__bottom">
+                      <a class="product-card__caption" href="product.html">Название товара</a>
+                      <div class="product-card__price">55 000 ₸</div>
+                      <div class="product-card__favorite">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="#151515"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="category__card product-card card">
+                    <a class="product-card__img" href="product.html">
+                      <img src="@img/image-9.jpg" alt="">
+                      <div class="product-card__plate">NEW</div>
+                    </a>
+                    <div class="product-card__bottom">
+                      <a class="product-card__caption" href="product.html">Название товара</a>
+                      <div class="product-card__price">55 000 ₸</div>
+                      <div class="product-card__favorite">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="#151515"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="faq section-pad-bottom section-hidden">
+            <div class="container">
+              <div class="faq__container">
+                <div class="faq__accordion">
+                  <div class="faq__item">
+                    <button class="faq__header text-l">
+                      Купить дублёнки и кожаные куртки COAT в Астане и с доставкой по всему миру
+                      <span class="icon">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5 8L11 13.5L16.5 8" stroke="black"/>
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="faq__content">
+                      <div class="faq__txt">
+                        <p>COAT — премиальная верхняя одежда из натурального меха и кожи. В нашем каталоге представлены дублёнки, кожаные куртки, косухи, бомберы, пиджаки и плащи. Каждая модель создаётся вручную из тщательно отобранных материалов: Toscana, Merino, Curly, Teddy и других. Мы предлагаем широкий выбор силуэтов, оттенков и фасонов, чтобы каждая вещь подчеркивала индивидуальность владельца.</p>
+                        <p>Дублёнки и кожаные изделия COAT можно купить в Астане и с доставкой по всему Казахстану, России, Беларуси, Кыргызстану, Европе и США. Для клиентов доступен не только готовый ассортимент, но и индивидуальный пошив: вы сами выбираете фасон, длину, материал и детали будущего изделия. Это позволяет создать одежду, которая идеально сидит по фигуре и остаётся актуальной многие годы.</p>
+                        <p>COAT сочетает мировые fashion-стандарты с локальными особенностями. Наши коллекции объединяют элегантность, комфорт и долговечность. Мы делаем ставку на ручное производство и внимание к каждой детали, чтобы каждая дублёнка или кожаная куртка стала частью вашей истории.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+        @@include('html/footer.html') 
+      </div>
+    </div>
+
+    
+    @@include('html/foot.html')
+  </body>
+</html>

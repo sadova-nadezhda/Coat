@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "Корзина" })
+  <body>
+    
+
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        @@include('html/header.html')
+        <main>
+          <section class="basket section-pad-bottom section-hidden">
+            <div class="container">
+              <div class="basket__container">
+                <div class="basket__top">
+                  <h1 class="basket__title text-center text-up">Корзина</h1>
+                  <span>2 товара</span>
+                </div>
+                <div class="basket__wrap">
+                  <div class="basket__group"></div>
+                  <div class="basket__row">
+                    <div class="basket__cards">
+                      <div class="basket__card">
+                        <input type="checkbox" name="check" id="check-1">
+                        <label class="basket__label" for="check-1">
+                          <div class="basket__img">
+                            <img src="@img/image-5.jpg" alt="">
+                          </div>
+                          <div class="basket__col basket-info">
+                            <div class="basket-info__top">
+                              <div class="basket-info__caption">Дублёнка</div>
+                              <div class="basket-info__price">
+                                <span class="price">35 000 ₸</span>
+                                <span class="old-price">55 000 ₸</span>
+                              </div>
+                              <div class="basket-info__sale">36%</div>
+                            </div>
+                            <ul class="basket-info__list">
+                              <li class="basket-info__item">мех Toscana, кожа</li>
+                              <li class="basket-info__item">Зима</li>
+                              <li class="basket-info__item">95 см</li>
+                              <li class="basket-info__item">Oversize</li>
+                              <li class="basket-info__item">S</li>
+                            </ul>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="basket__card">
+                        <input type="checkbox" name="check" id="check-2">
+                        <label class="basket__label" for="check-2">
+                          <div class="basket__img">
+                            <img src="@img/image-5.jpg" alt="">
+                          </div>
+                          <div class="basket__col basket-info">
+                            <div class="basket-info__top">
+                              <div class="basket-info__caption">Дублёнка</div>
+                              <div class="basket-info__price">
+                                <span class="price">35 000 ₸</span>
+                                <span class="old-price">55 000 ₸</span>
+                              </div>
+                              <div class="basket-info__sale">36%</div>
+                            </div>
+                            <ul class="basket-info__list">
+                              <li class="basket-info__item">мех Toscana, кожа</li>
+                              <li class="basket-info__item">Зима</li>
+                              <li class="basket-info__item">95 см</li>
+                              <li class="basket-info__item">Oversize</li>
+                              <li class="basket-info__item">S</li>
+                            </ul>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="basket__right basket-result">
+                      <div class="basket-result__caption">Сумма заказа</div>
+                      <div class="basket-result__sum">
+                        <span>2 товар(а)</span>
+                        <div class="basket-result__price">110 000 ₸</div>
+                      </div>
+                      <div class="basket-result__sale">
+                        <span>Скидка</span>
+                        <div class="basket-result__price">51 000 ₸</div>
+                      </div>
+                      <div class="basket-result__total">
+                        <span>Итого</span>
+                        <div class="basket-result__price">59 000 ₸</div>
+                      </div>
+                      <div class="basket-result__bottom">
+                        <div class="basket-result__note">*Итоговая цена без учета доставки</div>
+                        <button class="basket-result__button button button-dark text-up">Оформить заказ</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="product-viewed section-pad-bottom section-hidden">
+            <div class="container">
+              <div class="product-viewed__container">
+                <h2 class="product-viewed__title title-indent text-up">Просмотренные товары</h2>
+                <div class="product-viewed__cards grid-4">
+                  <div class="product-similar__card product-card card">
+                    <a class="product-card__img" href="product.html">
+                      <img src="@img/image-4.jpg" alt="">
+                      <div class="product-card__plate">NEW</div>
+                    </a>
+                    <div class="product-card__bottom">
+                      <a class="product-card__caption" href="product.html">Название товара</a>
+                      <div class="product-card__price">55 000 ₸</div>
+                      <div class="product-card__favorite">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="#151515"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-similar__card product-card card">
+                    <a class="product-card__img" href="product.html">
+                      <img src="@img/image-4.jpg" alt="">
+                      <div class="product-card__plate">NEW</div>
+                    </a>
+                    <div class="product-card__bottom">
+                      <a class="product-card__caption" href="product.html">Название товара</a>
+                      <div class="product-card__price">55 000 ₸</div>
+                      <div class="product-card__favorite">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="#151515"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-similar__card product-card card">
+                    <a class="product-card__img" href="product.html">
+                      <img src="@img/image-4.jpg" alt="">
+                      <div class="product-card__plate">NEW</div>
+                    </a>
+                    <div class="product-card__bottom">
+                      <a class="product-card__caption" href="product.html">Название товара</a>
+                      <div class="product-card__price">55 000 ₸</div>
+                      <div class="product-card__favorite">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="#151515"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-similar__card product-card card">
+                    <a class="product-card__img" href="product.html">
+                      <img src="@img/image-4.jpg" alt="">
+                      <div class="product-card__plate">NEW</div>
+                    </a>
+                    <div class="product-card__bottom">
+                      <a class="product-card__caption" href="product.html">Название товара</a>
+                      <div class="product-card__price">55 000 ₸</div>
+                      <div class="product-card__favorite">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="#151515"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+        @@include('html/footer.html') 
+      </div>
+    </div>
+
+    
+    @@include('html/foot.html')
+  </body>
+</html>

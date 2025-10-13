@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "Дублёнка" })
+  <body>
+    
+
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        @@include('html/header.html')
+        <main>
+          <section class="product section-pad-bottom section-hidden">
+            <div class="container">
+              <div class="product__container">
+                <div class="product__col product__sliders">
+                  <div class="swiper js-prod-nav-slider product__slider-nav">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="@img/image-1.jpg" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="@img/image-1.jpg" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="@img/image-1.jpg" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="@img/image-1.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper js-prod-slider product__slider">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="@img/image-1.jpg" alt="" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="@img/image-1.jpg" alt="" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="@img/image-1.jpg" alt="" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="@img/image-1.jpg" alt="" />
+                      </div>
+                    </div>
+                    <div class="swiper-button-next prod-button-next">
+                      <svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.649902 10.7727L0.649902 0.772705L5.6499 5.77271L0.649902 10.7727Z" fill="#1D1B20"/>
+                      </svg>
+                    </div>
+                    <div class="swiper-button-prev prod-button-prev">
+                      <svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.5 10.7727L5.5 0.772705L0.5 5.77271L5.5 10.7727Z" fill="#1D1B20"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="product__col product__info">
+                  <div class="product__top">
+                    <div class="product__header">
+                      <div class="product__group">
+                        <h1 class="product__title">Дублёнка</h1>
+                        <div class="product__plate">Скидка</div>
+                      </div>
+                      <div class="product__price text-l">
+                        <div class="price">35 000 ₸</div>
+                        <div class="old-price">55 000 ₸</div>
+                      </div>
+                    </div>
+                    <div class="product__box">
+                      <div class="product__icon product__compare">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5 6.52498L9.66934 2V22H8.25509V5.34338L5.98254 7.5457L5 6.52498ZM15.7449 18.6566V2H14.3307V22L19 17.475L18.0175 16.4543L15.7449 18.6566Z" fill="#151515"/>
+                        </svg>
+                      </div>
+                      <div class="product__icon product__favorite">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="#151515"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product__size">
+                    <span>Размер</span>
+                    <div class="product__fields">
+                      <input type="radio" name="product-size" id="size-xs" value="xs" checked>
+                      <label for="size-xs">xs</label>
+                      <input type="radio" name="product-size" id="size-s" value="s">
+                      <label for="size-s">s</label>
+                      <input type="radio" name="product-size" id="size-m" value="m">
+                      <label for="size-m">m</label>
+                      <input type="radio" name="product-size" id="size-l" value="l">
+                      <label for="size-l">l</label>
+                      <input type="radio" name="product-size" id="size-xl" value="xl" disabled>
+                      <label for="size-xl">xl</label>
+                    </div>
+                  </div>
+                  <div class="product__edit">
+                    Для изменения вида и оттенка сырья, изменения длины и других деталей переходите в раздел <a href="">Индивидуальный пошив.</a>
+                  </div>
+                  <div class="product__tabs">
+                    <ul data-tabs class="tabs">
+                      <li><a data-tabby-default href="#tab-1">Характеристики</a></li>
+                      <li><a href="#tab-2">Описание</a></li>
+                      <li><a href="#tab-3">Таблица размеров</a></li>
+                      <li><a href="#tab-4">Оплата</a></li>
+                      <li><a href="#tab-5">Доставка</a></li>
+                    </ul>
+
+                    <div id="tab-1">
+                      <div class="product__list">
+                        <div class="product__item">
+                          <div>Материал:</div>
+                          <div>мех Toscana, кожа</div>
+                        </div>
+                        <div class="product__item">
+                          <div>Сезон:</div>
+                          <div>Зима</div>
+                        </div>
+                        <div class="product__item">
+                          <div>Силуэт:</div>
+                          <div>Oversize</div>
+                        </div>
+                        <div class="product__item">
+                          <div>Тип воротника:</div>
+                          <div>95 см</div>
+                        </div>
+                        <div class="product__item">
+                          <div>Длина:</div>
+                          <div>95 см</div>
+                        </div>
+                        <div class="product__item">
+                          <div>Особенности:</div>
+                          <div>Двухстороннее изделие</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="tab-2">
+                      <div class="product__desc">
+                        <h5>Выберите модель</h5>
+                        <p>Ознакомьтесь с ассортиментом и выберите подходящую вещь в каталоге.</p>
+                        <h5>Добавьте в корзину</h5>
+                        <p>Укажите размер и цвет (если доступны), затем нажмите кнопку «В корзину».</p>
+                        <h5>Оформите заказ</h5>
+                        <p>Перейдите в корзину, введите свои контактные данные и адрес доставки.</p>
+                        <h5>Подтвердите покупку</h5>
+                        <p>Выберите удобный способ оплаты и завершите оформление.</p>
+                        <h5>Получите заказ</h5>
+                        <p>Мы отправим вашу покупку в выбранный регион и уведомим вас о доставке.</p>
+                      </div>
+                    </div>
+                    <div id="tab-3">
+                      <div class="product__txt">Найдите в таблице параметры, близкие к вашим, чтобы определить свой размер.</div>
+                      <div class="product__table">
+                        <table>
+                          <thead>
+                            <tr>
+                              <th>INT</th>
+                              <th>RU</th>
+                              <th>EU</th>
+                              <th>Обхват груди, см</th>
+                              <th>Обхват бедер, см</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>XS</td>
+                              <td>40</td>
+                              <td>34</td>
+                              <td>80-85</td>
+                              <td>88</td>
+                            </tr>
+                            <tr>
+                              <td>S</td>
+                              <td>42</td>
+                              <td>36</td>
+                              <td>86-90</td>
+                              <td>88</td>
+                            </tr>
+                            <tr>
+                              <td>M</td>
+                              <td>44</td>
+                              <td>38</td>
+                              <td>90-96</td>
+                              <td>88</td>
+                            </tr>
+                            <tr>
+                              <td>L</td>
+                              <td>46</td>
+                              <td>40</td>
+                              <td>96-102</td>
+                              <td>88</td>
+                            </tr>
+                            <tr>
+                              <td>XL</td>
+                              <td>48-50</td>
+                              <td>42-44</td>
+                              <td>102-110</td>
+                              <td>88</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="product__txt product__txt_grey">*Для точности измерений используйте сантиметровую ленту, снимая мерки поверх белья и легкой одежды.</div>
+                    </div>
+                    <div id="tab-4">
+                      <div class="product__desc">
+                        <h5>Выберите модель</h5>
+                        <p>Ознакомьтесь с ассортиментом и выберите подходящую вещь в каталоге.</p>
+                        <h5>Добавьте в корзину</h5>
+                        <p>Укажите размер и цвет (если доступны), затем нажмите кнопку «В корзину».</p>
+                        <h5>Оформите заказ</h5>
+                        <p>Перейдите в корзину, введите свои контактные данные и адрес доставки.</p>
+                        <h5>Подтвердите покупку</h5>
+                        <p>Выберите удобный способ оплаты и завершите оформление.</p>
+                        <h5>Получите заказ</h5>
+                        <p>Мы отправим вашу покупку в выбранный регион и уведомим вас о доставке.</p>
+                      </div>
+                    </div>
+                    <div id="tab-5">
+                      <div class="product__desc">
+                        <h5>Выберите модель</h5>
+                        <p>Ознакомьтесь с ассортиментом и выберите подходящую вещь в каталоге.</p>
+                        <h5>Добавьте в корзину</h5>
+                        <p>Укажите размер и цвет (если доступны), затем нажмите кнопку «В корзину».</p>
+                        <ul>
+                          <li>размер 1</li>
+                          <li>размер 2</li>
+                          <li>размер 3</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product__bottom">
+                    <div class="product__buttons">
+                      <button class="product__button button button-border text-up">Добавить в корзину</button>
+                      <button class="product__button button button-dark text-up modal-btn">Купить в один клик</button>
+                    </div>
+                    <div class="product__note">
+                      <span>Товар добавлен в корзину</span>
+                      <a href="">Перейти</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="product-similar section-pad-bottom section-hidden">
+            <div class="container">
+              <div class="product-similar__container">
+                <h2 class="product-similar__title title-indent text-up">Похожие товары</h2>
+                <div class="product-similar__cards grid-4">
+                  <div class="product-similar__card product-card card">
+                    <a class="product-card__img" href="product.html">
+                      <img src="@img/image-4.jpg" alt="">
+                      <div class="product-card__plate">NEW</div>
+                    </a>
+                    <div class="product-card__bottom">
+                      <a class="product-card__caption" href="product.html">Название товара</a>
+                      <div class="product-card__price">55 000 ₸</div>
+                      <div class="product-card__favorite">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="#151515"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-similar__card product-card card">
+                    <a class="product-card__img" href="product.html">
+                      <img src="@img/image-4.jpg" alt="">
+                      <div class="product-card__plate">NEW</div>
+                    </a>
+                    <div class="product-card__bottom">
+                      <a class="product-card__caption" href="product.html">Название товара</a>
+                      <div class="product-card__price">55 000 ₸</div>
+                      <div class="product-card__favorite">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="#151515"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-similar__card product-card card">
+                    <a class="product-card__img" href="product.html">
+                      <img src="@img/image-4.jpg" alt="">
+                      <div class="product-card__plate">NEW</div>
+                    </a>
+                    <div class="product-card__bottom">
+                      <a class="product-card__caption" href="product.html">Название товара</a>
+                      <div class="product-card__price">55 000 ₸</div>
+                      <div class="product-card__favorite">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="#151515"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-similar__card product-card card">
+                    <a class="product-card__img" href="product.html">
+                      <img src="@img/image-4.jpg" alt="">
+                      <div class="product-card__plate">NEW</div>
+                    </a>
+                    <div class="product-card__bottom">
+                      <a class="product-card__caption" href="product.html">Название товара</a>
+                      <div class="product-card__price">55 000 ₸</div>
+                      <div class="product-card__favorite">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="#151515"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="product-viewed section-pad-bottom section-hidden">
+            <div class="container">
+              <div class="product-viewed__container">
+                <h2 class="product-viewed__title title-indent text-up">Просмотренные товары</h2>
+                <div class="product-viewed__cards grid-4">
+                  <div class="product-similar__card product-card card">
+                    <a class="product-card__img" href="product.html">
+                      <img src="@img/image-4.jpg" alt="">
+                      <div class="product-card__plate">NEW</div>
+                    </a>
+                    <div class="product-card__bottom">
+                      <a class="product-card__caption" href="product.html">Название товара</a>
+                      <div class="product-card__price">55 000 ₸</div>
+                      <div class="product-card__favorite">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="#151515"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-similar__card product-card card">
+                    <a class="product-card__img" href="product.html">
+                      <img src="@img/image-4.jpg" alt="">
+                      <div class="product-card__plate">NEW</div>
+                    </a>
+                    <div class="product-card__bottom">
+                      <a class="product-card__caption" href="product.html">Название товара</a>
+                      <div class="product-card__price">55 000 ₸</div>
+                      <div class="product-card__favorite">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="#151515"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-similar__card product-card card">
+                    <a class="product-card__img" href="product.html">
+                      <img src="@img/image-4.jpg" alt="">
+                      <div class="product-card__plate">NEW</div>
+                    </a>
+                    <div class="product-card__bottom">
+                      <a class="product-card__caption" href="product.html">Название товара</a>
+                      <div class="product-card__price">55 000 ₸</div>
+                      <div class="product-card__favorite">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="#151515"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-similar__card product-card card">
+                    <a class="product-card__img" href="product.html">
+                      <img src="@img/image-4.jpg" alt="">
+                      <div class="product-card__plate">NEW</div>
+                    </a>
+                    <div class="product-card__bottom">
+                      <a class="product-card__caption" href="product.html">Название товара</a>
+                      <div class="product-card__price">55 000 ₸</div>
+                      <div class="product-card__favorite">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="#151515"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+        @@include('html/footer.html') 
+      </div>
+    </div>
+
+    
+    @@include('html/foot.html')
+  </body>
+</html>

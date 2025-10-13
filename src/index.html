@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "Главная" })
+  <body>
+    
+
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        @@include('html/header.html')
+        <main>
+          <section class="main-hero section-hidden">
+            <div class="main-hero__slider">
+              <div class="swiper heroSwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide main-hero__slide">
+                    <picture class="main-hero__img">
+                      <source srcset="@img/main-hero-mb.png" media="(max-width: 767px)">
+                      <img src="@img/main-hero.png" alt="">
+                    </picture>
+                    <h1 class="main-hero__title l text-up">Материалы, рожденные природой.</h1>
+                    <div class="main-hero__desc text-m text-up">Мы возвращаем уважение к природе, создавая качественные вещи из того, что могло бы быть утилизировано.</div>
+                    <a href="" class="main-hero__button button button-border_light text-up">В каталог</a>
+                  </div>
+                  <div class="swiper-slide main-hero__slide">
+                    <picture class="main-hero__img">
+                      <source srcset="@img/main-hero-mb.png" media="(max-width: 767px)">
+                      <img src="@img/main-hero.png" alt="">
+                    </picture>
+                    <h2 class="main-hero__title l text-up">Материалы, рожденные природой.</h2>
+                    <div class="main-hero__desc text-m text-up">Мы возвращаем уважение к природе, создавая качественные вещи из того, что могло бы быть утилизировано.</div>
+                    <a href="" class="main-hero__button button button-border_light text-up">В каталог</a>
+                  </div>
+                  <div class="swiper-slide main-hero__slide">
+                    <picture class="main-hero__img">
+                      <source srcset="@img/main-hero-mb.png" media="(max-width: 767px)">
+                      <img src="@img/main-hero.png" alt="">
+                    </picture>
+                    <h2 class="main-hero__title l text-up">Материалы, рожденные природой.</h2>
+                    <div class="main-hero__desc text-m text-up">Мы возвращаем уважение к природе, создавая качественные вещи из того, что могло бы быть утилизировано.</div>
+                    <a href="" class="main-hero__button button button-border_light text-up">В каталог</a>
+                  </div>
+                </div>
+                <div class="swiper-pagination hero-pagination"></div>
+              </div>
+            </div>
+          </section>
+          <section class="main-catalog section-hidden">
+            <div class="container">
+              <div class="main-catalog__container">
+                <div class="main-catalog__cards">
+                  <a class="main-catalog__card" href="">
+                    <img src="@img/main-catalog-1.jpg" alt="">
+                    <div class="main-catalog__caption text-center text-up">Дублёнки и шубы</div>
+                    <div class="main-catalog__button button button-border_light text-up">Перейти</div>
+                  </a>
+                  <a class="main-catalog__card" href="">
+                    <img src="@img/main-catalog-2.jpg" alt="">
+                    <div class="main-catalog__caption text-center text-up">Кожаные куртки</div>
+                    <div class="main-catalog__button button button-border_light text-up">Перейти</div>
+                  </a>
+                  <a class="main-catalog__card" href="">
+                    <img src="@img/main-catalog-3.jpg" alt="">
+                    <div class="main-catalog__caption text-center text-up">Мужская коллекция</div>
+                    <div class="main-catalog__button button button-border_light text-up">Перейти</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="main-popular section-pad section-hidden">
+            <div class="container">
+              <div class="main-popular__container">
+                <h2 class="main-popular__title title-indent text-center text-up">Популярное</h2>
+                <div class="main-popular__cards product__cards grid-1">
+                  <div class="main-popular__card product-card card">
+                    <a class="product-card__img" href="product.html">
+                      <img src="@img/image-4.jpg" alt="">
+                      <div class="product-card__plate">NEW</div>
+                    </a>
+                    <div class="product-card__bottom">
+                      <a class="product-card__caption" href="product.html">Название товара</a>
+                      <div class="product-card__price">55 000 ₸</div>
+                      <div class="product-card__favorite">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="#151515"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main-popular__card product-card card">
+                    <a class="product-card__img" href="product.html">
+                      <img src="@img/image-3.jpg" alt="">
+                      <div class="product-card__plate">NEW</div>
+                    </a>
+                    <div class="product-card__bottom">
+                      <a class="product-card__caption" href="product.html">Название товара</a>
+                      <div class="product-card__price">55 000 ₸</div>
+                      <div class="product-card__favorite active">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="#151515"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main-popular__card product-card card">
+                    <a class="product-card__img" href="product.html">
+                      <img src="@img/image-1.jpg" alt="">
+                      <div class="product-card__plate">NEW</div>
+                    </a>
+                    <div class="product-card__bottom">
+                      <a class="product-card__caption" href="product.html">Название товара</a>
+                      <div class="product-card__price">55 000 ₸</div>
+                      <div class="product-card__favorite">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="#151515"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main-popular__card product-card card">
+                    <a class="product-card__img" href="product.html">
+                      <img src="@img/image-5.jpg" alt="">
+                      <div class="product-card__plate">NEW</div>
+                    </a>
+                    <div class="product-card__bottom">
+                      <a class="product-card__caption" href="product.html">Название товара</a>
+                      <div class="product-card__price">55 000 ₸</div>
+                      <div class="product-card__favorite">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="#151515"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main-popular__card product-card card">
+                    <a class="product-card__img" href="product.html">
+                      <img src="@img/image-6.jpg" alt="">
+                      <div class="product-card__plate">NEW</div>
+                    </a>
+                    <div class="product-card__bottom">
+                      <a class="product-card__caption" href="product.html">Название товара</a>
+                      <div class="product-card__price">55 000 ₸</div>
+                      <div class="product-card__favorite">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="#151515"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main-popular__card product-card card">
+                    <a class="product-card__img" href="product.html">
+                      <img src="@img/image-2.jpg" alt="">
+                      <div class="product-card__plate">NEW</div>
+                    </a>
+                    <div class="product-card__bottom">
+                      <a class="product-card__caption" href="product.html">Название товара</a>
+                      <div class="product-card__price">55 000 ₸</div>
+                      <div class="product-card__favorite">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="#151515"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main-popular__card product-card card">
+                    <a class="product-card__img" href="product.html">
+                      <img src="@img/image-7.jpg" alt="">
+                      <div class="product-card__plate">NEW</div>
+                    </a>
+                    <div class="product-card__bottom">
+                      <a class="product-card__caption" href="product.html">Название товара</a>
+                      <div class="product-card__price">55 000 ₸</div>
+                      <div class="product-card__favorite">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="#151515"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main-popular__card product-card card">
+                    <a class="product-card__img" href="product.html">
+                      <img src="@img/image-8.jpg" alt="">
+                      <div class="product-card__plate">NEW</div>
+                    </a>
+                    <div class="product-card__bottom">
+                      <a class="product-card__caption" href="product.html">Название товара</a>
+                      <div class="product-card__price">55 000 ₸</div>
+                      <div class="product-card__favorite">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="#151515"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main-popular__card product-card card">
+                    <a class="product-card__img" href="product.html">
+                      <img src="@img/image-9.jpg" alt="">
+                      <div class="product-card__plate">NEW</div>
+                    </a>
+                    <div class="product-card__bottom">
+                      <a class="product-card__caption" href="product.html">Название товара</a>
+                      <div class="product-card__price">55 000 ₸</div>
+                      <div class="product-card__favorite">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="#151515"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a href="" class="main-popular__button button button-border text-up">Перейти в каталог</a>
+              </div>
+            </div>
+          </section>
+          <section class="main-sewing section-pad-bottom section-hidden">
+            <div class="container">
+              <div class="main-sewing__container">
+                <picture class="main-sewing__img">
+                  <source srcset="@img/main-sewing-mb.png" media="(max-width: 767px)">
+                  <img src="@img/main-sewing.png" alt="">
+                </picture>
+                <h2 class="main-sewing__title title-display text-center text-up">Индивидуальный пошив</h2>
+                <div class="main-sewing__desc text-l text-center text-up">Изделие будет именно таким, каким вы его хотите.</div>
+                <a href="" class="main-sewing__button button button-light text-up">Создать свою модель</a>
+              </div>
+            </div>
+          </section>
+          <section class="main-news section-pad-bottom section-hidden">
+            <div class="container">
+              <div class="main-news__container">
+                <h2 class="main-news__title title-indent text-center text-up">Новости</h2>
+                <div class="main-news__cards">
+                  <a class="main-news__card news-card" href="news-inner.html">
+                    <div class="news-card__img"><img src="@img/image-1.jpg" alt=""></div>
+                    <div class="news-card__caption text-l">Запуск новой коллекции дублёнок FW25</div>
+                    <div class="news-card__date">30 августа 2025</div>
+                  </a>
+                  <a class="main-news__card news-card" href="news-inner.html">
+                    <div class="news-card__img"><img src="@img/image-2.jpg" alt=""></div>
+                    <div class="news-card__caption text-l">Запуск новой коллекции дублёнок FW25</div>
+                    <div class="news-card__date">30 августа 2025</div>
+                  </a>
+                  <a class="main-news__card news-card" href="news-inner.html">
+                    <div class="news-card__img"><img src="@img/image-3.jpg" alt=""></div>
+                    <div class="news-card__caption text-l">Запуск новой коллекции дублёнок FW25</div>
+                    <div class="news-card__date">30 августа 2025</div>
+                  </a>
+                  <a class="main-news__card news-card" href="news-inner.html">
+                    <div class="news-card__img"><img src="@img/image-4.jpg" alt=""></div>
+                    <div class="news-card__caption text-l">Запуск новой коллекции дублёнок FW25</div>
+                    <div class="news-card__date">30 августа 2025</div>
+                  </a>
+                </div>
+                <a href="" class="main-news__button button button-border text-up">Показать все новости</a>
+              </div>
+            </div>
+          </section>
+        </main>
+        @@include('html/footer.html') 
+      </div>
+    </div>
+
+    
+    @@include('html/foot.html')
+  </body>
+</html>
