@@ -2731,6 +2731,10 @@ h6 {
   will-change: transform;
 }
 
+.news {
+  padding-top: calc(24 * var(--width-multiplier));
+}
+
 .news-card {
   padding: calc(12 * var(--width-multiplier));
   border: calc(1 * var(--width-multiplier)) solid rgba(21, 21, 21, 0.1);
@@ -2768,6 +2772,124 @@ h6 {
 
 .news-card:hover .news-card__img img {
   transform: scale(1.05);
+}
+
+.news-inner {
+  padding-top: calc(24 * var(--width-multiplier));
+}
+
+.news-inner__meta {
+  margin-bottom: calc(8 * var(--width-multiplier));
+  color: rgba(21, 21, 21, 0.4);
+  text-align: center;
+}
+
+.news-inner__title {
+  max-width: calc(692 * var(--width-multiplier));
+  margin: 0 auto;
+  margin-bottom: calc(24 * var(--width-multiplier));
+}
+
+.news-inner__img {
+  max-width: calc(926 * var(--width-multiplier));
+  width: 100%;
+  height: calc(487 * var(--width-multiplier));
+  margin: 0 auto;
+  margin-bottom: calc(24 * var(--width-multiplier));
+}
+
+.news-inner__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 30%;
+     object-position: 50% 30%;
+}
+
+.news-inner__desc {
+  max-width: calc(700 * var(--width-multiplier));
+  margin: 0 auto;
+}
+
+.news-inner__desc p,
+.news-inner__desc ol,
+.news-inner__desc ul {
+  margin-bottom: calc(24 * var(--width-multiplier));
+}
+
+.news-inner__desc h1,
+.news-inner__desc h2,
+.news-inner__desc h3,
+.news-inner__desc h4,
+.news-inner__desc h5,
+.news-inner__desc h6 {
+  margin-bottom: calc(8 * var(--width-multiplier));
+  font-weight: 700;
+}
+
+.news-inner__desc > * {
+  margin-bottom: 0;
+}
+
+.collections {
+  padding-top: calc(24 * var(--width-multiplier));
+}
+
+.collections__wrap {
+  display: flex;
+  flex-direction: column;
+  gap: calc(24 * var(--width-multiplier));
+}
+
+.collections__row {
+  display: flex;
+  flex-direction: column;
+  gap: calc(12 * var(--width-multiplier));
+  padding: calc(12 * var(--width-multiplier));
+  border: calc(1 * var(--width-multiplier)) solid rgba(21, 21, 21, 0.1);
+}
+
+.collections__images {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: calc(8 * var(--width-multiplier));
+}
+
+.collections__images img {
+  height: calc(540 * var(--width-multiplier));
+  width: 100%;
+  padding: calc(12 * var(--width-multiplier));
+  border: calc(1 * var(--width-multiplier)) solid rgba(21, 21, 21, 0.1);
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 30%;
+     object-position: 50% 30%;
+}
+
+.collections__images img:first-child {
+  grid-column: span 2;
+}
+
+.collections__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: calc(8 * var(--width-multiplier));
+}
+
+.collections__caption {
+  font-size: calc(20 * var(--width-multiplier));
+  font-weight: 600;
+  line-height: 1.1em;
+}
+
+.collections__link {
+  transition: color 0.3s ease-in-out;
+}
+
+.collections__link:hover {
+  color: var(--blue, #1C5BB4);
 }
 
 .faq__accordion {
@@ -3289,6 +3411,30 @@ h6 {
     height: calc(250 * var(--width-multiplier));
   }
 
+  .news-inner__img {
+    height: calc(400 * var(--width-multiplier));
+  }
+
+  .collections__images {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .collections__images img {
+    height: calc(440 * var(--width-multiplier));
+  }
+
+  .collections__images img:first-child {
+    grid-column: unset;
+  }
+
+  .collections__images img:last-child {
+    display: none;
+  }
+
+  .collections__caption {
+    font-size: calc(18 * var(--width-multiplier));
+  }
+
   .thanks__box {
     padding: calc(24 * var(--width-multiplier));
   }
@@ -3767,6 +3913,37 @@ h6 {
 
   .news-card__date {
     font-size: calc(12 * var(--width-multiplier));
+  }
+
+  .collections__wrap {
+    gap: 0;
+  }
+
+  .collections__images {
+    grid-template-columns: 1fr;
+  }
+
+  .collections__images img {
+    display: none;
+    padding: 0;
+    border: 0;
+  }
+
+  .collections__images img:first-child {
+    display: block;
+  }
+
+  .collections__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .collections__caption {
+    font-size: calc(16 * var(--width-multiplier));
+  }
+
+  .collections__link {
+    font-size: calc(14 * var(--width-multiplier));
   }
 
   .thanks__container {
