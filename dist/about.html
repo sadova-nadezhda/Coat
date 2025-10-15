@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>О компании</title>
   <link rel="shortcut icon" href="img/favicon.png" type="image/png">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20251013181446" />
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/cferdinandi/tabby/dist/css/tabby-ui.min.css?_v=20251013181446">
-  <link rel="stylesheet" href="css/style.css?_v=20251013181446" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20251015183418" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/cferdinandi/tabby/dist/css/tabby-ui.min.css?_v=20251015183418">
+  <link rel="stylesheet" href="css/style.css?_v=20251015183418" />
 </head>
 
   <body>
@@ -51,27 +51,35 @@
             <input type="text" value="" name="search" id="search" class="header__search">
         </form>
         <div class="header__group">
-          <a class="header__icon header__compare" href="">
+          <a class="header__icon header__compare" href="compare.html">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M5 6.52498L9.66934 2V22H8.25509V5.34338L5.98254 7.5457L5 6.52498ZM15.7449 18.6566V2H14.3307V22L19 17.475L18.0175 16.4543L15.7449 18.6566Z" fill="#151515"/>
             </svg>
           </a>
-          <a class="header__icon header__favorites" href="">
+          <a class="header__icon header__favorites" href="favorite.html">
             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="black"/>
             </svg>
           </a>
-          <a class="header__icon header__basket" href="">
+          <a class="header__icon header__basket" href="basket.html">
             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M7.75 8.23809C7.75 8.23809 6.5772 1 11.5 1C16.4228 1 15.25 8.23809 15.25 8.23809M4 7.33333H19V20H4V7.33333Z" stroke="black"/>
             </svg>
           </a>
-          <a class="header__icon header__profile" href="">
+          <!-- если не авторизован -->
+          <a class="header__icon header__profile modal-btn" data-type="login">
             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M15.2903 5.07195C15.2903 7.32082 13.4706 9.14389 11.2258 9.14389C8.98104 9.14389 7.16129 7.32082 7.16129 5.07195C7.16129 2.82307 8.98104 1 11.2258 1C13.4706 1 15.2903 2.82307 15.2903 5.07195Z" stroke="black"/>
               <path d="M4 16.8353C4 16.8353 7.80299 11.754 11.2258 11.8585C14.5049 11.9586 18 16.8353 18 16.8353C18 16.8353 14.3097 19.9115 11.2258 19.9981C7.98943 20.089 4 16.8353 4 16.8353Z" stroke="black"/>
             </svg>
           </a>
+          <!-- если авторизован -->
+          <!-- <a class="header__icon header__profile" href="profile.html">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.2903 5.07195C15.2903 7.32082 13.4706 9.14389 11.2258 9.14389C8.98104 9.14389 7.16129 7.32082 7.16129 5.07195C7.16129 2.82307 8.98104 1 11.2258 1C13.4706 1 15.2903 2.82307 15.2903 5.07195Z" stroke="black"/>
+              <path d="M4 16.8353C4 16.8353 7.80299 11.754 11.2258 11.8585C14.5049 11.9586 18 16.8353 18 16.8353C18 16.8353 14.3097 19.9115 11.2258 19.9981C7.98943 20.089 4 16.8353 4 16.8353Z" stroke="black"/>
+            </svg>
+          </a> -->
         </div>
       </div>
     </div>
@@ -138,10 +146,10 @@
                 </div>
               </div>
             </li>
-            <li><a href="">Индивидуальный пошив</a></li>
-            <li><a href="">О компании</a></li>
-            <li><a href="">Клиентский сервис</a></li>
-            <li><a href="">Материалы COAT</a></li>
+            <li><a href="sewing.html">Индивидуальный пошив</a></li>
+            <li><a href="about.html">О компании</a></li>
+            <li><a href="service.html">Клиентский сервис</a></li>
+            <li><a href="materials.html">Материалы COAT</a></li>
           </ul>
         </nav>
         <div class="header__burger">
@@ -271,9 +279,9 @@
             <div class="container">
               <div class="faq__container">
                 <h2 class="faq__title text-up title-indent">Популярные вопросы</h2>
-                <div class="faq__accordion">
-                  <div class="faq__item">
-                    <button class="faq__header text-l">
+                <div class="faq__accordion accordion">
+                  <div class="faq__item accordion__item">
+                    <button class="faq__header accordion__header text-l">
                       Как проходит индивидуальный пошив?
                       <span class="icon">
                         <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -281,14 +289,14 @@
                         </svg>
                       </span>
                     </button>
-                    <div class="faq__content">
+                    <div class="faq__content accordion__content">
                       <div class="faq__txt">
                         <p>Индивидуальный пошив проходит строго в чате с менеджером. Вы выбираете модель, вид сырья, оттенок, длину, фурнитуру, подклад, карманы и другие детали. Мы уточняем необходимые параметры - их легко измерить дома с помощью сантиметровой ленты. После согласования оформляется предоплата и мы начинаем пошив. По готовности отправляем финальные фото и готовим изделие к отправке. Завершающая оплата - перед отправкой. Весь процесс ведём лично и остаёмся с вами на связи.</p>
                       </div>
                     </div>
                   </div>
-                  <div class="faq__item">
-                    <button class="faq__header text-l">
+                  <div class="faq__item accordion__item">
+                    <button class="faq__header accordion__header text-l">
                       Можно ли что-то изменить в готовой модели?
                       <span class="icon">
                         <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -296,14 +304,14 @@
                         </svg>
                       </span>
                     </button>
-                    <div class="faq__content">
+                    <div class="faq__content accordion__content">
                       <div class="faq__txt">
                         <p>Да. Мы можем адаптировать любую модель под ваш рост и пожелания. Вы можете изменить вид или оттенок сырья, длину, фурнитуру, убрать или добавить детали.</p>
                       </div>
                     </div>
                   </div>
-                  <div class="faq__item">
-                    <button class="faq__header text-l">
+                  <div class="faq__item accordion__item">
+                    <button class="faq__header accordion__header text-l">
                       Как определить свой размер?
                       <span class="icon">
                         <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -311,14 +319,14 @@
                         </svg>
                       </span>
                     </button>
-                    <div class="faq__content">
+                    <div class="faq__content accordion__content">
                       <div class="faq__txt">
                         <p>Если вы заказываете изделие из готовой коллекции на сайте - ориентируйтесь на размерную сетку указанную на сайте. А если вы заказываете по индивидуальному пошиву, то понадобятся три простых параметра, которые можно снять самостоятельно: обхват груди, обхват бедер и рост.</p>
                       </div>
                     </div>
                   </div>
-                  <div class="faq__item">
-                    <button class="faq__header text-l">
+                  <div class="faq__item accordion__item">
+                    <button class="faq__header accordion__header text-l">
                       А если не подойдет размер при индивидуальном пошиве?
                       <span class="icon">
                         <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -326,14 +334,14 @@
                         </svg>
                       </span>
                     </button>
-                    <div class="faq__content">
+                    <div class="faq__content accordion__content">
                       <div class="faq__txt">
                         <p>У нас действует 100% гарантия размера. Если вы сняли мерки по нашей инструкции, но изделие не подошло - мы примем его на проверку. В случае ошибки с нашей стороны мы бесплатно произведем ремонт или изготовим новое изделие по вашим параметрам.</p>
                       </div>
                     </div>
                   </div>
-                  <div class="faq__item">
-                    <button class="faq__header text-l">
+                  <div class="faq__item accordion__item">
+                    <button class="faq__header accordion__header text-l">
                       А если не подойдет размер изделия из готовой коллекции?
                       <span class="icon">
                         <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -341,14 +349,14 @@
                         </svg>
                       </span>
                     </button>
-                    <div class="faq__content">
+                    <div class="faq__content accordion__content">
                       <div class="faq__txt">
                         <p>Вы можете обменять изделие на другой размер или вернуть его в течение 14 дней с момента получения. Важно сохранить товарный вид, оригинальную упаковку и бирки. Стоимость доставки при возврате оплачивается покупателем.</p>
                       </div>
                     </div>
                   </div>
-                  <div class="faq__item">
-                    <button class="faq__header text-l">
+                  <div class="faq__item accordion__item">
+                    <button class="faq__header accordion__header text-l">
                       Вы шьете изделие точно по моим меркам, “впритык”?
                       <span class="icon">
                         <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -356,14 +364,14 @@
                         </svg>
                       </span>
                     </button>
-                    <div class="faq__content">
+                    <div class="faq__content accordion__content">
                       <div class="faq__txt">
                         <p>Нет. <br> Вы отправляете нам параметры, снятые на легкую домашнюю одежду (обхват груди, бедер и рост). Мы же, на основе опыта и модели изделия, добавляем технические припуски, запас - чтобы вещь сидела комфортно, не сковывала движения и допускала носку тёплой одежды под низ.</p>
                       </div>
                     </div>
                   </div>
-                  <div class="faq__item">
-                    <button class="faq__header text-l">
+                  <div class="faq__item accordion__item">
+                    <button class="faq__header accordion__header text-l">
                       Где и кем производится одежда COAT?
                       <span class="icon">
                         <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -371,14 +379,14 @@
                         </svg>
                       </span>
                     </button>
-                    <div class="faq__content">
+                    <div class="faq__content accordion__content">
                       <div class="faq__txt">
                         <p>Все изделия COAT  изготавливаются на нашем производстве в Стамбуле. В команде работают дизайнеры, закройщики, технологи и швеи. Каждый этап - под нашим контролем.</p>
                       </div>
                     </div>
                   </div>
-                  <div class="faq__item">
-                    <button class="faq__header text-l">
+                  <div class="faq__item accordion__item">
+                    <button class="faq__header accordion__header text-l">
                       Это натуральная кожа и мех?
                       <span class="icon">
                         <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -386,14 +394,14 @@
                         </svg>
                       </span>
                     </button>
-                    <div class="faq__content">
+                    <div class="faq__content accordion__content">
                       <div class="faq__txt">
                         <p>Да. Мы используем исключительно натуральные материалы - кожу и мех, полученные из переработанного сырья, с уважением к природе. Мы не используем кожзаменитель и экокожу. </p>
                       </div>
                     </div>
                   </div>
-                  <div class="faq__item">
-                    <button class="faq__header text-l">
+                  <div class="faq__item accordion__item">
+                    <button class="faq__header accordion__header text-l">
                       Сколько весят изделия?
                       <span class="icon">
                         <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -401,14 +409,14 @@
                         </svg>
                       </span>
                     </button>
-                    <div class="faq__content">
+                    <div class="faq__content accordion__content">
                       <div class="faq__txt">
                         <p>Благодаря современным технологиям обработки сырья кожаные изделия COAT весят до 1 кг, а дублёнки - от 1.6 до 2.2 кг. Они лёгкие, мягкие и комфортные в носке.</p>
                       </div>
                     </div>
                   </div>
-                  <div class="faq__item">
-                    <button class="faq__header text-l">
+                  <div class="faq__item accordion__item">
+                    <button class="faq__header accordion__header text-l">
                       На какой температурный режим рассчитаны изделия?
                       <span class="icon">
                         <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -416,7 +424,7 @@
                         </svg>
                       </span>
                     </button>
-                    <div class="faq__content">
+                    <div class="faq__content accordion__content">
                       <div class="faq__txt">
                         <p>Каждый вид меха имеет свой диапазон:</p>
                         <ul>
@@ -429,8 +437,8 @@
                       </div>
                     </div>
                   </div>
-                  <div class="faq__item">
-                    <button class="faq__header text-l">
+                  <div class="faq__item accordion__item">
+                    <button class="faq__header accordion__header text-l">
                       Как происходит доставка?
                       <span class="icon">
                         <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -438,14 +446,14 @@
                         </svg>
                       </span>
                     </button>
-                    <div class="faq__content">
+                    <div class="faq__content accordion__content">
                       <div class="faq__txt">
                         <p>Доставка осуществляется из Стамбула в любую точку мира: Казахстан, Россия, Беларусь, Кыргызстан, Европа, США, Япония и другие страны. Срок - от 2 до 14 дней в зависимости от региона.</p>
                       </div>
                     </div>
                   </div>
-                  <div class="faq__item">
-                    <button class="faq__header text-l">
+                  <div class="faq__item accordion__item">
+                    <button class="faq__header accordion__header text-l">
                       Сколько стоит доставка до двери?
                       <span class="icon">
                         <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -453,7 +461,7 @@
                         </svg>
                       </span>
                     </button>
-                    <div class="faq__content">
+                    <div class="faq__content accordion__content">
                       <div class="faq__txt">
                         <ul>
                           <li>Казахстан (СДЭК): кожаное изделие - 8 900 ₸, дублёнка - 11 900 ₸</li>
@@ -467,8 +475,8 @@
                       </div>
                     </div>
                   </div>
-                  <div class="faq__item">
-                    <button class="faq__header text-l">
+                  <div class="faq__item accordion__item">
+                    <button class="faq__header accordion__header text-l">
                       Срок изготовления изделий?
                       <span class="icon">
                         <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -476,14 +484,14 @@
                         </svg>
                       </span>
                     </button>
-                    <div class="faq__content">
+                    <div class="faq__content accordion__content">
                       <div class="faq__txt">
                         <p>Срок зависит от загруженности и сложности вашего заказа. В среднем - 3–7 дней. Максимальный срок - до 21 дня, если выбранного сырья нет в наличии.</p>
                       </div>
                     </div>
                   </div>
-                  <div class="faq__item">
-                    <button class="faq__header text-l">
+                  <div class="faq__item accordion__item">
+                    <button class="faq__header accordion__header text-l">
                       Есть ли у вас экспресс-изготовление?
                       <span class="icon">
                         <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -491,14 +499,14 @@
                         </svg>
                       </span>
                     </button>
-                    <div class="faq__content">
+                    <div class="faq__content accordion__content">
                       <div class="faq__txt">
                         <p>Да. При наличии уважительной причины мы можем пошить изделие в течение 1–2 дней без дополнительной оплаты, если это не нарушает производственный процесс. Об этом вы можете сообщить менеджеру.</p>
                       </div>
                     </div>
                   </div>
-                  <div class="faq__item">
-                    <button class="faq__header text-l">
+                  <div class="faq__item accordion__item">
+                    <button class="faq__header accordion__header text-l">
                       Если я приехал(а) в Стамбул, могу ли посетить ваш шоурум?
                       <span class="icon">
                         <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -506,14 +514,14 @@
                         </svg>
                       </span>
                     </button>
-                    <div class="faq__content">
+                    <div class="faq__content accordion__content">
                       <div class="faq__txt">
                         <p>Да. Мы можем принять вас на нашем производстве в Стамбуле, показать коллекцию, снять мерки фигуры и оформить заказ на месте. Также возможна выездная примерка по городу: мы привезём модели и образцы сырья, поможем с выбором и создадим изделие под вас.</p>
                       </div>
                     </div>
                   </div>
-                  <div class="faq__item">
-                    <button class="faq__header text-l">
+                  <div class="faq__item accordion__item">
+                    <button class="faq__header accordion__header text-l">
                       На сайте всё выглядит красиво. А в жизни?
                       <span class="icon">
                         <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -521,14 +529,14 @@
                         </svg>
                       </span>
                     </button>
-                    <div class="faq__content">
+                    <div class="faq__content accordion__content">
                       <div class="faq__txt">
                         <p> Мы не используем фильтры и ретушь. На фото передается реальная фактура кожи и меха, чтобы вы сразу понимали, как это выглядит вживую.</p>
                       </div>
                     </div>
                   </div>
-                  <div class="faq__item">
-                    <button class="faq__header text-l">
+                  <div class="faq__item accordion__item">
+                    <button class="faq__header accordion__header text-l">
                       На высоких моделях всё сидит идеально. А если у меня другой рост?
                       <span class="icon">
                         <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -536,14 +544,14 @@
                         </svg>
                       </span>
                     </button>
-                    <div class="faq__content">
+                    <div class="faq__content accordion__content">
                       <div class="faq__txt">
                         <p>Свяжитесь с нами - мы покажем, как изделия сидят на моделях на обычной фигурой и стандартным ростом 160-170см.</p>
                       </div>
                     </div>
                   </div>
-                  <div class="faq__item">
-                    <button class="faq__header text-l">
+                  <div class="faq__item accordion__item">
+                    <button class="faq__header accordion__header text-l">
                       Как происходит оплата?
                       <span class="icon">
                         <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -551,7 +559,7 @@
                         </svg>
                       </span>
                     </button>
-                    <div class="faq__content">
+                    <div class="faq__content accordion__content">
                       <div class="faq__txt">
                         <p>Оплата осуществляется онлайн на сайте через платежный шлюз. Поддерживаются карты Visa, MasterCard, MIR. Все транзакции защищены.</p>
                       </div>
@@ -633,13 +641,161 @@
       </div>
     </div>
 
-    
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20251013181446"></script>
-<script src="https://cdn.jsdelivr.net/gh/cferdinandi/tabby/dist/js/tabby.polyfills.min.js?_v=20251013181446"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js?_v=20251013181446"></script>
-<script src="https://cdn.prod.website-files.com/622b0a8557cc790ca01b97bb/66005a0997fdea31bc68d664_ScrollSmoother.min.js.txt?_v=20251013181446"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js?_v=20251013181446"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollToPlugin.min.js?_v=20251013181446"></script>
-<script src="js/app.js?_v=20251013181446"></script>
+    <div class="modals">
+  <div class="modal modal-order" data-type="order">
+    <div class="modal__container">
+      <div class="modal__top">
+        <div class="modal__caption">Заказ в один клик</div>
+        <button class="modal__close">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="#1D1B20"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal__card basket__label">
+        <div class="basket__img">
+          <img src="img/image-5.jpg" alt="">
+        </div>
+        <div class="basket__col basket-info">
+          <div class="basket-info__top">
+            <div class="basket-info__caption">Дублёнка</div>
+            <div class="basket-info__price">
+              <span class="price">35 000 ₸</span>
+              <span class="old-price">55 000 ₸</span>
+            </div>
+            <div class="basket-info__sale">36%</div>
+          </div>
+          <ul class="basket-info__list">
+            <li class="basket-info__item">мех Toscana, кожа</li>
+            <li class="basket-info__item">Зима</li>
+            <li class="basket-info__item">95 см</li>
+            <li class="basket-info__item">Oversize</li>
+            <li class="basket-info__item">S</li>
+          </ul>
+        </div>
+      </div>
+      <form action="" class="modal-form">
+        <div class="modal-form__grid">
+          <div class="modal-form__field">
+            <input type="text" placeholder="Имя*" required>
+          </div>
+          <div class="modal-form__field">
+            <input type="text" placeholder="Фамилия*" required>
+          </div>
+          <div class="modal-form__field">
+            <input type="tel" placeholder="Номер телефона*" required>
+          </div>
+          <div class="modal-form__field">
+            <input type="email" placeholder="Электронная почта*" required>
+          </div>
+        </div>
+        <button class="modal-form__button button button-dark text-up">Купить в один клик</button>
+      </form>
+    </div>
+  </div>
+  <div class="modal modal-login" data-type="login">
+    <button class="modal__close">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2.53464 19.3333L0.667969 17.4666L8.13464 9.99996L0.667969 2.53329L2.53464 0.666626L10.0013 8.13329L17.468 0.666626L19.3346 2.53329L11.868 9.99996L19.3346 17.4666L17.468 19.3333L10.0013 11.8666L2.53464 19.3333Z" fill="#1D1B20"/>
+      </svg>
+    </button>
+    <img class="modal__back" src="img/login.png" alt="">
+    <div class="modal__container">
+      <div class="modal__caption text-up">Авторизация</div>
+      <form action="" class="modal-form">
+        <div class="modal-form__field field-email">
+          <input type="email" name="email" id="email" placeholder="Электронная почта">
+        </div>
+        <div class="modal-form__field field-password">
+          <input type="password" name="password" id="password" placeholder="Пароль">
+          <div class="eye close"></div>
+        </div>
+        <div class="modal-form__group">
+          <div class="modal-form__remember">
+            <input type="checkbox" name="remember" id="remember">
+            <label for="remember">Запомнить меня</label>
+          </div>
+          <a class="modal-form__forgot modal-btn" data-type="forgot">Забыл(а) пароль</a>
+        </div>
+        <button class="modal-form__button button button-border">Войти</button>
+      </form>
+      <a class="modal__link modal-btn" data-type="register">У меня нет аккаунта</a>
+      <div class="modal__note">Продолжая, вы соглашаетесь с <a href="#" target="_blank">политикой конфиденциальности</a></div>
+    </div>
+  </div>
+  <div class="modal modal-forgot" data-type="forgot">
+    <button class="modal__close">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2.53464 19.3333L0.667969 17.4666L8.13464 9.99996L0.667969 2.53329L2.53464 0.666626L10.0013 8.13329L17.468 0.666626L19.3346 2.53329L11.868 9.99996L19.3346 17.4666L17.468 19.3333L10.0013 11.8666L2.53464 19.3333Z" fill="#1D1B20"/>
+      </svg>
+    </button>
+    <img class="modal__back" src="img/login.png" alt="">
+    <div class="modal__container">
+      <div class="modal__caption text-up">Восстановление пароля</div>
+      <form action="" class="modal-form">
+        <div class="modal-form__field field-email">
+          <input type="email" name="email" id="email" placeholder="Электронная почта">
+        </div>
+        <button class="modal-form__button button button-border">Восстановить</button>
+      </form>
+      <a class="modal__link modal-btn" data-type="login">Я помню пароль</a>
+    </div>
+  </div>
+  <div class="modal modal-reset" data-type="reset">
+    <button class="modal__close">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2.53464 19.3333L0.667969 17.4666L8.13464 9.99996L0.667969 2.53329L2.53464 0.666626L10.0013 8.13329L17.468 0.666626L19.3346 2.53329L11.868 9.99996L19.3346 17.4666L17.468 19.3333L10.0013 11.8666L2.53464 19.3333Z" fill="#1D1B20"/>
+      </svg>
+    </button>
+    <img class="modal__back" src="img/login.png" alt="">
+    <div class="modal__container">
+      <div class="modal__caption text-up">Сброс пароля</div>
+      <form action="" class="modal-form">
+        <div class="modal-form__field field-password">
+          <input type="password" name="password" id="password" placeholder="Новый пароль">
+          <div class="eye close"></div>
+        </div>
+        <div class="modal-form__field field-password">
+          <input type="password" name="password" id="password" placeholder="Повторите пароль">
+          <div class="eye close"></div>
+        </div>
+        <button class="modal-form__button button button-border">Сохранить</button>
+      </form>
+    </div>
+  </div>
+  <div class="modal modal-register" data-type="register">
+    <button class="modal__close">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2.53464 19.3333L0.667969 17.4666L8.13464 9.99996L0.667969 2.53329L2.53464 0.666626L10.0013 8.13329L17.468 0.666626L19.3346 2.53329L11.868 9.99996L19.3346 17.4666L17.468 19.3333L10.0013 11.8666L2.53464 19.3333Z" fill="#1D1B20"/>
+      </svg>
+    </button>
+    <img class="modal__back" src="img/login.png" alt="">
+    <div class="modal__container">
+      <div class="modal__caption text-up">Регистрация</div>
+      <form action="" class="modal-form">
+        <div class="modal-form__field field-email">
+          <input type="text" name="name" id="name" placeholder="Имя">
+        </div>
+        <div class="modal-form__field field-email">
+          <input type="email" name="email" id="email" placeholder="Электронная почта">
+        </div>
+        <div class="modal-form__field field-password">
+          <input type="password" name="password" id="password" placeholder="Пароль">
+          <div class="eye close"></div>
+        </div>
+        <button class="modal-form__button button button-border">Зарегистрироваться</button>
+      </form>
+      <a class="modal__link modal-btn" data-type="login">У меня есть аккаунт</a>
+      <div class="modal__note">Продолжая, вы соглашаетесь с <a href="#" target="_blank">политикой конфиденциальности</a></div>
+    </div>
+  </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20251015183418"></script>
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/tabby/dist/js/tabby.polyfills.min.js?_v=20251015183418"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js?_v=20251015183418"></script>
+<script src="https://cdn.prod.website-files.com/622b0a8557cc790ca01b97bb/66005a0997fdea31bc68d664_ScrollSmoother.min.js.txt?_v=20251015183418"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js?_v=20251015183418"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollToPlugin.min.js?_v=20251015183418"></script>
+<script src="js/app.js?_v=20251015183418"></script>
   </body>
 </html>

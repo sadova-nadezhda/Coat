@@ -1,27 +1,5 @@
 <div class="modals">
-  <div class="modal" data-type="feedback">
-    <div class="modal__container">
-      <button class="modal__close">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99992 11.1787L14.714 15.8927C15.0394 16.2182 15.567 16.2182 15.8925 15.8927C16.2179 15.5673 16.2179 15.0396 15.8925 14.7142L11.1784 10.0002L15.8925 5.28612C16.2179 4.96069 16.2179 4.43305 15.8925 4.10761C15.567 3.78218 15.0394 3.78218 14.714 4.10761L9.99992 8.82165L5.28587 4.1076C4.96043 3.78217 4.4328 3.78217 4.10736 4.1076C3.78192 4.43304 3.78192 4.96068 4.10736 5.28611L8.82141 10.0002L4.10736 14.7142C3.78192 15.0397 3.78192 15.5673 4.10736 15.8927C4.4328 16.2182 4.96043 16.2182 5.28587 15.8927L9.99992 11.1787Z" fill="#222222"/>
-        </svg>        
-      </button>
-      <h4 class="modal__caption">Оставить заявку</h4>
-      <div class="modal__form">
-        <form action="">
-          <input type="text" id="name" name="name" autocomplete="name" placeholder="Имя" >
-          <input type="tel" id="phone" name="phone" placeholder="Телефон" autocomplete="tel">
-          <select id="services" name="services" autocomplete="off">
-            <option value="">Услуга</option>
-            <option value="">Услуга 1</option>
-            <option value="">Услуга 2</option>
-          </select>
-          <input type="submit" value="{ Отправить }" class="button button-primary">
-        </form>
-      </div>
-    </div>
-  </div>
-  <div class="modal modal-" data-type="">
+  <div class="modal modal-order" data-type="order">
     <div class="modal__container">
       <div class="modal__top">
         <div class="modal__caption">Заказ в один клик</div>
@@ -31,39 +9,141 @@
           </svg>
         </button>
       </div>
-      <div class="modal__card modal-card">
-        <div class="modal-card__img"><img src="@img/image-5.jpg" alt=""></div>
-        <div class="modal-card__info">
-          <div class="modal-card__top">
-            <div class="modal-card__caption"></div>
-            <div class="modal-card__price">
-              <span class="price"></span>
-              <span class="old-price"></span>
+      <div class="modal__card basket__label">
+        <div class="basket__img">
+          <img src="@img/image-5.jpg" alt="">
+        </div>
+        <div class="basket__col basket-info">
+          <div class="basket-info__top">
+            <div class="basket-info__caption">Дублёнка</div>
+            <div class="basket-info__price">
+              <span class="price">35 000 ₸</span>
+              <span class="old-price">55 000 ₸</span>
             </div>
+            <div class="basket-info__sale">36%</div>
           </div>
-          <ul class="modal-card__list">
-            <li class="modal-card__item"></li>
-            <li class="modal-card__item"></li>
-            <li class="modal-card__item"></li>
-            <li class="modal-card__item"></li>
+          <ul class="basket-info__list">
+            <li class="basket-info__item">мех Toscana, кожа</li>
+            <li class="basket-info__item">Зима</li>
+            <li class="basket-info__item">95 см</li>
+            <li class="basket-info__item">Oversize</li>
+            <li class="basket-info__item">S</li>
           </ul>
-          <select name="" class="modal-card__select">
-            <option value="">Выбор размера</option>
-            <option value="">xs</option>
-            <option value="">s</option>
-            <option value="">m</option>
-          </select>
         </div>
       </div>
       <form action="" class="modal-form">
         <div class="modal-form__grid">
-          <input type="text" placeholder="Имя*" required>
-          <input type="text" placeholder="Фамилия*" required>
-          <input type="tel" placeholder="Номер телефона*" required>
-          <input type="email" placeholder="Электронная почта*" required>
+          <div class="modal-form__field">
+            <input type="text" placeholder="Имя*" required>
+          </div>
+          <div class="modal-form__field">
+            <input type="text" placeholder="Фамилия*" required>
+          </div>
+          <div class="modal-form__field">
+            <input type="tel" placeholder="Номер телефона*" required>
+          </div>
+          <div class="modal-form__field">
+            <input type="email" placeholder="Электронная почта*" required>
+          </div>
         </div>
         <button class="modal-form__button button button-dark text-up">Купить в один клик</button>
       </form>
+    </div>
+  </div>
+  <div class="modal modal-login" data-type="login">
+    <button class="modal__close">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2.53464 19.3333L0.667969 17.4666L8.13464 9.99996L0.667969 2.53329L2.53464 0.666626L10.0013 8.13329L17.468 0.666626L19.3346 2.53329L11.868 9.99996L19.3346 17.4666L17.468 19.3333L10.0013 11.8666L2.53464 19.3333Z" fill="#1D1B20"/>
+      </svg>
+    </button>
+    <img class="modal__back" src="@img/login.png" alt="">
+    <div class="modal__container">
+      <div class="modal__caption text-up">Авторизация</div>
+      <form action="" class="modal-form">
+        <div class="modal-form__field field-email">
+          <input type="email" name="email" id="email" placeholder="Электронная почта">
+        </div>
+        <div class="modal-form__field field-password">
+          <input type="password" name="password" id="password" placeholder="Пароль">
+          <div class="eye close"></div>
+        </div>
+        <div class="modal-form__group">
+          <div class="modal-form__remember">
+            <input type="checkbox" name="remember" id="remember">
+            <label for="remember">Запомнить меня</label>
+          </div>
+          <a class="modal-form__forgot modal-btn" data-type="forgot">Забыл(а) пароль</a>
+        </div>
+        <button class="modal-form__button button button-border">Войти</button>
+      </form>
+      <a class="modal__link modal-btn" data-type="register">У меня нет аккаунта</a>
+      <div class="modal__note">Продолжая, вы соглашаетесь с <a href="#" target="_blank">политикой конфиденциальности</a></div>
+    </div>
+  </div>
+  <div class="modal modal-forgot" data-type="forgot">
+    <button class="modal__close">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2.53464 19.3333L0.667969 17.4666L8.13464 9.99996L0.667969 2.53329L2.53464 0.666626L10.0013 8.13329L17.468 0.666626L19.3346 2.53329L11.868 9.99996L19.3346 17.4666L17.468 19.3333L10.0013 11.8666L2.53464 19.3333Z" fill="#1D1B20"/>
+      </svg>
+    </button>
+    <img class="modal__back" src="@img/login.png" alt="">
+    <div class="modal__container">
+      <div class="modal__caption text-up">Восстановление пароля</div>
+      <form action="" class="modal-form">
+        <div class="modal-form__field field-email">
+          <input type="email" name="email" id="email" placeholder="Электронная почта">
+        </div>
+        <button class="modal-form__button button button-border">Восстановить</button>
+      </form>
+      <a class="modal__link modal-btn" data-type="login">Я помню пароль</a>
+    </div>
+  </div>
+  <div class="modal modal-reset" data-type="reset">
+    <button class="modal__close">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2.53464 19.3333L0.667969 17.4666L8.13464 9.99996L0.667969 2.53329L2.53464 0.666626L10.0013 8.13329L17.468 0.666626L19.3346 2.53329L11.868 9.99996L19.3346 17.4666L17.468 19.3333L10.0013 11.8666L2.53464 19.3333Z" fill="#1D1B20"/>
+      </svg>
+    </button>
+    <img class="modal__back" src="@img/login.png" alt="">
+    <div class="modal__container">
+      <div class="modal__caption text-up">Сброс пароля</div>
+      <form action="" class="modal-form">
+        <div class="modal-form__field field-password">
+          <input type="password" name="password" id="password" placeholder="Новый пароль">
+          <div class="eye close"></div>
+        </div>
+        <div class="modal-form__field field-password">
+          <input type="password" name="password" id="password" placeholder="Повторите пароль">
+          <div class="eye close"></div>
+        </div>
+        <button class="modal-form__button button button-border">Сохранить</button>
+      </form>
+    </div>
+  </div>
+  <div class="modal modal-register" data-type="register">
+    <button class="modal__close">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2.53464 19.3333L0.667969 17.4666L8.13464 9.99996L0.667969 2.53329L2.53464 0.666626L10.0013 8.13329L17.468 0.666626L19.3346 2.53329L11.868 9.99996L19.3346 17.4666L17.468 19.3333L10.0013 11.8666L2.53464 19.3333Z" fill="#1D1B20"/>
+      </svg>
+    </button>
+    <img class="modal__back" src="@img/login.png" alt="">
+    <div class="modal__container">
+      <div class="modal__caption text-up">Регистрация</div>
+      <form action="" class="modal-form">
+        <div class="modal-form__field field-email">
+          <input type="text" name="name" id="name" placeholder="Имя">
+        </div>
+        <div class="modal-form__field field-email">
+          <input type="email" name="email" id="email" placeholder="Электронная почта">
+        </div>
+        <div class="modal-form__field field-password">
+          <input type="password" name="password" id="password" placeholder="Пароль">
+          <div class="eye close"></div>
+        </div>
+        <button class="modal-form__button button button-border">Зарегистрироваться</button>
+      </form>
+      <a class="modal__link modal-btn" data-type="login">У меня есть аккаунт</a>
+      <div class="modal__note">Продолжая, вы соглашаетесь с <a href="#" target="_blank">политикой конфиденциальности</a></div>
     </div>
   </div>
 </div>

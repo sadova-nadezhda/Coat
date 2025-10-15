@@ -207,11 +207,11 @@ window.addEventListener("load", function () {
   });
 
   // Accordion 
-  const faqItems = document.querySelectorAll(".faq__item");
+  const faqItems = document.querySelectorAll(".accordion__item");
   faqItems.forEach((el) => {
     el.addEventListener("click", function () {
       this.classList.toggle("active");
-      let accBody = this.querySelector(".faq__content");
+      let accBody = this.querySelector(".accordion__content");
       if (accBody.style.maxHeight) {
         accBody.style.maxHeight = null;
       } else {
@@ -235,6 +235,117 @@ window.addEventListener("load", function () {
     const percent = ((val - min) / (max - min)) * 100;
     label.style.left = `calc(${percent}%)`;
   });
+  
+  // modal
+  (function () {
+    const modalWrapper = document.querySelector('.modals');
+    if (!modalWrapper) return;
+
+    const modals = Array.from(modalWrapper.querySelectorAll('.modal'));
+    const body = document.body;
+
+    const getModalByType = (type) =>
+      modalWrapper.querySelector(`.modal[data-type="${type}"]`);
+
+    const showWrapper = () => {
+      body.style.overflow = 'hidden';
+      modalWrapper.style.opacity = 1;
+      modalWrapper.style.pointerEvents = 'all';
+    };
+
+    const hideWrapper = () => {
+      body.style.overflow = '';
+      modalWrapper.style.opacity = 0;
+      modalWrapper.style.pointerEvents = 'none';
+    };
+
+    const openModal = (type) => {
+      // Скрыть все
+      modals.forEach((m) => {
+        m.style.display = 'none';
+        m.style.removeProperty('transform');
+        const c = m.querySelector('.modal__container');
+        if (c) c.style.removeProperty('transform');
+      });
+
+      const modal = getModalByType(type);
+      if (!modal) return;
+
+      modal.style.display = 'flex';
+      showWrapper();
+
+      // Анимируем ИМЕННО контейнер
+      const container = modal.querySelector('.modal__container') || modal;
+      if (window.gsap) {
+        gsap.fromTo(
+          container,
+          { y: '-100%' },
+          { y: '0%', duration: 0.5, ease: 'power3.out' }
+        );
+      }
+    };
+
+    const closeCurrentModal = () => {
+      const current = modals.find((m) => m.style.display !== 'none');
+      const container =
+        current?.querySelector('.modal__container') || current || null;
+
+      const finishClose = () => {
+        if (current) current.style.display = 'none';
+        hideWrapper();
+      };
+
+      if (container && window.gsap) {
+        gsap.to(container, {
+          y: '-100%',
+          duration: 0.4,
+          ease: 'power3.in',
+          onComplete: () => {
+            container.style.removeProperty('transform');
+            finishClose();
+          },
+        });
+      } else {
+        finishClose();
+      }
+    };
+
+    // Кнопки открытия
+    document.querySelectorAll('.modal-btn').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const type = btn.dataset.type;
+        if (type) openModal(type);
+      });
+    });
+
+    // Закрытие по клику на задник (.modal), но НЕ внутри .modal__container
+    modalWrapper.addEventListener('click', (e) => {
+      // клик по крестику
+      if (e.target.closest('.modal__close')) {
+        closeCurrentModal();
+        return;
+      }
+
+      const current = modals.find((m) => m.style.display !== 'none');
+      if (!current) return;
+
+      // если кликнут НЕ контейнер и не его дети — закрываем
+      if (!e.target.closest('.modal__container')) {
+        // Дополнительно убеждаемся, что клик внутри активной .modal или на .modals
+        if (e.target === modalWrapper || e.target.closest('.modal') === current) {
+          closeCurrentModal();
+        }
+      }
+    });
+
+    // ESC
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modalWrapper.style.pointerEvents === 'all') {
+        closeCurrentModal();
+      }
+    });
+  })();
 
   // Tabs
   var tabs = new Tabby('[data-tabs]');

@@ -2,7 +2,6 @@
 <html lang="en">
   @@include('html/head.html', { "title": "Дублёнка" })
   <body>
-    
 
     <div id="smooth-wrapper">
       <div id="smooth-content">
@@ -234,11 +233,11 @@
                   <div class="product__bottom">
                     <div class="product__buttons">
                       <button class="product__button button button-border text-up">Добавить в корзину</button>
-                      <button class="product__button button button-dark text-up modal-btn">Купить в один клик</button>
+                      <button class="product__button button button-dark text-up modal-btn" data-type="order">Купить в один клик</button>
                     </div>
                     <div class="product__note">
                       <span>Товар добавлен в корзину</span>
-                      <a href="">Перейти</a>
+                      <a href="basket.html">Перейти</a>
                     </div>
                   </div>
                 </div>
@@ -388,7 +387,7 @@
       </div>
     </div>
 
-    
+    @@include('html/modals.html')
     @@include('html/foot.html')
   </body>
 </html>

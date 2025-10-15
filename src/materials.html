@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "Материалы COAT" })
+  <body>
+
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        @@include('html/header.html')
+        <main>
+          <section class="materials section-pad-bottom section-hidden">
+            <div class="container">
+              <div class="materials__container">
+                <div class="materials__cards">
+                  <a class="materials__card" href="#">
+                    <img src="@img/image-3.jpg" alt="">
+                    <div class="materials__caption text-up">Мех COAT</div>
+                    <div class="materials__txt text-up">выбор для зимы и морозов.</div>
+                    <div class="materials__button button button-border_light text-up">Перейти</div>
+                  </a>
+                  <a class="materials__card" href="#">
+                    <img src="@img/image-9.jpg" alt="">
+                    <div class="materials__caption text-up">Кожа COAT</div>
+                    <div class="materials__txt text-up">выбор для демисезона и прохладного лета.</div>
+                    <div class="materials__button button button-border_light text-up">Перейти</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+        @@include('html/footer.html') 
+      </div>
+    </div>
+
+    @@include('html/modals.html')
+    @@include('html/foot.html')
+  </body>
+</html>

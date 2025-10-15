@@ -154,6 +154,9 @@
       width: calc(20 * var(--width-multiplier));
       height: calc(20 * var(--width-multiplier));
     }
+    &:hover {
+      cursor: pointer;
+    }
   }
   &__burger {
     position: relative;

@@ -213,7 +213,7 @@ textarea {
   border: calc(1 * var(--width-multiplier)) solid transparent;
   line-height: 1.5em;
   @include transition;
-  &:hover:not(:disabled) {
+  &:not(:disabled):hover {
     cursor: pointer;
   }
   &:disabled {
@@ -223,22 +223,22 @@ textarea {
     border-color: var(--dark, $dark);
     color: var(--light, $light);
     background-color: var(--dark, $dark);
-    &:hover {
+    &:not(:disabled):hover {
       background-color: rgba(54, 54, 54, 1);
     }
   }
   &-border {
-    border-color: rgba(21, 21, 21, 0.1);
+    border-color: var(--dark, $dark);
     color: var(--dark, $dark);
     background-color: var(--light, $light);
-    &:hover {
+    &:not(:disabled):hover {
       color: var(--light, $light);
       background-color: var(--dark, $dark);
     }
     &_light {
       border-color: var(--light, $light);
       color: var(--light, $light);
-      &:hover {
+      &:not(:disabled):hover {
         color: var(--dark, $dark);
         background-color: var(--light, $light);
       }
@@ -247,7 +247,7 @@ textarea {
   &-light {
     color: var(--dark, $dark);
     background-color: var(--light, $light);
-    &:hover {
+    &:not(:disabled):hover {
       background-color: rgba(248, 248, 248, 1);
     }
   }

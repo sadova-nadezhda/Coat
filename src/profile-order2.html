@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "Текущие заказы" })
+  <body>
+
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        @@include('html/header.html')
+        <main>
+          <section class="profile profile-cansel section-pad-bottom section-hidden">
+            <div class="container">
+              <div class="profile__container">
+                <ul class="profile__aside">
+                  <li><a href="profile.html">Личные данные</a></li>
+                  <li><a href="profile-payment.html">Профили оплат</a></li>
+                  <li><a href="profile-order.html">Текущие заказы</a></li>
+                  <li><a href="profile-history.html">История заказов</a></li>
+                </ul>
+                <div class="profile__wrap">
+                  <h1 class="profile__title title-indent text-up">Текущие заказы</h1>
+                  <div class="profile__row">
+                    <div class="profile-cansel__name text-up">Вы уверены, что хотите отменить заказ #7299? Отмена заказа необратима.</div>
+                    <form class="profile-cansel__form">
+                      <div class="profile-cansel__group">
+                        <span>Укажите, пожалуйста, причину отмены заказа:</span>
+                        <input type="text" name="message" placeholder="Комментарий">
+                      </div>
+                      <button class="profile-cansel__button button button-border">Отменить заказ</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+        @@include('html/footer.html') 
+      </div>
+    </div>
+
+    @@include('html/modals.html')
+    @@include('html/foot.html')
+  </body>
+</html>

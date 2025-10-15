@@ -33,27 +33,35 @@
             <input type="text" value="" name="search" id="search" class="header__search">
         </form>
         <div class="header__group">
-          <a class="header__icon header__compare" href="">
+          <a class="header__icon header__compare" href="compare.html">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M5 6.52498L9.66934 2V22H8.25509V5.34338L5.98254 7.5457L5 6.52498ZM15.7449 18.6566V2H14.3307V22L19 17.475L18.0175 16.4543L15.7449 18.6566Z" fill="#151515"/>
             </svg>
           </a>
-          <a class="header__icon header__favorites" href="">
+          <a class="header__icon header__favorites" href="favorite.html">
             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="black"/>
             </svg>
           </a>
-          <a class="header__icon header__basket" href="">
+          <a class="header__icon header__basket" href="basket.html">
             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M7.75 8.23809C7.75 8.23809 6.5772 1 11.5 1C16.4228 1 15.25 8.23809 15.25 8.23809M4 7.33333H19V20H4V7.33333Z" stroke="black"/>
             </svg>
           </a>
-          <a class="header__icon header__profile" href="">
+          <!-- если не авторизован -->
+          <a class="header__icon header__profile modal-btn" data-type="login">
             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M15.2903 5.07195C15.2903 7.32082 13.4706 9.14389 11.2258 9.14389C8.98104 9.14389 7.16129 7.32082 7.16129 5.07195C7.16129 2.82307 8.98104 1 11.2258 1C13.4706 1 15.2903 2.82307 15.2903 5.07195Z" stroke="black"/>
               <path d="M4 16.8353C4 16.8353 7.80299 11.754 11.2258 11.8585C14.5049 11.9586 18 16.8353 18 16.8353C18 16.8353 14.3097 19.9115 11.2258 19.9981C7.98943 20.089 4 16.8353 4 16.8353Z" stroke="black"/>
             </svg>
           </a>
+          <!-- если авторизован -->
+          <!-- <a class="header__icon header__profile" href="profile.html">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.2903 5.07195C15.2903 7.32082 13.4706 9.14389 11.2258 9.14389C8.98104 9.14389 7.16129 7.32082 7.16129 5.07195C7.16129 2.82307 8.98104 1 11.2258 1C13.4706 1 15.2903 2.82307 15.2903 5.07195Z" stroke="black"/>
+              <path d="M4 16.8353C4 16.8353 7.80299 11.754 11.2258 11.8585C14.5049 11.9586 18 16.8353 18 16.8353C18 16.8353 14.3097 19.9115 11.2258 19.9981C7.98943 20.089 4 16.8353 4 16.8353Z" stroke="black"/>
+            </svg>
+          </a> -->
         </div>
       </div>
     </div>
@@ -120,10 +128,10 @@
                 </div>
               </div>
             </li>
-            <li><a href="">Индивидуальный пошив</a></li>
-            <li><a href="">О компании</a></li>
-            <li><a href="">Клиентский сервис</a></li>
-            <li><a href="">Материалы COAT</a></li>
+            <li><a href="sewing.html">Индивидуальный пошив</a></li>
+            <li><a href="about.html">О компании</a></li>
+            <li><a href="service.html">Клиентский сервис</a></li>
+            <li><a href="materials.html">Материалы COAT</a></li>
           </ul>
         </nav>
         <div class="header__burger">

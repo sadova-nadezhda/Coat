@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "Текущие заказы" })
+  <body>
+
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        @@include('html/header.html')
+        <main>
+          <section class="profile profile-order section-pad-bottom section-hidden">
+            <div class="container">
+              <div class="profile__container">
+                <ul class="profile__aside">
+                  <li><a href="profile.html">Личные данные</a></li>
+                  <li><a href="profile-payment.html">Профили оплат</a></li>
+                  <li><a href="profile-order.html">Текущие заказы</a></li>
+                  <li><a href="profile-history.html">История заказов</a></li>
+                </ul>
+                <div class="profile__wrap">
+                  <h1 class="profile__title title-indent text-up">Текущие заказы</h1>
+                  <div class="profile__orders">
+                    <div class="profile__row profile-order__row">
+                      <div class="profile-order__name text-up">Заказ №7298 от 22.09.2025, 1 товар на сумму 55 000 ₸</div>
+                      <div class="profile-order__info">
+                        <div class="profile-order__col">
+                          <div class="profile-order__check">
+                            <div class="profile-order__caption">Счет №7298/1 от 22.09.2025, VISA</div>
+                            <span class="profile-order__status">Не оплачено</span>
+                          </div>
+                          <div class="profile-order__price">Сумма к оплате по счету: 55 000 ₸</div>
+                        </div>
+                        <div class="profile-order__bottom">
+                          <a class="profile-order__button button button-border" href="profile-order2.html">Отменить заказ</a>
+                          <button class="profile-order__button button button-dark">Оплатить</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="profile__row profile-order__row">
+                      <div class="profile-order__name text-up">Заказ №7298 от 22.09.2025, 1 товар на сумму 55 000 ₸</div>
+                      <div class="profile-order__info">
+                        <div class="profile-order__col">
+                          <div class="profile-order__check">
+                            <div class="profile-order__caption">Счет №7298/1 от 22.09.2025, VISA</div>
+                            <span class="profile-order__status">Оплачено</span>
+                          </div>
+                          <div class="profile-order__price">Сумма к оплате по счету: 55 000 ₸</div>
+                        </div>
+                        <div class="profile-order__bottom">
+                          <a class="profile-order__button button button-border" href="profile-order2.html">Отменить заказ</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+        @@include('html/footer.html') 
+      </div>
+    </div>
+
+    @@include('html/modals.html')
+    @@include('html/foot.html')
+  </body>
+</html>

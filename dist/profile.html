@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Личные данные</title>
+  <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20251015183418" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/cferdinandi/tabby/dist/css/tabby-ui.min.css?_v=20251015183418">
+  <link rel="stylesheet" href="css/style.css?_v=20251015183418" />
+</head>
+
+  <body>
+
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <header class="header">
+  <div class="header__marquee marquee__wrap">
+    <div class="marquee__row marquee">
+      <div class="marquee__item">Бесплатная доставка по Казахстану при заказе от 100 000 ₸</div>
+      <div class="marquee__item">Индивидуальный пошив — выбери мех, кожу и детали сам</div>
+      <div class="marquee__item">Новая коллекция FW25 уже в продаже</div>
+      <div class="marquee__item">-20% на кожаные куртки до конца сентября</div>
+      <div class="marquee__item">COAT — премиальная кожа и мех </div>
+      <div class="marquee__item">Сделано в Казахстане</div>
+    </div>
+    <div aria-hidden="true" class="marquee__row marquee">
+      <div class="marquee__item">Бесплатная доставка по Казахстану при заказе от 100 000 ₸</div>
+      <div class="marquee__item">Индивидуальный пошив — выбери мех, кожу и детали сам</div>
+      <div class="marquee__item">Новая коллекция FW25 уже в продаже</div>
+      <div class="marquee__item">-20% на кожаные куртки до конца сентября</div>
+      <div class="marquee__item">COAT — премиальная кожа и мех </div>
+      <div class="marquee__item">Сделано в Казахстане</div>
+    </div>
+  </div>
+  <div class="secondary-menu">
+    <div class="container">
+      <div class="secondary-menu__container">
+        <div class="header__social">
+          <span>Instagram:</span>
+          <a href="" target="_blank">@coat.official</a>
+        </div>
+        <select name="currency" class="header__currency select-currency">
+          <option value="">USD</option>
+          <option value="">KZT</option>
+          <option value="">RUB</option>
+        </select>
+        <form role="search" method="get" action="">
+            <input type="text" value="" name="search" id="search" class="header__search">
+        </form>
+        <div class="header__group">
+          <a class="header__icon header__compare" href="compare.html">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 6.52498L9.66934 2V22H8.25509V5.34338L5.98254 7.5457L5 6.52498ZM15.7449 18.6566V2H14.3307V22L19 17.475L18.0175 16.4543L15.7449 18.6566Z" fill="#151515"/>
+            </svg>
+          </a>
+          <a class="header__icon header__favorites" href="favorite.html">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 2H5V20C5 20 8.32699 15.5 11.5 15.5C14.673 15.5 18 20 18 20V2Z" stroke="black"/>
+            </svg>
+          </a>
+          <a class="header__icon header__basket" href="basket.html">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7.75 8.23809C7.75 8.23809 6.5772 1 11.5 1C16.4228 1 15.25 8.23809 15.25 8.23809M4 7.33333H19V20H4V7.33333Z" stroke="black"/>
+            </svg>
+          </a>
+          <!-- если не авторизован -->
+          <a class="header__icon header__profile modal-btn" data-type="login">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.2903 5.07195C15.2903 7.32082 13.4706 9.14389 11.2258 9.14389C8.98104 9.14389 7.16129 7.32082 7.16129 5.07195C7.16129 2.82307 8.98104 1 11.2258 1C13.4706 1 15.2903 2.82307 15.2903 5.07195Z" stroke="black"/>
+              <path d="M4 16.8353C4 16.8353 7.80299 11.754 11.2258 11.8585C14.5049 11.9586 18 16.8353 18 16.8353C18 16.8353 14.3097 19.9115 11.2258 19.9981C7.98943 20.089 4 16.8353 4 16.8353Z" stroke="black"/>
+            </svg>
+          </a>
+          <!-- если авторизован -->
+          <!-- <a class="header__icon header__profile" href="profile.html">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.2903 5.07195C15.2903 7.32082 13.4706 9.14389 11.2258 9.14389C8.98104 9.14389 7.16129 7.32082 7.16129 5.07195C7.16129 2.82307 8.98104 1 11.2258 1C13.4706 1 15.2903 2.82307 15.2903 5.07195Z" stroke="black"/>
+              <path d="M4 16.8353C4 16.8353 7.80299 11.754 11.2258 11.8585C14.5049 11.9586 18 16.8353 18 16.8353C18 16.8353 14.3097 19.9115 11.2258 19.9981C7.98943 20.089 4 16.8353 4 16.8353Z" stroke="black"/>
+            </svg>
+          </a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="primary-menu">
+    <div class="container">
+      <div class="primary-menu__container">
+        <a class="header__logo" href="/"><img src="img/logo.svg" alt=""></a>
+        <nav class="header__nav">
+          <ul class="header__menu">
+            <li class="button-dropdown">
+              <a href="javascript:void(0)" class="dropdown-toggle">Каталог</a>
+              <div class="dropdown-menu">
+                <div class="dropdown-inner">
+                  <div class="header__col">
+                    <div class="header__caption">Дублёнки и шубы</div>
+                    <ul class="header__submenu">
+                      <li>
+                        <a href="">Oversize / свободный крой</a>
+                        <img src="img/image-1.jpg" alt="">
+                      </li>
+                      <li>
+                        <a href="">С капюшоном</a>
+                        <img src="img/image-2.jpg" alt="">
+                      </li>
+                      <li>
+                        <a href="">Укороченные модели</a>
+                        <img src="img/image-3.jpg" alt="">
+                      </li>
+                      <li><a href="">Длинные модели</a></li>
+                      <li><a href="">Toscana / Merino / Curly</a></li>
+                    </ul>
+                  </div>
+                  <div class="header__col">
+                    <div class="header__caption">Кожаные куртки</div>
+                    <ul class="header__submenu">
+                      <li><a href="">Классические кожанки</a></li>
+                      <li><a href="">Бомберы</a></li>
+                      <li><a href="">Укороченные</a></li>
+                      <li><a href="">Длинные (пальто из кожи)</a></li>
+                      <li><a href="">С утеплителем (зимние)</a></li>
+                      <li><a href="">Без утеплителя (демисезонные)</a></li>
+                    </ul>
+                  </div>
+                  <div class="header__col">
+                    <div class="header__caption">Косухи</div>
+                    <ul class="header__submenu">
+                      <li><a href="">Классическая косуха (чёрная)</a></li>
+                      <li><a href="">Oversize</a></li>
+                      <li><a href="">Укороченные</a></li>
+                      <li><a href="">Из гладкой кожи</a></li>
+                    </ul>
+                  </div>
+                  <div class="header__col">
+                    <div class="header__caption">Плащи</div>
+                    <ul class="header__submenu">
+                      <li><a href="">Кожаные плащи</a></li>
+                      <li><a href="">С поясом</a></li>
+                      <li><a href="">Длинные плащи</a></li>
+                      <li><a href="">Укороченные</a></li>
+                      <li><a href="">Демисезонные</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li><a href="sewing.html">Индивидуальный пошив</a></li>
+            <li><a href="about.html">О компании</a></li>
+            <li><a href="service.html">Клиентский сервис</a></li>
+            <li><a href="materials.html">Материалы COAT</a></li>
+          </ul>
+        </nav>
+        <div class="header__burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+        <main>
+          <section class="profile profile-main section-pad-bottom section-hidden">
+            <div class="container">
+              <div class="profile__container">
+                <ul class="profile__aside">
+                  <li><a href="profile.html">Личные данные</a></li>
+                  <li><a href="profile-payment.html">Профили оплат</a></li>
+                  <li><a href="profile-order.html">Текущие заказы</a></li>
+                  <li><a href="profile-history.html">История заказов</a></li>
+                </ul>
+                <div class="profile__wrap">
+                  <h1 class="profile__title title-indent text-up">Личные данные</h1>
+                  <form class="profile__form profile-form">
+                    <div class="profile-form__group">
+                      <span>Имя</span>
+                      <input type="text" name="firstname" placeholder="Введите имя" value="Анастасия">
+                    </div>
+                    <div class="profile-form__group">
+                      <span>Фамилия</span>
+                      <input type="text" name="lastname" placeholder="Введите фамилию">
+                    </div>
+                    <div class="profile-form__group">
+                      <span>Номер телефона</span>
+                      <input type="text" name="phone" placeholder="Номер телефона" value="+7 (747) 502 02 24">
+                    </div>
+                    <div class="profile-form__group">
+                      <span>Электронная почта</span>
+                      <input type="text" name="email" placeholder="Электронная почта" value="anastasiamali@gmail.com">
+                    </div>
+                    <button class="profile-form__button button button-border" disabled>Сохранить</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+        <footer class="footer">
+  <div class="container">
+    <div class="footer__container">
+      <div class="footer__wrap">
+        <div class="footer__row">
+          <div class="footer__col">
+            <a href="" class="footer__logo"><img src="img/logo.svg" alt=""></a>
+            <div class="footer__qr"><img src="img/qr.png" alt=""></div>
+          </div>
+          <div class="footer__col">
+            <div class="footer__caption">Навигация</div>
+            <ul class="footer__menu">
+              <li><a href="">О компании</a></li>
+              <li><a href="">Новости</a></li>
+              <li><a href="">Клиентский сервис</a></li>
+              <li><a href="">Вопросы и ответы</a></li>
+              <li><a href="">Каталог</a></li>
+              <li><a href="">Индивидуальный пошив</a></li>
+              <li><a href="">Коллекции</a></li>
+              <li><a href="">Материалы COAT</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <div class="footer__caption">Контакты</div>
+            <div class="footer__box">
+              <div class="footer__group">
+                <span>Адрес шоурума:</span>
+                <span>г. Стамбул</span>
+              </div>
+              <div class="footer__group">
+                <span>Телефон:</span>
+                <a href="tel:+7 (XXX) XXX-XX-XX">+7 (XXX) XXX-XX-XX</a>
+              </div>
+              <div class="footer__group">
+                <span>Телефон:</span>
+                <a href="tel:+7 (XXX) XXX-XX-XX">+7 (XXX) XXX-XX-XX</a>
+              </div>
+              <div class="footer__group">
+                <span>Email:</span>
+                <a href="mailto:info@coat.kz">info@coat.kz</a>
+              </div>
+              <div class="footer__group">
+                <span>Время работы:</span>
+                <span>Пн–Вс, 10:00–20:00</span>
+              </div>
+            </div>
+          </div>
+          <div class="footer__col">
+            <div class="footer__caption">Социальные сети</div>
+            <div class="footer__box">
+              <a href="" target="_blank">Instagram</a>
+              <a href="" target="_blank">Telegram</a>
+              <a href="" target="_blank">WhatsApp</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__policy text-center text-s">
+          <a href="">Политика конфиденциальности и условия использования</a>
+        </div>
+      </div>
+      <div class="footer__copy">
+        <span>© 2025 COAT. Все права защищены.</span>
+        <a href="" class="">Сайт разработан Factum</a>
+      </div>
+    </div>
+  </div>
+</footer>
+ 
+      </div>
+    </div>
+
+    <div class="modals">
+  <div class="modal modal-order" data-type="order">
+    <div class="modal__container">
+      <div class="modal__top">
+        <div class="modal__caption">Заказ в один клик</div>
+        <button class="modal__close">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="#1D1B20"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal__card basket__label">
+        <div class="basket__img">
+          <img src="img/image-5.jpg" alt="">
+        </div>
+        <div class="basket__col basket-info">
+          <div class="basket-info__top">
+            <div class="basket-info__caption">Дублёнка</div>
+            <div class="basket-info__price">
+              <span class="price">35 000 ₸</span>
+              <span class="old-price">55 000 ₸</span>
+            </div>
+            <div class="basket-info__sale">36%</div>
+          </div>
+          <ul class="basket-info__list">
+            <li class="basket-info__item">мех Toscana, кожа</li>
+            <li class="basket-info__item">Зима</li>
+            <li class="basket-info__item">95 см</li>
+            <li class="basket-info__item">Oversize</li>
+            <li class="basket-info__item">S</li>
+          </ul>
+        </div>
+      </div>
+      <form action="" class="modal-form">
+        <div class="modal-form__grid">
+          <div class="modal-form__field">
+            <input type="text" placeholder="Имя*" required>
+          </div>
+          <div class="modal-form__field">
+            <input type="text" placeholder="Фамилия*" required>
+          </div>
+          <div class="modal-form__field">
+            <input type="tel" placeholder="Номер телефона*" required>
+          </div>
+          <div class="modal-form__field">
+            <input type="email" placeholder="Электронная почта*" required>
+          </div>
+        </div>
+        <button class="modal-form__button button button-dark text-up">Купить в один клик</button>
+      </form>
+    </div>
+  </div>
+  <div class="modal modal-login" data-type="login">
+    <button class="modal__close">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2.53464 19.3333L0.667969 17.4666L8.13464 9.99996L0.667969 2.53329L2.53464 0.666626L10.0013 8.13329L17.468 0.666626L19.3346 2.53329L11.868 9.99996L19.3346 17.4666L17.468 19.3333L10.0013 11.8666L2.53464 19.3333Z" fill="#1D1B20"/>
+      </svg>
+    </button>
+    <img class="modal__back" src="img/login.png" alt="">
+    <div class="modal__container">
+      <div class="modal__caption text-up">Авторизация</div>
+      <form action="" class="modal-form">
+        <div class="modal-form__field field-email">
+          <input type="email" name="email" id="email" placeholder="Электронная почта">
+        </div>
+        <div class="modal-form__field field-password">
+          <input type="password" name="password" id="password" placeholder="Пароль">
+          <div class="eye close"></div>
+        </div>
+        <div class="modal-form__group">
+          <div class="modal-form__remember">
+            <input type="checkbox" name="remember" id="remember">
+            <label for="remember">Запомнить меня</label>
+          </div>
+          <a class="modal-form__forgot modal-btn" data-type="forgot">Забыл(а) пароль</a>
+        </div>
+        <button class="modal-form__button button button-border">Войти</button>
+      </form>
+      <a class="modal__link modal-btn" data-type="register">У меня нет аккаунта</a>
+      <div class="modal__note">Продолжая, вы соглашаетесь с <a href="#" target="_blank">политикой конфиденциальности</a></div>
+    </div>
+  </div>
+  <div class="modal modal-forgot" data-type="forgot">
+    <button class="modal__close">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2.53464 19.3333L0.667969 17.4666L8.13464 9.99996L0.667969 2.53329L2.53464 0.666626L10.0013 8.13329L17.468 0.666626L19.3346 2.53329L11.868 9.99996L19.3346 17.4666L17.468 19.3333L10.0013 11.8666L2.53464 19.3333Z" fill="#1D1B20"/>
+      </svg>
+    </button>
+    <img class="modal__back" src="img/login.png" alt="">
+    <div class="modal__container">
+      <div class="modal__caption text-up">Восстановление пароля</div>
+      <form action="" class="modal-form">
+        <div class="modal-form__field field-email">
+          <input type="email" name="email" id="email" placeholder="Электронная почта">
+        </div>
+        <button class="modal-form__button button button-border">Восстановить</button>
+      </form>
+      <a class="modal__link modal-btn" data-type="login">Я помню пароль</a>
+    </div>
+  </div>
+  <div class="modal modal-reset" data-type="reset">
+    <button class="modal__close">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2.53464 19.3333L0.667969 17.4666L8.13464 9.99996L0.667969 2.53329L2.53464 0.666626L10.0013 8.13329L17.468 0.666626L19.3346 2.53329L11.868 9.99996L19.3346 17.4666L17.468 19.3333L10.0013 11.8666L2.53464 19.3333Z" fill="#1D1B20"/>
+      </svg>
+    </button>
+    <img class="modal__back" src="img/login.png" alt="">
+    <div class="modal__container">
+      <div class="modal__caption text-up">Сброс пароля</div>
+      <form action="" class="modal-form">
+        <div class="modal-form__field field-password">
+          <input type="password" name="password" id="password" placeholder="Новый пароль">
+          <div class="eye close"></div>
+        </div>
+        <div class="modal-form__field field-password">
+          <input type="password" name="password" id="password" placeholder="Повторите пароль">
+          <div class="eye close"></div>
+        </div>
+        <button class="modal-form__button button button-border">Сохранить</button>
+      </form>
+    </div>
+  </div>
+  <div class="modal modal-register" data-type="register">
+    <button class="modal__close">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2.53464 19.3333L0.667969 17.4666L8.13464 9.99996L0.667969 2.53329L2.53464 0.666626L10.0013 8.13329L17.468 0.666626L19.3346 2.53329L11.868 9.99996L19.3346 17.4666L17.468 19.3333L10.0013 11.8666L2.53464 19.3333Z" fill="#1D1B20"/>
+      </svg>
+    </button>
+    <img class="modal__back" src="img/login.png" alt="">
+    <div class="modal__container">
+      <div class="modal__caption text-up">Регистрация</div>
+      <form action="" class="modal-form">
+        <div class="modal-form__field field-email">
+          <input type="text" name="name" id="name" placeholder="Имя">
+        </div>
+        <div class="modal-form__field field-email">
+          <input type="email" name="email" id="email" placeholder="Электронная почта">
+        </div>
+        <div class="modal-form__field field-password">
+          <input type="password" name="password" id="password" placeholder="Пароль">
+          <div class="eye close"></div>
+        </div>
+        <button class="modal-form__button button button-border">Зарегистрироваться</button>
+      </form>
+      <a class="modal__link modal-btn" data-type="login">У меня есть аккаунт</a>
+      <div class="modal__note">Продолжая, вы соглашаетесь с <a href="#" target="_blank">политикой конфиденциальности</a></div>
+    </div>
+  </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20251015183418"></script>
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/tabby/dist/js/tabby.polyfills.min.js?_v=20251015183418"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js?_v=20251015183418"></script>
+<script src="https://cdn.prod.website-files.com/622b0a8557cc790ca01b97bb/66005a0997fdea31bc68d664_ScrollSmoother.min.js.txt?_v=20251015183418"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js?_v=20251015183418"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollToPlugin.min.js?_v=20251015183418"></script>
+<script src="js/app.js?_v=20251015183418"></script>
+  </body>
+</html>

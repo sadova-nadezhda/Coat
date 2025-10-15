@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "Профили оплат" })
+  <body>
+
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        @@include('html/header.html')
+        <main>
+          <section class="profile profile-payment section-pad-bottom section-hidden">
+            <div class="container">
+              <div class="profile__container">
+                <ul class="profile__aside">
+                  <li><a href="profile.html">Личные данные</a></li>
+                  <li><a href="profile-payment.html">Профили оплат</a></li>
+                  <li><a href="profile-order.html">Текущие заказы</a></li>
+                  <li><a href="profile-history.html">История заказов</a></li>
+                </ul>
+                <div class="profile__wrap">
+                  <h1 class="profile__title title-indent text-up">Профили оплат</h1>
+                  <form class="profile-payment__form">
+                    <div class="profile-payment__group">
+                      <span>Имя</span>
+                      <input type="text" name="firstname" placeholder="Введите имя" value="Анастасия">
+                    </div>
+                    <div class="profile-payment__group">
+                      <span>Фамилия</span>
+                      <input type="text" name="firstname" placeholder="Введите фамилию">
+                    </div>
+                    <div class="profile-payment__group">
+                      <span>Номер телефона</span>
+                      <input type="tel" name="phone" placeholder="Номер телефона" value="+7 (747) 502 02 24">
+                    </div>
+                    <div class="profile-payment__group">
+                      <span>Электронная почта</span>
+                      <input type="email" name="email" placeholder="Электронная почта" value="anastasiamali@gmail.com">
+                    </div>
+                    <div class="profile-payment__bottom">
+                      <button class="profile-payment__button button button-border">Отмена</button>
+                      <button class="profile-payment__button button button-dark">Сохранить изменения</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+        @@include('html/footer.html') 
+      </div>
+    </div>
+
+    @@include('html/modals.html')
+    @@include('html/foot.html')
+  </body>
+</html>
