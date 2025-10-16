@@ -3124,10 +3124,16 @@ h6 {
   gap: calc(120 * var(--width-multiplier));
 }
 
+.profile__aside {
+  display: flex;
+  flex-direction: column;
+}
+
 .profile__aside a {
   display: block;
   padding: calc(8 * var(--width-multiplier)) calc(12 * var(--width-multiplier));
   transition: color 0.3s ease-in-out;
+  white-space: nowrap;
 }
 
 .profile__aside a:hover {
@@ -3307,10 +3313,110 @@ h6 {
   font-size: calc(14 * var(--width-multiplier));
 }
 
+.profile-history__accordion {
+  gap: 0;
+}
+
+.profile-history__item {
+  padding: 0;
+  border: 0;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.profile-history__item.active {
+  color: var(--light, #FFFFFF);
+  background-color: var(--dark, #151515);
+}
+
+.profile-history__item.active .accordion__header {
+  color: var(--light, #FFFFFF);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.profile-history__item.active .accordion__header svg {
+  transform: rotate(180deg);
+}
+
+.profile-history__item.active .accordion__header path {
+  stroke: var(--light, #FFFFFF);
+}
+
 .profile-history__heading,
 .profile-history__header {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
+  gap: 0;
+}
+
+.profile-history__heading {
+  border-top: calc(1 * var(--width-multiplier)) solid rgb(21, 21, 21);
+  border-bottom: calc(1 * var(--width-multiplier)) solid rgb(21, 21, 21);
+}
+
+.profile-history__header {
+  border-bottom: calc(1 * var(--width-multiplier)) solid rgba(21, 21, 21, 0.1);
+  font-size: calc(16 * var(--width-multiplier));
+  font-weight: 400;
+  text-transform: none;
+}
+
+.profile-history__header svg {
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-history__header path {
+  transition: stroke 0.3s ease-in-out;
+}
+
+.profile-history__col {
+  display: flex;
+  align-items: center;
+  gap: calc(10 * var(--width-multiplier));
+  padding: calc(10 * var(--width-multiplier));
+  min-width: calc(120 * var(--width-multiplier));
+  white-space: nowrap;
+}
+
+.profile-history__price {
+  font-weight: 600;
+}
+
+.profile-history__box {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: calc(16 * var(--width-multiplier));
+  padding: calc(24 * var(--width-multiplier)) calc(16 * var(--width-multiplier));
+}
+
+.profile-history__caption {
+  margin-bottom: calc(24 * var(--width-multiplier));
+  font-size: calc(20 * var(--width-multiplier));
+  font-weight: 600;
+  line-height: 1;
+}
+
+.profile-history__name {
+  font-size: calc(18 * var(--width-multiplier));
+  font-weight: 500;
+  line-height: 1;
+}
+
+.profile-history__rows {
+  display: flex;
+  flex-direction: column;
+  gap: calc(20 * var(--width-multiplier));
+}
+
+.profile-history__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: calc(8 * var(--width-multiplier));
+  line-height: 1;
+}
+
+.profile-history__row span {
+  font-weight: 600;
 }
 
 .thanks__container {
@@ -4006,7 +4112,24 @@ h6 {
   }
 
   .profile__container {
+    grid-template-columns: 1fr;
     gap: calc(24 * var(--width-multiplier));
+  }
+
+  .profile__aside a {
+    border: calc(1 * var(--width-multiplier)) solid rgba(21, 21, 21, 0.1);
+  }
+
+  .profile__aside {
+    flex-direction: row;
+    gap: calc(8 * var(--width-multiplier));
+    overflow-y: hidden;
+    overflow-x: auto;
+  }
+
+  .profile-history__table {
+    overflow-y: hidden;
+    overflow-x: auto;
   }
 
   .thanks__box {
@@ -4553,14 +4676,6 @@ h6 {
     min-height: calc(455 * var(--width-multiplier));
   }
 
-  .profile__container {
-    grid-template-columns: 1fr;
-  }
-
-  .profile__aside a {
-    padding: calc(8 * var(--width-multiplier)) 0;
-  }
-
   .profile-wallet {
     flex: 1 1 100%;
   }
@@ -4605,6 +4720,23 @@ h6 {
 
   .profile-cansel__group {
     margin-bottom: calc(12 * var(--width-multiplier));
+  }
+
+  .profile-history__col {
+    font-size: calc(14 * var(--width-multiplier));
+  }
+
+  .profile-history__caption {
+    margin-bottom: calc(16 * var(--width-multiplier));
+    font-size: calc(18 * var(--width-multiplier));
+  }
+
+  .profile-history__name {
+    font-size: calc(16 * var(--width-multiplier));
+  }
+
+  .profile-history__row {
+    font-size: calc(14 * var(--width-multiplier));
   }
 
   .profile__button {

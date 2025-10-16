@@ -2764,23 +2764,30 @@
     grid-template-columns: calc(225 * var(--width-multiplier)) 1fr;
     gap: calc(120 * var(--width-multiplier));
     @media (max-width: 1024px) {
-      gap: calc(24 * var(--width-multiplier));
-    }
-    @media (max-width: 767px) {
       grid-template-columns: 1fr;
+      gap: calc(24 * var(--width-multiplier));
     }
   }
   &__aside {
+    display: flex;
+    flex-direction: column;
     a {
       display: block;
       padding: calc(8 * var(--width-multiplier)) calc(12 * var(--width-multiplier));
       transition: color 0.3s ease-in-out;
+      white-space: nowrap;
       &:hover {
         color: var(--blue, $blue);
       }
-      @media (max-width: 767px) {
-        padding: calc(8 * var(--width-multiplier)) 0;
+      @media (max-width: 1024px) {
+        border: calc(1 * var(--width-multiplier)) solid rgba(21, 21, 21, 0.1);
       }
+    }
+    @media (max-width: 1024px) {
+      flex-direction: row;
+      gap: calc(8 * var(--width-multiplier));
+      overflow-y: hidden;
+      overflow-x: auto;
     }
   }
   &__wallets {
@@ -2976,9 +2983,110 @@
     }
   }
   &-history {
+    &__table {
+      @media (max-width: 1024px) {
+        overflow-y: hidden;
+        overflow-x: auto;
+      }
+    }
+    &__accordion {
+      gap: 0;
+    }
+    &__item {
+      padding: 0;
+      border: 0;
+      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+      &.active {
+        color: var(--light, $light);
+        background-color: var(--dark, $dark);
+        .accordion__header {
+          color: var(--light, $light);
+          border-color: rgba(255, 255, 255, 0.1);
+          svg {
+            transform: rotate(180deg);
+          }
+          path {
+            stroke: var(--light, $light);
+          }
+        }
+      }
+    }
     &__heading, &__header {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
+      gap: 0;
+    }
+    &__heading {
+      border-top: calc(1 * var(--width-multiplier)) solid rgba(21, 21, 21, 1);
+      border-bottom: calc(1 * var(--width-multiplier)) solid rgba(21, 21, 21, 1);
+    }
+    &__header {
+      border-bottom: calc(1 * var(--width-multiplier)) solid rgba(21, 21, 21, 0.1);
+      font-size: calc(16 * var(--width-multiplier));
+      font-weight: 400;
+      text-transform: none;
+      svg {
+        transition: transform 0.3s ease-in-out;
+      }
+      path {
+        transition: stroke 0.3s ease-in-out;
+      }
+    }
+    &__col {
+      display: flex;
+      align-items: center;
+      gap: calc(10 * var(--width-multiplier));
+      padding: calc(10 * var(--width-multiplier));
+      min-width: calc(120 * var(--width-multiplier));
+      white-space: nowrap;
+      @media (max-width: 767px) {
+        font-size: calc(14 * var(--width-multiplier));
+      }
+    }
+    &__price {
+      font-weight: 600;
+    }
+    &__box {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: calc(16 * var(--width-multiplier));
+      padding: calc(24 * var(--width-multiplier)) calc(16 * var(--width-multiplier));
+    }
+    &__caption {
+      margin-bottom: calc(24 * var(--width-multiplier));
+      font-size: calc(20 * var(--width-multiplier));
+      font-weight: 600;
+      line-height: 1;
+      @media (max-width: 767px) {
+        margin-bottom: calc(16 * var(--width-multiplier));
+        font-size: calc(18 * var(--width-multiplier));
+      }
+    }
+    &__name {
+      font-size: calc(18 * var(--width-multiplier));
+      font-weight: 500;
+      line-height: 1;
+      @media (max-width: 767px) {
+        font-size: calc(16 * var(--width-multiplier));
+      }
+    }
+    &__rows {
+      display: flex;
+      flex-direction: column;
+      gap: calc(20 * var(--width-multiplier));
+    }
+    &__row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: calc(8 * var(--width-multiplier));
+      line-height: 1;
+      span {
+        font-weight: 600;
+      }
+      @media (max-width: 767px) {
+        font-size: calc(14 * var(--width-multiplier));
+      }
     }
   }
   &__button {
