@@ -863,6 +863,13 @@
     &:last-child {
       border-right: calc(1 * var(--width-multiplier)) solid rgba(21, 21, 21, 0.1);
     }
+    &:hover {
+      .product-card__img {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
     @media (max-width: 1024px) {
       &:nth-child(2n) {
         border-right: calc(1 * var(--width-multiplier)) solid rgba(21, 21, 21, 0.1);

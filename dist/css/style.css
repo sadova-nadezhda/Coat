@@ -1398,6 +1398,10 @@ h6 {
   border-right: calc(1 * var(--width-multiplier)) solid rgba(21, 21, 21, 0.1);
 }
 
+.product-card:hover .product-card__img img {
+  transform: scale(1.1);
+}
+
 .product-card__img {
   position: relative;
   flex-grow: 1;
