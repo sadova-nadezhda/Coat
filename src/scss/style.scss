@@ -2697,7 +2697,7 @@
     justify-content: center;
     width: 100%;
     height: 100%;
-    min-height: calc(555 * var(--width-multiplier));
+    min-height: 100dvh;
     padding: calc(12 * var(--width-multiplier));
     color: var(--light, $light);
     border-radius: calc(5 * var(--width-multiplier));
@@ -2725,8 +2725,11 @@
       object-position: 50% 20%;
       z-index: -2;
     }
+    @media (max-width: 1024px) {
+      min-height: calc(555 * var(--width-multiplier));
+    }
     @media (max-width: 767px) {
-      min-height: calc(455 * var(--width-multiplier));
+      min-height: calc(420 * var(--width-multiplier));
     }
   }
   &__caption {
@@ -2782,13 +2785,13 @@
       overflow-x: auto;
     }
   }
-  &__wallets {
+  &__cards {
     display: flex;
     flex-wrap: wrap;
     gap: calc(12 * var(--width-multiplier));
     margin-bottom: calc(24 * var(--width-multiplier));
   }
-  &-wallet {
+  &-card {
     flex: 0 1 calc(420 * var(--width-multiplier));
     position: relative;
     display: flex;
@@ -3365,6 +3368,11 @@
       input {
         width: calc(16 * var(--width-multiplier));
         height: calc(16 * var(--width-multiplier));
+        border-radius: calc(2 * var(--width-multiplier));
+        @media (max-width: 767px) {
+          width: calc(14 * var(--width-multiplier));
+          height: calc(14 * var(--width-multiplier));
+        }
       }
       label {
         cursor: pointer;

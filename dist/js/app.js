@@ -135,7 +135,6 @@ window.addEventListener("load", function () {
   }
 
   // GSAP
-
   if (location.hash) {
     const y = smoother.offset(location.hash, 'top top');
     smoother.scrollTo(y, false);
@@ -149,7 +148,6 @@ window.addEventListener("load", function () {
 
     const wrap = section.querySelector('.about-production__wrap');
     const slot = section.querySelector('.about-production__slot');
-    const items = gsap.utils.toArray('.about-production__item', slot);
 
     const computeShift = () => {
       const delta = Math.max(0, slot.scrollHeight - wrap.clientHeight + 24);
@@ -158,7 +156,6 @@ window.addEventListener("load", function () {
 
     function setup() {
       const yEnd = computeShift();
-
 
       const tl = gsap.timeline({
         defaults: { ease: 'none' },

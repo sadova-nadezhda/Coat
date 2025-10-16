@@ -3053,7 +3053,7 @@ h6 {
   justify-content: center;
   width: 100%;
   height: 100%;
-  min-height: calc(555 * var(--width-multiplier));
+  min-height: 100dvh;
   padding: calc(12 * var(--width-multiplier));
   color: var(--light, #FFFFFF);
   border-radius: calc(5 * var(--width-multiplier));
@@ -3131,14 +3131,14 @@ h6 {
   color: var(--blue, #1C5BB4);
 }
 
-.profile__wallets {
+.profile__cards {
   display: flex;
   flex-wrap: wrap;
   gap: calc(12 * var(--width-multiplier));
   margin-bottom: calc(24 * var(--width-multiplier));
 }
 
-.profile-wallet {
+.profile-card {
   flex: 0 1 calc(420 * var(--width-multiplier));
   position: relative;
   display: flex;
@@ -3149,7 +3149,7 @@ h6 {
   border-radius: calc(4 * var(--width-multiplier));
 }
 
-.profile-wallet input {
+.profile-card input {
   position: absolute;
   top: calc(16 * var(--width-multiplier));
   right: calc(16 * var(--width-multiplier));
@@ -3157,25 +3157,25 @@ h6 {
   height: calc(16 * var(--width-multiplier));
 }
 
-.profile-wallet__name {
+.profile-card__name {
   font-weight: 700;
 }
 
-.profile-wallet__group {
+.profile-card__group {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: calc(6 * var(--width-multiplier));
 }
 
-.profile-wallet__link {
+.profile-card__link {
   position: relative;
   display: block;
   font-size: calc(14 * var(--width-multiplier));
   line-height: 1;
 }
 
-.profile-wallet__link::before {
+.profile-card__link::before {
   content: "";
   position: absolute;
   top: 100%;
@@ -3680,6 +3680,7 @@ h6 {
 .modal-form__remember input {
   width: calc(16 * var(--width-multiplier));
   height: calc(16 * var(--width-multiplier));
+  border-radius: calc(2 * var(--width-multiplier));
 }
 
 .modal-form__remember label {
@@ -4100,6 +4101,10 @@ h6 {
 
   .collections-inner__container {
     grid-template-columns: 1fr;
+  }
+
+  .materials__card {
+    min-height: calc(555 * var(--width-multiplier));
   }
 
   .profile__container {
@@ -4664,10 +4669,10 @@ h6 {
   }
 
   .materials__card {
-    min-height: calc(455 * var(--width-multiplier));
+    min-height: calc(420 * var(--width-multiplier));
   }
 
-  .profile-wallet {
+  .profile-card {
     flex: 1 1 100%;
   }
 
@@ -4771,6 +4776,11 @@ h6 {
 
   .modal-form__field input {
     font-size: calc(14 * var(--width-multiplier));
+  }
+
+  .modal-form__remember input {
+    width: calc(14 * var(--width-multiplier));
+    height: calc(14 * var(--width-multiplier));
   }
 
   .modal-order .modal__top {
