@@ -8,7 +8,6 @@ const smoother = ScrollSmoother.create({
 });
 
 const header   = document.querySelector('header');
-const wrap     = document.querySelector('.service__wrap');
 const aside    = document.querySelector('.my-sticky');
 const links    = gsap.utils.toArray('.service__aside a');
 const sections = gsap.utils.toArray('.service__group');
@@ -51,15 +50,6 @@ sections.forEach(sec => {
 });
 
 const delayedRefresh = gsap.delayedCall(0.12, () => ScrollTrigger.refresh());
-
-window.addEventListener('load', () => {
-  if (location.hash) {
-    const y = smoother.offset(location.hash, 'top top');
-    smoother.scrollTo(y, false);
-    setActive(location.hash.slice(1));
-  }
-  delayedRefresh.restart(true);
-});
 
 document.addEventListener('tabby', () => delayedRefresh.restart(true), true);
 
@@ -143,6 +133,54 @@ window.addEventListener("load", function () {
       });
     }
   }
+
+  // GSAP
+
+  if (location.hash) {
+    const y = smoother.offset(location.hash, 'top top');
+    smoother.scrollTo(y, false);
+    setActive(location.hash.slice(1));
+  }
+  delayedRefresh.restart(true);
+
+  function initAboutProduction() {
+    const section = document.querySelector('.about-production');
+    if (!section) return;
+
+    const wrap = section.querySelector('.about-production__wrap');
+    const slot = section.querySelector('.about-production__slot');
+    const items = gsap.utils.toArray('.about-production__item', slot);
+
+    const computeShift = () => {
+      const delta = Math.max(0, slot.scrollHeight - wrap.clientHeight + 24);
+      return -delta;
+    };
+
+    function setup() {
+      const yEnd = computeShift();
+
+
+      const tl = gsap.timeline({
+        defaults: { ease: 'none' },
+        scrollTrigger: {
+          trigger: wrap,
+          start: 'top top',
+          scrub: true,
+          pin: true,
+          anticipatePin: 1,
+          invalidateOnRefresh: true
+        }
+      });
+
+      tl.to(slot, { y: yEnd, duration: 1});
+    }
+
+    setup();
+    ScrollTrigger.addEventListener('refreshInit', () => gsap.set(slot, { clearProps: 'y' }));
+    window.addEventListener('resize', () => ScrollTrigger.refresh());
+  }
+
+  initAboutProduction();
 
   // Grids
   const grids = document.querySelectorAll('.category__grid');
