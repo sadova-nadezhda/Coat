@@ -1,64 +1,5 @@
-// gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
-
-// const smoother = ScrollSmoother.create({
-//   wrapper: '#smooth-wrapper',
-//   content: '#smooth-content',
-//   smooth: 2,
-//   effects: true
-// });
-
-// const aside = document.querySelector('.my-sticky');
-// const header = document.querySelector('header');
-
-// ScrollTrigger.create({
-//   trigger: '.service__wrap',
-//   start: 'top 2%',
-//   pin: '.my-sticky',
-//   pinSpacing: false
-// });
-
-// function setActiveById(id) {
-//   links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === `#${id}`));
-// }
-
-// links.forEach(a => {
-//   a.addEventListener('click', (e) => {
-//     const hash = a.getAttribute('href');
-//     if (!hash || hash[0] !== '#') return;
-//     e.preventDefault();
-
-//     setActiveById(hash.slice(1));
-
-//     const y = smoother.offset(hash, 'top top');
-//     smoother.scrollTo(y, true);
-
-//     history.pushState(null, '', hash);
-//   });
-// });
-
-// sections.forEach(sec => {
-//   ScrollTrigger.create({
-//     trigger: sec,
-//     start: () => `top center`,
-//     end: 'bottom center',
-//     onEnter:  () => setActiveById(sec.id),
-//     onEnterBack: () => setActiveById(sec.id)
-//   });
-// });
-
-// const delayedRefresh = gsap.delayedCall(0.12, () => ScrollTrigger.refresh());
-
-// document.addEventListener('tabby', () => delayedRefresh.restart(true), true);
-
-// document.querySelectorAll('.accordion__header').forEach(btn => {
-//   btn.addEventListener('click', () => setTimeout(() => delayedRefresh.restart(true), 180));
-// });
-
-// window.addEventListener('resize', () => delayedRefresh.restart(true));
-
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
 
-// ---------- GSAP core ----------
 const smoother = ScrollSmoother.create({
   wrapper: '#smooth-wrapper',
   content: '#smooth-content',
@@ -66,7 +7,6 @@ const smoother = ScrollSmoother.create({
   effects: true
 });
 
-// селекторы
 const header   = document.querySelector('header');
 const wrap     = document.querySelector('.service__wrap');
 const aside    = document.querySelector('.my-sticky');
