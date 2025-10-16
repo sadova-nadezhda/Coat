@@ -2067,7 +2067,7 @@ h6 {
   padding-top: calc(24 * var(--width-multiplier));
 }
 
-.order__row {
+.order__form {
   display: grid;
   grid-template-columns: 1fr calc(460 * var(--width-multiplier));
   align-items: flex-start;
@@ -2107,6 +2107,12 @@ h6 {
   margin-bottom: calc(8 * var(--width-multiplier));
   color: rgba(21, 21, 21, 0.4);
   font-weight: 600;
+}
+
+.order__group {
+  display: flex;
+  flex-direction: column;
+  gap: calc(8 * var(--width-multiplier));
 }
 
 .order__fields {
@@ -3185,6 +3191,10 @@ h6 {
   background-color: var(--dark, #151515);
 }
 
+.profile-card__link:hover {
+  cursor: pointer;
+}
+
 .profile-form {
   display: flex;
   flex-direction: column;
@@ -3734,6 +3744,10 @@ h6 {
   padding-top: calc(16 * var(--width-multiplier));
 }
 
+.is-hidden {
+  display: none !important;
+}
+
 @keyframes scroll {
   from {
     transform: translateX(0);
@@ -4034,7 +4048,7 @@ h6 {
     gap: calc(16 * var(--width-multiplier));
   }
 
-  .order__row {
+  .order__form {
     grid-template-columns: 1fr;
     gap: calc(16 * var(--width-multiplier));
   }

@@ -11,56 +11,95 @@
             <div class="container">
               <div class="order__container">
                 <h1 class="order__title title-indent text-up">Оформление заказа</h1>
-                <div class="order__row">
+                <form class="order__form">
                   <div class="order__wrap">
                     <div class="order__box">
                       <div class="order__caption">Введите данные получателя</div>
-                      <div class="order__radio">
-                        <input type="checkbox" name="person-save" id="radio-1">
-                        <label for="radio-1">Выбрать сохранённый профиль</label>
+                      <div class="order__cards">
+                        <div class="profile__cards">
+                          <label class="profile__card profile-card" data-uid="c1">
+                            <input type="radio" name="card" id="card-1" checked>
+                            <div class="profile-card__name text-up">Анастасия Малинова</div>
+                            <div class="profile-card__group">
+                              <div class="profile-card__email">anastasiamali@gmail.com</div>
+                              <div class="profile-card__height">160 см</div>
+                            </div>
+                            <div class="profile-card__group">
+                              <div class="profile-card__tel">+7 747 502 0224</div>
+                              <a class="profile-card__link js-edit">Изменить</a>
+                            </div>
+                          </label>
+                          <label class="profile__card profile-card" data-uid="c2">
+                            <input type="radio" name="card" id="card-2">
+                            <div class="profile-card__name text-up">Екатерина Малинова</div>
+                            <div class="profile-card__group">
+                              <div class="profile-card__email">ekaterinamali@gmail.com</div>
+                              <div class="profile-card__height">170 см</div>
+                            </div>
+                            <div class="profile-card__group">
+                              <div class="profile-card__tel">+7 747 502 0224</div>
+                              <a class="profile-card__link js-edit">Изменить</a>
+                            </div>
+                          </label>
+                        </div>
+                        <button class="order__button button button-dark" type="button" id="addCardBtn">Добавить еще</button>
                       </div>
-                      <div class="order__fields">
-                        <div class="order__field field error">
-                          <input type="text" placeholder="Имя*" required>
-                          <span>Пожалуйства введите имя</span>
+                      <div class="order__group">
+                        <div class="order__fields">
+                          <div class="order__field field">
+                            <input type="text" id="fName" placeholder="Имя*" required>
+                            <span>Пожалуйства введите имя</span>
+                          </div>
+                          <div class="order__field field">
+                            <input type="text" id="lName" placeholder="Фамилия*" required>
+                            <span>Пожалуйства введите фамилию</span>
+                          </div>
+                          <div class="order__field field">
+                            <input type="tel" id="phone" placeholder="Номер телефона*" required>
+                            <span>Пожалуйства введите номер телефона</span>
+                          </div>
+                          <div class="order__field field">
+                            <input type="email" id="email" placeholder="Электронная почта*" required>
+                            <span>Пожалуйства введите почту</span>
+                          </div>
+                          <div class="order__field field">
+                            <input type="text" id="height" placeholder="Ваш рост, см*" required>
+                            <span>Пожалуйства введите рост, см</span>
+                          </div>
                         </div>
-                        <div class="order__field field">
-                          <input type="text" placeholder="Фамилия*" required>
-                        </div>
-                        <div class="order__field field">
-                          <input type="tel" placeholder="Номер телефона*" required>
-                        </div>
-                        <div class="order__field field">
-                          <input type="email" placeholder="Электронная почта*" required>
-                        </div>
-                        <div class="order__field field">
-                          <input type="text" placeholder="Ваш рост, см*" required>
-                        </div>
+                        <button class="order__button button button-dark"  type="button" id="continueBtn">Продолжить</button>
                       </div>
                     </div>
                     <div class="order__box">
                       <div class="order__caption">Адрес доставки</div>
                       <div class="order__fields">
                         <div class="order__field field">
-                        <input type="text" placeholder="Страна*" required>
+                          <input type="text" placeholder="Страна*" required>
+                          <span>Пожалуйства введите страну</span>
                         </div>
                         <div class="order__field field">
-                        <input type="text" placeholder="Город*" required>
+                          <input type="text" placeholder="Город*" required>
+                          <span>Пожалуйства введите город</span>
                         </div>
                         <div class="order__field field">
-                        <input type="tel" placeholder="Улица*" required>
+                          <input type="text" placeholder="Улица*" required>
+                          <span>Пожалуйства введите улицу</span>
                         </div>
                         <div class="order__field field">
-                        <input type="email" placeholder="Дом*" required>
+                          <input type="text" placeholder="Дом*" required>
+                          <span>Пожалуйства введите дом</span>
                         </div>
                         <div class="order__field field s">
-                        <input type="text" placeholder="Подъезд*"required>
+                          <input type="text" placeholder="Подъезд*"required>
+                          <span>Пожалуйства введите подъезд</span>
                         </div>
                         <div class="order__field field s">
-                        <input type="text" placeholder="Этаж*"required>
+                          <input type="text" placeholder="Этаж*"required>
+                          <span>Пожалуйства введите этаж</span>
                         </div>
                         <div class="order__field field s">
-                        <input type="text" placeholder="Квартиру*"required>
+                          <input type="text" placeholder="Квартиру*"required>
+                          <span>Пожалуйства введите квартиру</span>
                         </div>
                       </div>
                     </div>
@@ -95,7 +134,7 @@
                       <button class="order-result__button button button-dark text-up">Перейти к оплате</button>
                     </div>
                   </div>
-                </div>
+                </form>
               </div>
             </div>
           </section>

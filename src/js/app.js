@@ -192,6 +192,146 @@ window.addEventListener("load", function () {
     });
   });
 
+  // Order
+
+  const box = document.querySelector('.order__box');
+  const cardsWrap = box.querySelector('.order__cards');
+  const cardsList = box.querySelector('.profile__cards');
+  const fieldsWrap = box.querySelector('.order__group');
+
+  const addCardBtn = box.querySelector('#addCardBtn');
+  const continueBtn = box.querySelector('#continueBtn');
+
+  const $fName  = box.querySelector('#fName');
+  const $lName  = box.querySelector('#lName');
+  const $phone  = box.querySelector('#phone');
+  const $email  = box.querySelector('#email');
+  const $height = box.querySelector('#height');
+
+  let editingUid = null;
+
+  const hasCards = () => cardsList.querySelectorAll('.profile__card').length > 0;
+
+  const showCards = () => {
+    cardsWrap.classList.remove('is-hidden');
+    fieldsWrap.classList.add('is-hidden');
+    editingUid = null;
+  };
+
+  const showForm = () => {
+    cardsWrap.classList.add('is-hidden');
+    fieldsWrap.classList.remove('is-hidden');
+  };
+
+  const clearForm = () => {
+    $fName.value = '';
+    $lName.value = '';
+    $phone.value = '';
+    $email.value = '';
+    $height.value = '';
+  };
+
+  const fillForm = (data) => {
+    $fName.value  = data.firstName || '';
+    $lName.value  = data.lastName  || '';
+    $phone.value  = data.phone     || '';
+    $email.value  = data.email     || '';
+    $height.value = data.height    || '';
+  };
+
+  const readForm = () => ({
+    firstName: $fName.value.trim(),
+    lastName:  $lName.value.trim(),
+    phone:     $phone.value.trim(),
+    email:     $email.value.trim(),
+    height:    $height.value.trim()
+  });
+
+  const uid = () => 'c' + Math.random().toString(36).slice(2, 9);
+
+  const readCard = (cardEl) => {
+    const fullName = (cardEl.querySelector('.profile-card__name')?.textContent || '').trim();
+    const [firstName, ...rest] = fullName.split(/\s+/);
+    const lastName = rest.join(' ');
+    const email = (cardEl.querySelector('.profile-card__email')?.textContent || '').trim();
+    const height = (cardEl.querySelector('.profile-card__height')?.textContent || '').trim();
+    const phone = (cardEl.querySelector('.profile-card__tel')?.textContent || '').trim();
+    return { firstName, lastName, email, phone, height };
+  };
+
+  const renderCard = (data, existingUid = null) => {
+    const nameLine = [data.firstName, data.lastName].filter(Boolean).join(' ');
+    const html = `
+      <label class="profile__card profile-card" data-uid="${existingUid || uid()}">
+        <input type="radio" name="card" ${existingUid ? '' : 'checked'}>
+        <div class="profile-card__name text-up">${nameLine}</div>
+        <div class="profile-card__group">
+          <div class="profile-card__email">${data.email || ''}</div>
+          <div class="profile-card__height">${data.height || ''}</div>
+        </div>
+        <div class="profile-card__group">
+          <div class="profile-card__tel">${data.phone || ''}</div>
+          <a href="#" class="profile-card__link js-edit">Изменить</a>
+        </div>
+      </label>
+    `;
+
+    if (existingUid) {
+      const el = cardsList.querySelector(`.profile__card[data-uid="${existingUid}"]`);
+      if (el) el.outerHTML = html;
+    } else {
+      cardsList.insertAdjacentHTML('beforeend', html);
+      const radios = cardsList.querySelectorAll('input[type="radio"][name="card"]');
+      radios.forEach(r => r.checked = false);
+      radios[radios.length - 1].checked = true;
+    }
+  };
+
+  if (hasCards()) { showCards(); } else { showForm(); }
+
+  addCardBtn?.addEventListener('click', (e) => {
+    e.preventDefault();
+    editingUid = null;
+    clearForm();
+
+
+    cardsWrap.classList.remove('is-hidden');
+    fieldsWrap.classList.remove('is-hidden');
+    addCardBtn.classList.add('is-hidden');
+  });
+
+  cardsWrap.addEventListener('click', (e) => {
+    const link = e.target.closest('.js-edit');
+    if (!link) return;
+    e.preventDefault();
+    const card = e.target.closest('.profile__card');
+    if (!card) return;
+
+    editingUid = card.dataset.uid || null;
+    const data = readCard(card);
+    fillForm(data);
+    showForm();
+  });
+
+  continueBtn?.addEventListener('click', (e) => {
+    e.preventDefault();
+    const data = readForm();
+
+    if (!data.firstName || !data.lastName || !data.phone || !data.email || !data.height) {
+      alert('Пожалуйста, заполните все поля.');
+      return;
+    }
+
+    if (editingUid) {
+      renderCard(data, editingUid);
+    } else {
+      renderCard(data, null);
+    }
+
+    clearForm();
+    showCards();
+  });
+
   // Swiper
   const heroSwiper = new Swiper(".heroSwiper", { pagination: { el: ".hero-pagination" } });
   const compareSwiper = new Swiper(".compareSwiper", {

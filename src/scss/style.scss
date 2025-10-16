@@ -1641,7 +1641,7 @@
 
 .order {
   padding-top: calc(24 * var(--width-multiplier));
-  &__row {
+  &__form {
     display: grid;
     grid-template-columns: 1fr calc(460 * var(--width-multiplier));
     align-items: flex-start;
@@ -1692,6 +1692,11 @@
       margin-bottom: calc(16 * var(--width-multiplier));
       font-size: calc(18 * var(--width-multiplier));
     }
+  }
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: calc(8 * var(--width-multiplier));
   }
   &__fields {
     display: flex;
@@ -2833,6 +2838,9 @@
         width: 100%;
         background-color: var(--dark, $dark);
       }
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
   &-form {
@@ -3432,6 +3440,8 @@
     }
   }
 }
+
+.is-hidden { display: none !important; }
 
 // animation 
 
