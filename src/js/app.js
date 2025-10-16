@@ -215,12 +215,14 @@ window.addEventListener("load", function () {
   const showCards = () => {
     cardsWrap.classList.remove('is-hidden');
     fieldsWrap.classList.add('is-hidden');
+    addCardBtn?.classList.remove('is-hidden');
     editingUid = null;
   };
 
   const showForm = () => {
     cardsWrap.classList.add('is-hidden');
     fieldsWrap.classList.remove('is-hidden');
+    addCardBtn?.classList.add('is-hidden');
   };
 
   const clearForm = () => {
@@ -259,11 +261,23 @@ window.addEventListener("load", function () {
     return { firstName, lastName, email, phone, height };
   };
 
-  const renderCard = (data, existingUid = null) => {
+  const renderCard = (data, existingUid = null, forceChecked = false) => {
+    const id = existingUid || uid();
+
+    let wasChecked = false;
+    if (existingUid) {
+      const oldEl = cardsList.querySelector(`.profile__card[data-uid="${existingUid}"]`);
+      if (oldEl) {
+        const oldRadio = oldEl.querySelector('input[type="radio"][name="card"]');
+        wasChecked = !!oldRadio?.checked;
+      }
+    }
+
+    const shouldCheck = forceChecked || wasChecked || !existingUid;
     const nameLine = [data.firstName, data.lastName].filter(Boolean).join(' ');
     const html = `
-      <label class="profile__card profile-card" data-uid="${existingUid || uid()}">
-        <input type="radio" name="card" ${existingUid ? '' : 'checked'}>
+      <label class="profile__card profile-card" data-uid="${id}">
+        <input type="radio" name="card" ${shouldCheck ? 'checked' : ''}>
         <div class="profile-card__name text-up">${nameLine}</div>
         <div class="profile-card__group">
           <div class="profile-card__email">${data.email || ''}</div>
@@ -282,8 +296,10 @@ window.addEventListener("load", function () {
     } else {
       cardsList.insertAdjacentHTML('beforeend', html);
       const radios = cardsList.querySelectorAll('input[type="radio"][name="card"]');
-      radios.forEach(r => r.checked = false);
-      radios[radios.length - 1].checked = true;
+      radios.forEach(r => (r.checked = false));
+      cardsList
+        .querySelector(`.profile__card[data-uid="${id}"] input[type="radio"][name="card"]`)
+        .checked = true;
     }
   };
 
@@ -293,11 +309,7 @@ window.addEventListener("load", function () {
     e.preventDefault();
     editingUid = null;
     clearForm();
-
-
-    cardsWrap.classList.remove('is-hidden');
-    fieldsWrap.classList.remove('is-hidden');
-    addCardBtn.classList.add('is-hidden');
+    showForm();
   });
 
   cardsWrap.addEventListener('click', (e) => {
@@ -323,9 +335,9 @@ window.addEventListener("load", function () {
     }
 
     if (editingUid) {
-      renderCard(data, editingUid);
+      renderCard(data, editingUid, true); 
     } else {
-      renderCard(data, null);
+      renderCard(data, null, true);
     }
 
     clearForm();
