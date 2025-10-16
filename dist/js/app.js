@@ -1,3 +1,61 @@
+// gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
+
+// const smoother = ScrollSmoother.create({
+//   wrapper: '#smooth-wrapper',
+//   content: '#smooth-content',
+//   smooth: 2,
+//   effects: true
+// });
+
+// const aside = document.querySelector('.my-sticky');
+// const header = document.querySelector('header');
+
+// ScrollTrigger.create({
+//   trigger: '.service__wrap',
+//   start: 'top 2%',
+//   pin: '.my-sticky',
+//   pinSpacing: false
+// });
+
+// function setActiveById(id) {
+//   links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === `#${id}`));
+// }
+
+// links.forEach(a => {
+//   a.addEventListener('click', (e) => {
+//     const hash = a.getAttribute('href');
+//     if (!hash || hash[0] !== '#') return;
+//     e.preventDefault();
+
+//     setActiveById(hash.slice(1));
+
+//     const y = smoother.offset(hash, 'top top');
+//     smoother.scrollTo(y, true);
+
+//     history.pushState(null, '', hash);
+//   });
+// });
+
+// sections.forEach(sec => {
+//   ScrollTrigger.create({
+//     trigger: sec,
+//     start: () => `top center`,
+//     end: 'bottom center',
+//     onEnter:  () => setActiveById(sec.id),
+//     onEnterBack: () => setActiveById(sec.id)
+//   });
+// });
+
+// const delayedRefresh = gsap.delayedCall(0.12, () => ScrollTrigger.refresh());
+
+// document.addEventListener('tabby', () => delayedRefresh.restart(true), true);
+
+// document.querySelectorAll('.accordion__header').forEach(btn => {
+//   btn.addEventListener('click', () => setTimeout(() => delayedRefresh.restart(true), 180));
+// });
+
+// window.addEventListener('resize', () => delayedRefresh.restart(true));
+
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
 
 // ---------- GSAP core ----------
@@ -8,44 +66,26 @@ const smoother = ScrollSmoother.create({
   effects: true
 });
 
+// селекторы
 const header   = document.querySelector('header');
 const wrap     = document.querySelector('.service__wrap');
 const aside    = document.querySelector('.my-sticky');
 const links    = gsap.utils.toArray('.service__aside a');
 const sections = gsap.utils.toArray('.service__group');
 
-const getHeaderH = () => (header ? header.offsetHeight : 0);
-
-if (wrap && aside) {
-  ScrollTrigger.matchMedia({
-    "(min-width: 1025px)": () => {
-      ScrollTrigger.create({
-        trigger: wrap,
-        start: () => `top+=${getHeaderH()} top+=${getHeaderH()}`,
-        end: () => {
-          const total   = wrap.scrollHeight;
-          const stickyH = aside.offsetHeight;
-          return `+=${Math.max(0, total - stickyH - 1)}`;
-        },
-        pin: aside,
-        pinSpacing: true,
-        invalidateOnRefresh: true,
-        anticipatePin: 1
-      });
-    },
-
-    "(max-width: 1024px)": () => {
-      // ничего не создаём
-    }
-  });
-}
+ScrollTrigger.create({
+  trigger: '.service__wrap',
+  start: 'top 2%',
+  pin: '.my-sticky',
+  pinSpacing: false
+});
 
 links.forEach(a => {
   a.addEventListener('click', (e) => {
     const hash = a.getAttribute('href');
     if (!hash || hash[0] !== '#') return;
     e.preventDefault();
-    const y = smoother.offset(hash, 'top top') - getHeaderH();
+    const y = smoother.offset(hash, 'top 2%');
     smoother.scrollTo(y, true);
     history.pushState(null, '', hash);
   });
@@ -61,7 +101,7 @@ const setActive = (id) => {
 sections.forEach(sec => {
   ScrollTrigger.create({
     trigger: sec,
-    start: () => `top+=${getHeaderH()} center`,
+    start: 'top center',
     end: 'bottom center',
     onEnter:     () => setActive(sec.id),
     onEnterBack: () => setActive(sec.id),
@@ -74,7 +114,7 @@ const delayedRefresh = gsap.delayedCall(0.12, () => ScrollTrigger.refresh());
 
 window.addEventListener('load', () => {
   if (location.hash) {
-    const y = smoother.offset(location.hash, 'top top') - getHeaderH();
+    const y = smoother.offset(location.hash, 'top top');
     smoother.scrollTo(y, false);
     setActive(location.hash.slice(1));
   }
@@ -87,24 +127,11 @@ document.querySelectorAll('.faq__header').forEach(btn => {
   btn.addEventListener('click', () => setTimeout(() => delayedRefresh.restart(true), 180));
 });
 
-document.querySelectorAll('.service__box img').forEach(img => {
-  if (!img.complete) {
-    img.addEventListener('load',  () => delayedRefresh.restart(true), { once:true });
-    img.addEventListener('error', () => delayedRefresh.restart(true), { once:true });
-  }
-});
-
-const serviceBox = document.querySelector('.service__box');
-if (serviceBox && 'ResizeObserver' in window) {
-  new ResizeObserver(() => delayedRefresh.restart(true)).observe(serviceBox);
-}
-
 window.addEventListener('resize', () => delayedRefresh.restart(true));
 
 window.addEventListener("load", function () {
   let link = document.querySelector(".header__burger");
   let menu = document.querySelector(".header__nav");
-
   if (menu) {
     link.addEventListener("click", function () {
       link.classList.toggle("active");
@@ -207,8 +234,8 @@ window.addEventListener("load", function () {
   });
 
   // Accordion 
-  const faqItems = document.querySelectorAll(".accordion__item");
-  faqItems.forEach((el) => {
+  const accItems = document.querySelectorAll(".accordion__item");
+  accItems.forEach((el) => {
     el.addEventListener("click", function () {
       this.classList.toggle("active");
       let accBody = this.querySelector(".accordion__content");
@@ -221,6 +248,7 @@ window.addEventListener("load", function () {
     });
   });
 
+  // Range
   const range = document.querySelector("#input-range");
   const field = document.querySelector(".field-range");
   const label = field?.querySelector(".label");
@@ -235,8 +263,8 @@ window.addEventListener("load", function () {
     const percent = ((val - min) / (max - min)) * 100;
     label.style.left = `calc(${percent}%)`;
   });
-  
-  // modal
+
+  // Modal
   (function () {
     const modalWrapper = document.querySelector('.modals');
     if (!modalWrapper) return;
@@ -260,7 +288,6 @@ window.addEventListener("load", function () {
     };
 
     const openModal = (type) => {
-      // Скрыть все
       modals.forEach((m) => {
         m.style.display = 'none';
         m.style.removeProperty('transform');
@@ -274,7 +301,6 @@ window.addEventListener("load", function () {
       modal.style.display = 'flex';
       showWrapper();
 
-      // Анимируем ИМЕННО контейнер
       const container = modal.querySelector('.modal__container') || modal;
       if (window.gsap) {
         gsap.fromTo(
@@ -310,7 +336,6 @@ window.addEventListener("load", function () {
       }
     };
 
-    // Кнопки открытия
     document.querySelectorAll('.modal-btn').forEach((btn) => {
       btn.addEventListener('click', (e) => {
         e.preventDefault();
@@ -319,9 +344,7 @@ window.addEventListener("load", function () {
       });
     });
 
-    // Закрытие по клику на задник (.modal), но НЕ внутри .modal__container
     modalWrapper.addEventListener('click', (e) => {
-      // клик по крестику
       if (e.target.closest('.modal__close')) {
         closeCurrentModal();
         return;
@@ -330,9 +353,7 @@ window.addEventListener("load", function () {
       const current = modals.find((m) => m.style.display !== 'none');
       if (!current) return;
 
-      // если кликнут НЕ контейнер и не его дети — закрываем
       if (!e.target.closest('.modal__container')) {
-        // Дополнительно убеждаемся, что клик внутри активной .modal или на .modals
         if (e.target === modalWrapper || e.target.closest('.modal') === current) {
           closeCurrentModal();
         }
