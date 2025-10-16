@@ -194,154 +194,170 @@ window.addEventListener("load", function () {
 
   // Order
 
-  const box = document.querySelector('.order__box');
-  const cardsWrap = box.querySelector('.order__cards');
-  const cardsList = box.querySelector('.profile__cards');
-  const fieldsWrap = box.querySelector('.order__group');
+  const orderBox = document.querySelector('.order__payment');
+  if(orderBox) {
+    const cardsWrap = orderBox.querySelector('.order__cards');
+    const cardsList = orderBox.querySelector('.profile__cards');
+    const fieldsWrap = orderBox.querySelector('.order__group');
 
-  const addCardBtn = box.querySelector('#addCardBtn');
-  const continueBtn = box.querySelector('#continueBtn');
+    const addCardBtn = orderBox.querySelector('#addCardBtn');
+    const continueBtn = orderBox.querySelector('#continueBtn');
 
-  const $fName  = box.querySelector('#fName');
-  const $lName  = box.querySelector('#lName');
-  const $phone  = box.querySelector('#phone');
-  const $email  = box.querySelector('#email');
-  const $height = box.querySelector('#height');
+    const $fName  = orderBox.querySelector('#fName');
+    const $lName  = orderBox.querySelector('#lName');
+    const $phone  = orderBox.querySelector('#phone');
+    const $email  = orderBox.querySelector('#email');
+    const $height = orderBox.querySelector('#height');
 
-  let editingUid = null;
+    let editingUid = null;
 
-  const hasCards = () => cardsList.querySelectorAll('.profile__card').length > 0;
+    const hasCards = () => cardsList.querySelectorAll('.profile__card').length > 0;
 
-  const showCards = () => {
-    cardsWrap.classList.remove('is-hidden');
-    fieldsWrap.classList.add('is-hidden');
-    addCardBtn?.classList.remove('is-hidden');
-    editingUid = null;
-  };
+    const showCards = () => {
+      cardsWrap.classList.remove('is-hidden');
+      fieldsWrap.classList.add('is-hidden');
+      addCardBtn?.classList.remove('is-hidden');
+      editingUid = null;
+    };
 
-  const showForm = () => {
-    cardsWrap.classList.add('is-hidden');
-    fieldsWrap.classList.remove('is-hidden');
-    addCardBtn?.classList.add('is-hidden');
-  };
+    const showForm = () => {
+      cardsWrap.classList.add('is-hidden');
+      fieldsWrap.classList.remove('is-hidden');
+      addCardBtn?.classList.add('is-hidden');
+    };
 
-  const clearForm = () => {
-    $fName.value = '';
-    $lName.value = '';
-    $phone.value = '';
-    $email.value = '';
-    $height.value = '';
-  };
+    const clearForm = () => {
+      $fName.value = '';
+      $lName.value = '';
+      $phone.value = '';
+      $email.value = '';
+      $height.value = '';
+    };
 
-  const fillForm = (data) => {
-    $fName.value  = data.firstName || '';
-    $lName.value  = data.lastName  || '';
-    $phone.value  = data.phone     || '';
-    $email.value  = data.email     || '';
-    $height.value = data.height    || '';
-  };
+    const fillForm = (data) => {
+      $fName.value  = data.firstName || '';
+      $lName.value  = data.lastName  || '';
+      $phone.value  = data.phone     || '';
+      $email.value  = data.email     || '';
+      $height.value = data.height    || '';
+    };
 
-  const readForm = () => ({
-    firstName: $fName.value.trim(),
-    lastName:  $lName.value.trim(),
-    phone:     $phone.value.trim(),
-    email:     $email.value.trim(),
-    height:    $height.value.trim()
-  });
+    const readForm = () => ({
+      firstName: $fName.value.trim(),
+      lastName:  $lName.value.trim(),
+      phone:     $phone.value.trim(),
+      email:     $email.value.trim(),
+      height:    $height.value.trim()
+    });
 
-  const uid = () => 'c' + Math.random().toString(36).slice(2, 9);
+    const uid = () => 'c' + Math.random().toString(36).slice(2, 9);
 
-  const readCard = (cardEl) => {
-    const fullName = (cardEl.querySelector('.profile-card__name')?.textContent || '').trim();
-    const [firstName, ...rest] = fullName.split(/\s+/);
-    const lastName = rest.join(' ');
-    const email = (cardEl.querySelector('.profile-card__email')?.textContent || '').trim();
-    const height = (cardEl.querySelector('.profile-card__height')?.textContent || '').trim();
-    const phone = (cardEl.querySelector('.profile-card__tel')?.textContent || '').trim();
-    return { firstName, lastName, email, phone, height };
-  };
+    const readCard = (cardEl) => {
+      const fullName = (cardEl.querySelector('.profile-card__name')?.textContent || '').trim();
+      const [firstName, ...rest] = fullName.split(/\s+/);
+      const lastName = rest.join(' ');
+      const email = (cardEl.querySelector('.profile-card__email')?.textContent || '').trim();
+      const height = (cardEl.querySelector('.profile-card__height')?.textContent || '').trim();
+      const phone = (cardEl.querySelector('.profile-card__tel')?.textContent || '').trim();
+      return { firstName, lastName, email, phone, height };
+    };
 
-  const renderCard = (data, existingUid = null, forceChecked = false) => {
-    const id = existingUid || uid();
+    const renderCard = (data, existingUid = null, forceChecked = false) => {
+      const id = existingUid || uid();
 
-    let wasChecked = false;
-    if (existingUid) {
-      const oldEl = cardsList.querySelector(`.profile__card[data-uid="${existingUid}"]`);
-      if (oldEl) {
-        const oldRadio = oldEl.querySelector('input[type="radio"][name="card"]');
-        wasChecked = !!oldRadio?.checked;
+      let wasChecked = false;
+      if (existingUid) {
+        const oldEl = cardsList.querySelector(`.profile__card[data-uid="${existingUid}"]`);
+        if (oldEl) {
+          const oldRadio = oldEl.querySelector('input[type="radio"][name="card"]');
+          wasChecked = !!oldRadio?.checked;
+        }
       }
-    }
 
-    const shouldCheck = forceChecked || wasChecked || !existingUid;
-    const nameLine = [data.firstName, data.lastName].filter(Boolean).join(' ');
-    const html = `
-      <label class="profile__card profile-card" data-uid="${id}">
-        <input type="radio" name="card" ${shouldCheck ? 'checked' : ''}>
-        <div class="profile-card__name text-up">${nameLine}</div>
-        <div class="profile-card__group">
-          <div class="profile-card__email">${data.email || ''}</div>
-          <div class="profile-card__height">${data.height || ''}</div>
-        </div>
-        <div class="profile-card__group">
-          <div class="profile-card__tel">${data.phone || ''}</div>
-          <a href="#" class="profile-card__link js-edit">Изменить</a>
-        </div>
-      </label>
-    `;
+      const shouldCheck = forceChecked || wasChecked || !existingUid;
+      const nameLine = [data.firstName, data.lastName].filter(Boolean).join(' ');
+      const html = `
+        <label class="profile__card profile-card" data-uid="${id}">
+          <input type="radio" name="card" ${shouldCheck ? 'checked' : ''}>
+          <div class="profile-card__name text-up">${nameLine}</div>
+          <div class="profile-card__group">
+            <div class="profile-card__email">${data.email || ''}</div>
+            <div class="profile-card__height">${data.height || ''}</div>
+          </div>
+          <div class="profile-card__group">
+            <div class="profile-card__tel">${data.phone || ''}</div>
+            <a href="#" class="profile-card__link js-edit">Изменить</a>
+          </div>
+        </label>
+      `;
 
-    if (existingUid) {
-      const el = cardsList.querySelector(`.profile__card[data-uid="${existingUid}"]`);
-      if (el) el.outerHTML = html;
-    } else {
-      cardsList.insertAdjacentHTML('beforeend', html);
-      const radios = cardsList.querySelectorAll('input[type="radio"][name="card"]');
-      radios.forEach(r => (r.checked = false));
-      cardsList
-        .querySelector(`.profile__card[data-uid="${id}"] input[type="radio"][name="card"]`)
-        .checked = true;
-    }
-  };
+      if (existingUid) {
+        const el = cardsList.querySelector(`.profile__card[data-uid="${existingUid}"]`);
+        if (el) el.outerHTML = html;
+      } else {
+        cardsList.insertAdjacentHTML('beforeend', html);
+        const radios = cardsList.querySelectorAll('input[type="radio"][name="card"]');
+        radios.forEach(r => (r.checked = false));
+        cardsList
+          .querySelector(`.profile__card[data-uid="${id}"] input[type="radio"][name="card"]`)
+          .checked = true;
+      }
+    };
 
-  if (hasCards()) { showCards(); } else { showForm(); }
+    if (hasCards()) { showCards(); } else { showForm(); }
 
-  addCardBtn?.addEventListener('click', (e) => {
-    e.preventDefault();
-    editingUid = null;
-    clearForm();
-    showForm();
-  });
+    addCardBtn?.addEventListener('click', (e) => {
+      e.preventDefault();
+      editingUid = null;
+      clearForm();
+      showForm();
+    });
 
-  cardsWrap.addEventListener('click', (e) => {
-    const link = e.target.closest('.js-edit');
-    if (!link) return;
-    e.preventDefault();
-    const card = e.target.closest('.profile__card');
-    if (!card) return;
+    cardsWrap.addEventListener('click', (e) => {
+      const link = e.target.closest('.js-edit');
+      if (!link) return;
+      e.preventDefault();
+      const card = e.target.closest('.profile__card');
+      if (!card) return;
 
-    editingUid = card.dataset.uid || null;
-    const data = readCard(card);
-    fillForm(data);
-    showForm();
-  });
+      editingUid = card.dataset.uid || null;
+      const data = readCard(card);
+      fillForm(data);
+      showForm();
+    });
 
-  continueBtn?.addEventListener('click', (e) => {
-    e.preventDefault();
-    const data = readForm();
+    continueBtn?.addEventListener('click', (e) => {
+      e.preventDefault();
+      const data = readForm();
 
-    if (!data.firstName || !data.lastName || !data.phone || !data.email || !data.height) {
-      alert('Пожалуйста, заполните все поля.');
-      return;
-    }
+      if (!data.firstName || !data.lastName || !data.phone || !data.email || !data.height) {
+        alert('Пожалуйста, заполните все поля.');
+        return;
+      }
 
-    if (editingUid) {
-      renderCard(data, editingUid, true); 
-    } else {
-      renderCard(data, null, true);
-    }
+      if (editingUid) {
+        renderCard(data, editingUid, true); 
+      } else {
+        renderCard(data, null, true);
+      }
 
-    clearForm();
-    showCards();
+      clearForm();
+      showCards();
+    });
+  }
+
+  // Password
+
+  document.querySelectorAll('.field-password').forEach(field => {
+    const eye = field.querySelector('.eye');
+    const input = field.querySelector('input');
+
+    eye.addEventListener('click', () => {
+      const isClosed = eye.classList.contains('close');
+      eye.classList.toggle('close', !isClosed);
+      eye.classList.toggle('open', isClosed);
+      input.type = isClosed ? 'text' : 'password';
+    });
   });
 
   // Swiper
@@ -462,6 +478,13 @@ window.addEventListener("load", function () {
         finishClose();
       }
     };
+
+    const url = new URL(window.location.href);
+  
+    const modalParam = url.searchParams.get('modal');
+    if (modalParam) {
+      openModal(modalParam);
+    }
 
     document.querySelectorAll('.modal-btn').forEach((btn) => {
       btn.addEventListener('click', (e) => {
