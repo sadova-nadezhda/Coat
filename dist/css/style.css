@@ -2660,6 +2660,7 @@ h6 {
 .service__aside a {
   display: block;
   padding: calc(8 * var(--width-multiplier)) calc(12 * var(--width-multiplier));
+  transition: background-color 0.3s ease-in-out;
 }
 
 .service__aside a.active {
