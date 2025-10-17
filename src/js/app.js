@@ -412,10 +412,6 @@ window.addEventListener("load", function () {
     label.style.left = `calc(${percent}%)`;
   });
 
-  // Select
-
-  $('select').niceSelect(); 
-
   // Modal
   (function () {
     const modalWrapper = document.querySelector('.modals');

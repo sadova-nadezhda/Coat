@@ -808,8 +808,7 @@
     margin-bottom: calc(24 * var(--width-multiplier));
     font-size: calc(14 * var(--width-multiplier));
     line-height: 1;
-    .nice-select {
-      height: calc(38 * var(--width-multiplier));
+    select {
       width: calc(200 * var(--width-multiplier));
       max-width: max-content;
       padding: calc(10 * var(--width-multiplier)) calc(12 * var(--width-multiplier));
@@ -818,22 +817,12 @@
       background: url(../img/arrow-down-2.svg) no-repeat top 50% right calc(8 * var(--width-multiplier));
       background-size: calc(24 * var(--width-multiplier)) calc(24 * var(--width-multiplier));
       background-color: var(--light, $light);
-      font-family: Manrope;
-      font-size: calc(16 * var(--width-multiplier));
-      line-height: 1;
-      &:after {
-        content: none;
+      @media (max-width: 767px) {
+        padding: calc(8 * var(--width-multiplier)) calc(12 * var(--width-multiplier));
+        padding-right: calc(20 * var(--width-multiplier));
+        background: url(../img/arrow-down-2.svg) no-repeat top 50% right calc(4 * var(--width-multiplier));
+        background-size: calc(20 * var(--width-multiplier)) calc(20 * var(--width-multiplier));
       }
-    }
-    .list {
-      box-shadow: none;
-    }
-    .option {
-      padding: calc(4 * var(--width-multiplier)) calc(8 * var(--width-multiplier));
-      padding-right: calc(30 * var(--width-multiplier));
-    }
-    .option.selected {
-      font-weight: 600;
     }
   }
   &__choice, &__grids {
@@ -843,8 +832,8 @@
   }
   &__choice {
     padding: 0;
-    // overflow-y: hidden;
-    // overflow-x: auto;
+    overflow-y: hidden;
+    overflow-x: auto;
   }
   &__box {
     display: flex;
