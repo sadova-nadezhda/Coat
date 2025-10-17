@@ -258,6 +258,16 @@
   }
 }
 
+.button-dropdown {
+  @media(max-width: 1024px) {
+    &.open {
+      .dropdown-menu {
+        left: 0;
+      }
+    }
+  }
+}
+
 .dropdown-menu {
   position: absolute;
   top: calc(100% - calc(20 * var(--width-multiplier)));
@@ -267,9 +277,11 @@
   max-height: 0;
   z-index: 3;
   overflow: hidden;
-  transition: max-height 0.5s ease-out;
+  transition: max-height 0.5s ease-out, left 0.3s ease-out;
   @media(max-width: 1024px) {
     top: 0;
+    max-height: unset;
+    left: -100vw;
   }
 }
 

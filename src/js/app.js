@@ -66,14 +66,16 @@ window.addEventListener("load", function () {
     link.addEventListener("click", function () {
       link.classList.toggle("active");
       menu.classList.toggle("open");
+      closeAllDropdowns()
     });
 
-    window.addEventListener("scroll", () => {
-      if (menu.classList.contains("open")) {
-        link.classList.remove("active");
-        menu.classList.remove("open");
-      }
-    });
+    // window.addEventListener("scroll", () => {
+    //   if (menu.classList.contains("open")) {
+    //     link.classList.remove("active");
+    //     menu.classList.remove("open");
+    //     closeAllDropdowns()
+    //   }
+    // });
 
     document.addEventListener("click", (e) => {
       let target = e.target;
@@ -110,15 +112,11 @@ window.addEventListener("load", function () {
         toggle.addEventListener("click", function (e) {
           e.preventDefault();
           const parent = toggle.closest(".button-dropdown");
-          const dropdown = parent.querySelector(".dropdown-menu");
-          const height = dropdown.scrollHeight;
 
           if (parent.classList.contains("open")) {
             parent.classList.remove("open");
-            dropdown.style.maxHeight = null;
           } else {
             closeAllDropdowns();
-            dropdown.style.maxHeight = height + "px";
             parent.classList.add("open");
           }
         });
