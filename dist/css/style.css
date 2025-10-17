@@ -214,6 +214,11 @@ select {
   background-color: var(--light, #FFFFFF);
 }
 
+select option {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: calc(14 * var(--width-multiplier));
+}
+
 select:hover {
   cursor: pointer;
 }

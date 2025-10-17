@@ -183,6 +183,10 @@ select {
   background: url(../img/arrow-down.svg) no-repeat top 50% right calc(12 * var(--width-multiplier));
   background-size: calc(12 * var(--width-multiplier)) calc(6 * var(--width-multiplier));
   background-color: var(--light, $light);
+  option {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: calc(14 * var(--width-multiplier));
+  }
   &:hover {
     cursor: pointer;
   }
