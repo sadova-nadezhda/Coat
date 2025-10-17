@@ -1343,10 +1343,12 @@ h6 {
 
 .category__tabs {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   gap: calc(8 * var(--width-multiplier));
-  margin-bottom: calc(24 * var(--width-multiplier));
+  padding-bottom: calc(4 * var(--width-multiplier));
+  margin-bottom: calc(20 * var(--width-multiplier));
+  overflow-y: hidden;
+  overflow-x: auto;
 }
 
 .category__item {
@@ -1355,6 +1357,7 @@ h6 {
   border: calc(1 * var(--width-multiplier)) solid rgba(21, 21, 21, 0.1);
   background-color: var(--light, #FFFFFF);
   line-height: 1;
+  white-space: nowrap;
   transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
@@ -1364,15 +1367,12 @@ h6 {
   background-color: var(--dark, #151515);
 }
 
-.category__view {
-  display: none;
-}
-
 .category__filter {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: calc(8 * var(--width-multiplier));
+  gap: calc(4 * var(--width-multiplier));
   margin-bottom: calc(24 * var(--width-multiplier));
   font-size: calc(14 * var(--width-multiplier));
   line-height: 1;
@@ -1399,6 +1399,7 @@ h6 {
 
 .category__choice {
   padding: 0;
+  padding-bottom: calc(4 * var(--width-multiplier));
   overflow-y: hidden;
   overflow-x: auto;
 }
@@ -1407,6 +1408,7 @@ h6 {
   display: flex;
   align-items: center;
   gap: calc(16 * var(--width-multiplier));
+  margin-left: auto;
 }
 
 .category__grid {
@@ -2576,8 +2578,11 @@ h6 {
 .sewing-form .field-range input[type=range] {
   -webkit-appearance: none;
   width: 100%;
+  height: calc(4 * var(--width-multiplier));
   padding: 0;
   border: 0;
+  border-radius: calc(8 * var(--width-multiplier));
+  background-color: rgb(230, 224, 233);
 }
 
 .sewing-form .field-range input[type=range]:focus {
@@ -4429,16 +4434,6 @@ h6 {
     font-size: calc(14 * var(--width-multiplier));
   }
 
-  .category__view {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: calc(30 * var(--width-multiplier));
-    height: calc(30 * var(--width-multiplier));
-    margin-left: auto;
-    border: calc(1 * var(--width-multiplier)) solid rgba(21, 21, 21, 0.1);
-  }
-
   .category__filter select {
     padding: calc(8 * var(--width-multiplier)) calc(12 * var(--width-multiplier));
     padding-right: calc(20 * var(--width-multiplier));
@@ -4446,7 +4441,7 @@ h6 {
     background-size: calc(20 * var(--width-multiplier)) calc(20 * var(--width-multiplier));
   }
 
-  .category__box {
+  .category__grids {
     display: none;
   }
 

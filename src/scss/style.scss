@@ -760,10 +760,12 @@
   }
   &__tabs {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     gap: calc(8 * var(--width-multiplier));
-    margin-bottom: calc(24 * var(--width-multiplier));
+    padding-bottom: calc(4 * var(--width-multiplier));
+    margin-bottom: calc(20 * var(--width-multiplier));
+    overflow-y: hidden;
+    overflow-x: auto;
     @media (max-width: 767px) {
       margin-bottom: calc(16 * var(--width-multiplier));
     }
@@ -774,6 +776,7 @@
     border: calc(1 * var(--width-multiplier)) solid rgba(21, 21, 21, 0.1);
     background-color: var(--light, $light);
     line-height: 1;
+    white-space: nowrap;
     transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out;
     &:hover {
       border-color: var(--dark, $dark);
@@ -784,23 +787,12 @@
       font-size: calc(14 * var(--width-multiplier));
     }
   }
-  &__view {
-    display: none;
-    @media (max-width: 767px) {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: calc(30 * var(--width-multiplier));
-      height: calc(30 * var(--width-multiplier));
-      margin-left: auto;
-      border: calc(1 * var(--width-multiplier)) solid rgba(21, 21, 21, 0.1);
-    }
-  }
   &__filter {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    gap: calc(8 * var(--width-multiplier));
+    gap: calc(4 * var(--width-multiplier));
     margin-bottom: calc(24 * var(--width-multiplier));
     font-size: calc(14 * var(--width-multiplier));
     line-height: 1;
@@ -828,16 +820,20 @@
   }
   &__choice {
     padding: 0;
+    padding-bottom: calc(4 * var(--width-multiplier));
     overflow-y: hidden;
     overflow-x: auto;
+  }
+  &__grids {
+    @media (max-width: 767px) {
+      display: none;
+    }
   }
   &__box {
     display: flex;
     align-items: center;
     gap: calc(16 * var(--width-multiplier));
-    @media (max-width: 767px) {
-      display: none;
-    }
+    margin-left: auto;
   }
   &__grid {
     opacity: 0.4;
@@ -2139,8 +2135,11 @@
         input[type=range] {
           -webkit-appearance: none;
           width: 100%;
+          height: calc(4 * var(--width-multiplier));
           padding: 0;
           border: 0;
+          border-radius: calc(8 * var(--width-multiplier));
+          background-color: rgba(230, 224, 233, 1);
           &:focus {
             outline: none;
           }
