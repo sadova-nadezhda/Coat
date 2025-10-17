@@ -497,6 +497,7 @@ h6 {
 }
 
 .secondary-menu .select-currency {
+  height: auto;
   width: -moz-max-content;
   width: max-content;
   margin-left: auto;
