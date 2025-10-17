@@ -219,7 +219,7 @@
       background-color: transparent;
     }
   }
-  select {
+  .select-currency {
     width: max-content;
     margin-left: auto;
     padding: calc(4 * var(--width-multiplier));
@@ -228,6 +228,12 @@
     background: url(../img/arrow-down.svg) no-repeat top 50% right 0;
     background-size: calc(22 * var(--width-multiplier)) calc(22 * var(--width-multiplier));
     background-color: transparent;
+    font-family: Manrope;
+    font-size: calc(16 * var(--width-multiplier));
+    line-height: 1;
+    &:after {
+      content: none;
+    }
     @media (max-width: 1024px) {
       margin-left: unset;
       margin-right: auto;

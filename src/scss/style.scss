@@ -764,6 +764,7 @@
   }
   &__tabs {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: calc(8 * var(--width-multiplier));
     margin-bottom: calc(24 * var(--width-multiplier));
@@ -807,7 +808,8 @@
     margin-bottom: calc(24 * var(--width-multiplier));
     font-size: calc(14 * var(--width-multiplier));
     line-height: 1;
-    select {
+    .nice-select {
+      height: calc(38 * var(--width-multiplier));
       width: calc(200 * var(--width-multiplier));
       max-width: max-content;
       padding: calc(10 * var(--width-multiplier)) calc(12 * var(--width-multiplier));
@@ -816,6 +818,22 @@
       background: url(../img/arrow-down-2.svg) no-repeat top 50% right calc(8 * var(--width-multiplier));
       background-size: calc(24 * var(--width-multiplier)) calc(24 * var(--width-multiplier));
       background-color: var(--light, $light);
+      font-family: Manrope;
+      font-size: calc(16 * var(--width-multiplier));
+      line-height: 1;
+      &:after {
+        content: none;
+      }
+    }
+    .list {
+      box-shadow: none;
+    }
+    .option {
+      padding: calc(4 * var(--width-multiplier)) calc(8 * var(--width-multiplier));
+      padding-right: calc(30 * var(--width-multiplier));
+    }
+    .option.selected {
+      font-weight: 600;
     }
   }
   &__choice, &__grids {
@@ -825,8 +843,8 @@
   }
   &__choice {
     padding: 0;
-    overflow-y: hidden;
-    overflow-x: auto;
+    // overflow-y: hidden;
+    // overflow-x: auto;
   }
   &__box {
     display: flex;
@@ -1531,6 +1549,7 @@
     gap: calc(8 * var(--width-multiplier));
   }
   &__img {
+    max-height: calc(130 * var(--width-multiplier));
     img {
       width: 100%;
       height: 100%;
@@ -2522,6 +2541,13 @@
     gap: calc(12 * var(--width-multiplier));
     padding: calc(12 * var(--width-multiplier));
     border: calc(1 * var(--width-multiplier)) solid rgba(21, 21, 21, 0.1);
+    transition: border-color 0.3s ease-in-out;
+    &:hover {
+      border-color: var(--blue, $blue);
+      .collections__link {
+        color: var(--blue, $blue);
+      }
+    }
   }
   &__images {
     display: grid;
@@ -2587,9 +2613,6 @@
   }
   &__link {
     transition: color 0.3s ease-in-out;
-    &:hover {
-      color: var(--blue, $blue);
-    }
     @media (max-width: 767px) {
       font-size: calc(14 * var(--width-multiplier));
     }
