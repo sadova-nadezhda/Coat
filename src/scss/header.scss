@@ -125,22 +125,62 @@
     }
   }
   &__search {
-    -webkit-appearance: none;
+    display: flex;
+    align-items: center;
+    gap: calc(10 * var(--width-multiplier));
     width: calc(46 * var(--width-multiplier));
-    height: calc(30 * var(--width-multiplier));
+    height: calc(38 * var(--width-multiplier));
     padding: calc(4 * var(--width-multiplier)) calc(10 * var(--width-multiplier));
     outline: none;
     border: none;
-    background: url(../img/search.svg) no-repeat top 50% left calc(12 * var(--width-multiplier));
     background-color: transparent;
-    background-size: calc(20 * var(--width-multiplier)) calc(20 * var(--width-multiplier));
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    &:focus {
-      padding: calc(8 * var(--width-multiplier)) calc(12 * var(--width-multiplier));
-      padding-left: calc(44 * var(--width-multiplier));
+    &.active {
+      padding: calc(4 * var(--width-multiplier)) calc(12 * var(--width-multiplier));
       width: calc(420 * var(--width-multiplier));
       background-color: var(--light, $light);
+      .input {
+        width: 100%;
+        opacity: 1;
+      }
+    }
+    .input {
+      flex: 1 1 auto;
+      min-width: 0;
+      border: none;
+      background: transparent;
+      outline: none;
+      width: 0;
+      padding: 0;
+      opacity: 0;
+      font-size: calc(14 * var(--width-multiplier));
+      transition: width 0.35s ease, opacity 0.2s ease;
+    }
+    .icon-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .icon-btn svg {
+      display: block;
+      min-width: calc(20 * var(--width-multiplier));
+      width: calc(20 * var(--width-multiplier));
+      height: calc(20 * var(--width-multiplier));
+    }
+    @media (max-width: 1024px) {
+      display: none;
+    }
+    &_mb {
+      display: none;
+      @media (max-width: 1024px) {
+        display: block;
+      }
     }
   }
   &__group {
@@ -150,12 +190,17 @@
   }
   &__icon {
     svg {
+      display: block;
       min-width: calc(20 * var(--width-multiplier));
       width: calc(20 * var(--width-multiplier));
       height: calc(20 * var(--width-multiplier));
+      transition: transform 0.3s ease-in-out;
     }
     &:hover {
       cursor: pointer;
+      svg {
+        transform: scale(1.1);
+      }
     }
   }
   &__burger {

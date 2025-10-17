@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Главная</title>
   <link rel="shortcut icon" href="img/favicon.png" type="image/png">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20251017150307" />
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/cferdinandi/tabby/dist/css/tabby-ui.min.css?_v=20251017150307">
-  <link rel="stylesheet" href="css/style.css?_v=20251017150307" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20251017165547" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/cferdinandi/tabby/dist/css/tabby-ui.min.css?_v=20251017165547">
+  <link rel="stylesheet" href="css/style.css?_v=20251017165547" />
 </head>
 
   <body>
@@ -47,10 +47,20 @@
           <option value="">KZT</option>
           <option value="">RUB</option>
         </select>
-        <form role="search" method="get" action="">
-            <input type="text" value="" name="search" id="search" class="header__search">
+        <form class="header__search" action="" method="GET">
+          <button class="icon-btn" type="button" aria-label="Open search">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21 21L15.1703 15.5M17.7009 10.25C17.7009 14.2541 14.41 17.5 10.3505 17.5C6.29091 17.5 3 14.2541 3 10.25C3 6.24594 6.29091 3 10.3505 3C14.41 3 17.7009 6.24594 17.7009 10.25Z" stroke="#151515"/>
+            </svg>
+          </button>
+          <input class="input" type="search" placeholder="Введите название товара" aria-label="Search" />
         </form>
         <div class="header__group">
+          <a class="header__icon header__search header__search_mb" href="search.html">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21 21L15.1703 15.5M17.7009 10.25C17.7009 14.2541 14.41 17.5 10.3505 17.5C6.29091 17.5 3 14.2541 3 10.25C3 6.24594 6.29091 3 10.3505 3C14.41 3 17.7009 6.24594 17.7009 10.25Z" stroke="#151515"/>
+            </svg>
+          </a>
           <a class="header__icon header__compare" href="compare.html">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M5 6.52498L9.66934 2V22H8.25509V5.34338L5.98254 7.5457L5 6.52498ZM15.7449 18.6566V2H14.3307V22L19 17.475L18.0175 16.4543L15.7449 18.6566Z" fill="#151515"/>
@@ -632,12 +642,12 @@
     </div>
   </div>
 </div>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20251017150307"></script>
-<script src="https://cdn.jsdelivr.net/gh/cferdinandi/tabby/dist/js/tabby.polyfills.min.js?_v=20251017150307"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js?_v=20251017150307"></script>
-<script src="https://cdn.prod.website-files.com/622b0a8557cc790ca01b97bb/66005a0997fdea31bc68d664_ScrollSmoother.min.js.txt?_v=20251017150307"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js?_v=20251017150307"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollToPlugin.min.js?_v=20251017150307"></script>
-<script src="js/app.js?_v=20251017150307"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20251017165547"></script>
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/tabby/dist/js/tabby.polyfills.min.js?_v=20251017165547"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js?_v=20251017165547"></script>
+<script src="https://cdn.prod.website-files.com/622b0a8557cc790ca01b97bb/66005a0997fdea31bc68d664_ScrollSmoother.min.js.txt?_v=20251017165547"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js?_v=20251017165547"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollToPlugin.min.js?_v=20251017165547"></script>
+<script src="js/app.js?_v=20251017165547"></script>
   </body>
 </html>
