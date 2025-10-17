@@ -2759,6 +2759,143 @@
   &__txt {
     margin-bottom: calc(16 * var(--width-multiplier));
   }
+  &-hero {
+    &__container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: calc(16 * var(--width-multiplier));
+      width: 100%;
+      height: 100%;
+      min-height: calc(555 * var(--width-multiplier));
+      padding: calc(46 * var(--width-multiplier)) calc(24 * var(--width-multiplier));
+      color: var(--light, $light);
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(21, 21, 21, 0.4);
+        z-index: -1;
+      }
+      @media (max-width: 767px) {
+        min-height: calc(655 * var(--width-multiplier));
+        padding: calc(24 * var(--width-multiplier)) calc(12 * var(--width-multiplier));
+      }
+    }
+    &__img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &__title {
+      max-width: calc(700 * var(--width-multiplier));
+      text-align: center;
+    }
+  }
+  &-inner {
+    &__tabs {
+      padding: calc(24 * var(--width-multiplier)) 0;
+      .tabs {
+        gap: calc(8 * var(--width-multiplier));
+        width: max-content;
+        margin: 0 auto;
+        a[role=tab] {
+          padding: calc(12 * var(--width-multiplier)) calc(24 * var(--width-multiplier));
+          border: 0 !important;
+          backdrop-filter: blur(40px);
+          color: rgba(21, 21, 21, 0.4);
+          background-color: rgba(238, 238, 238, 0.2);
+          @media (max-width: 767px) {
+            padding: calc(12 * var(--width-multiplier));
+          }
+        }
+        a[role=tab][aria-selected=true] {
+          opacity: 1;
+          background: var(--dark, $dark);
+          color: var(--light, $light);
+        }
+        a[role=tab]:hover:not([aria-selected=true]) {
+          color: rgba(21, 21, 21, 1);
+        }
+      }
+    }
+    &__content {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100dvh;
+      padding: calc(24 * var(--width-multiplier));
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+      @media (max-width: 767px) {
+        padding: calc(12 * var(--width-multiplier));
+      }
+    }
+    &__card {
+      display: flex;
+      flex-direction: column;
+      gap: calc(2 * var(--width-multiplier));
+      width: 100%;
+      max-width: calc(402 * var(--width-multiplier));
+    }
+    &__caption {
+      padding: calc(12 * var(--width-multiplier)) calc(24 * var(--width-multiplier));
+      background-color: var(--light, $light);
+      font-weight: 700;
+      text-align: center;
+      @media (max-width: 767px) {
+        padding: calc(12 * var(--width-multiplier));
+      }
+    }
+    &__desc {
+      padding: calc(24 * var(--width-multiplier));
+      background-color: var(--light, $light);
+      @media (max-width: 767px) {
+        padding: calc(12 * var(--width-multiplier));
+        font-size: calc(14 * var(--width-multiplier));
+      }
+    }
+    &__temp {
+      display: flex;
+      align-items: center;
+      gap: calc(10 * var(--width-multiplier));
+      padding: calc(12 * var(--width-multiplier)) calc(24 * var(--width-multiplier));
+      background-color: var(--light, $light);
+      svg {
+        display: block;
+        min-width: calc(24 * var(--width-multiplier));
+        width: calc(24 * var(--width-multiplier));
+        height: calc(24 * var(--width-multiplier));
+      }
+      @media (max-width: 767px) {
+        padding: calc(12 * var(--width-multiplier));
+      }
+    }
+  }
 }
 
 .faq {
