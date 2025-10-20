@@ -155,6 +155,7 @@ input, select, textarea {
 input[type="checkbox"],
 input[type="radio"] {
   accent-color: var(--dark, $dark);
+  min-width: calc(16 * var(--width-multiplier));
   width: calc(16 * var(--width-multiplier));
   height: calc(16 * var(--width-multiplier));
 }

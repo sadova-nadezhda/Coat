@@ -191,7 +191,6 @@ window.addEventListener("load", function () {
   });
 
   // Order
-
   const orderBox = document.querySelector('.order__payment');
   if(orderBox) {
     const cardsWrap = orderBox.querySelector('.order__cards');
