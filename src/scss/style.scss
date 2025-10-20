@@ -2035,13 +2035,6 @@
       }
     }
     .field {
-      input[type="radio"], input[type="checkbox"] {
-        width: calc(16 * var(--width-multiplier));
-        height: calc(16 * var(--width-multiplier));
-        margin: 0;
-        margin-right: 10px;
-        vertical-align: middle;
-      }
       input {
         @media (max-width: 767px) {
           font-size: calc(14 * var(--width-multiplier));

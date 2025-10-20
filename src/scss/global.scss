@@ -10,6 +10,7 @@
   --width-base: 1440;
   --width-current: 100vw;
   --width-multiplier: var(--width-current) / var(--width-base);
+  --size: calc(16 * var(--width-multiplier));
 }
 
 @media(max-width: 1024px) {
@@ -136,7 +137,7 @@ select {
   }
 }
 
-input, select, textarea {
+input:not([type="checkbox"]):not([type="radio"]), select, textarea {
   width: 100%;
   padding: calc(14 * var(--width-multiplier)) calc(12 * var(--width-multiplier));
   border: 1px solid var(--blue, $blue);
@@ -152,13 +153,61 @@ input, select, textarea {
   }
 }
 
-input[type="checkbox"],
-input[type="radio"] {
-  accent-color: var(--dark, $dark);
-  min-width: calc(16 * var(--width-multiplier));
-  width: calc(16 * var(--width-multiplier));
-  height: calc(16 * var(--width-multiplier));
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+    display: grid;
+  inline-size: var(--size);
+  block-size: var(--size);
+  margin: 0;
+  margin-right: calc(8 * var(--width-multiplier));
+  border: 2px solid var(--dark, $dark);
+  border-radius: calc(2 * var(--width-multiplier));
+  place-content: center;
+  background: #fff;
+  cursor: pointer;
 }
+
+input[type="checkbox"]::before {
+  content: "";
+  width: calc(10 * var(--width-multiplier));
+  height: calc(10 * var(--width-multiplier));
+  margin-top: calc(-2 * var(--width-multiplier));
+  transform: scale(0);
+  transition: transform .12s ease-in-out;
+  clip-path: polygon(14% 52%, 0 66%, 38% 100%, 100% 28%, 86% 14%, 38% 72%);
+  background: var(--dark, $dark);
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  display: grid;
+  margin: 0;
+  margin-right: calc(8 * var(--width-multiplier));
+  inline-size: var(--size);
+  block-size: var(--size);
+  border: 2px solid var(--dark, $dark);
+  border-radius: 50%;
+  background: #fff;
+  place-content: center;
+}
+
+input[type="radio"]::after {
+  content: "";
+  width: calc(10 * var(--width-multiplier));
+  height: calc(10 * var(--width-multiplier));
+  border-radius: 50%;
+  background: var(--dark, $dark);
+  transform: scale(0);
+  transition: transform .12s ease-in-out;
+}
+
+input[type="radio"]:checked::after { transform: scale(1); }
 
 .field {
   span {

@@ -47,6 +47,7 @@
   --width-base: 1440;
   --width-current: 100vw;
   --width-multiplier: var(--width-current) / var(--width-base);
+  --size: calc(16 * var(--width-multiplier));
 }
 
 html {
@@ -143,7 +144,7 @@ select {
   padding: 0 calc(24 * var(--width-multiplier));
 }
 
-input,
+input:not([type=checkbox]):not([type=radio]),
 select,
 textarea {
   width: 100%;
@@ -155,18 +156,18 @@ textarea {
   font: inherit;
 }
 
-input::-moz-placeholder, select::-moz-placeholder, textarea::-moz-placeholder {
+input:not([type=checkbox]):not([type=radio])::-moz-placeholder, select::-moz-placeholder, textarea::-moz-placeholder {
   color: rgba(15, 15, 15, 0.4);
 }
 
-input::placeholder,
+input:not([type=checkbox]):not([type=radio])::placeholder,
 select::placeholder,
 textarea::placeholder {
   color: rgba(15, 15, 15, 0.4);
 }
 
-input:focus,
-input:focus-visible,
+input:not([type=checkbox]):not([type=radio]):focus,
+input:not([type=checkbox]):not([type=radio]):focus-visible,
 select:focus,
 select:focus-visible,
 textarea:focus,
@@ -174,12 +175,65 @@ textarea:focus-visible {
   outline: none;
 }
 
-input[type=checkbox],
+input[type=checkbox] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  display: grid;
+  inline-size: var(--size);
+  block-size: var(--size);
+  margin: 0;
+  margin-right: calc(8 * var(--width-multiplier));
+  border: 2px solid var(--dark, #151515);
+  border-radius: calc(2 * var(--width-multiplier));
+  place-content: center;
+  background: #fff;
+  cursor: pointer;
+}
+
+input[type=checkbox]::before {
+  content: "";
+  width: calc(10 * var(--width-multiplier));
+  height: calc(10 * var(--width-multiplier));
+  margin-top: calc(-2 * var(--width-multiplier));
+  transform: scale(0);
+  transition: transform 0.12s ease-in-out;
+  -webkit-clip-path: polygon(14% 52%, 0 66%, 38% 100%, 100% 28%, 86% 14%, 38% 72%);
+          clip-path: polygon(14% 52%, 0 66%, 38% 100%, 100% 28%, 86% 14%, 38% 72%);
+  background: var(--dark, #151515);
+}
+
+input[type=checkbox]:checked::before {
+  transform: scale(1);
+}
+
 input[type=radio] {
-  accent-color: var(--dark, #151515);
-  min-width: calc(16 * var(--width-multiplier));
-  width: calc(16 * var(--width-multiplier));
-  height: calc(16 * var(--width-multiplier));
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  display: grid;
+  margin: 0;
+  margin-right: calc(8 * var(--width-multiplier));
+  inline-size: var(--size);
+  block-size: var(--size);
+  border: 2px solid var(--dark, #151515);
+  border-radius: 50%;
+  background: #fff;
+  place-content: center;
+}
+
+input[type=radio]::after {
+  content: "";
+  width: calc(10 * var(--width-multiplier));
+  height: calc(10 * var(--width-multiplier));
+  border-radius: 50%;
+  background: var(--dark, #151515);
+  transform: scale(0);
+  transition: transform 0.12s ease-in-out;
+}
+
+input[type=radio]:checked::after {
+  transform: scale(1);
 }
 
 .field span {
@@ -2484,15 +2538,6 @@ h6 {
   flex-wrap: wrap;
   align-items: center;
   gap: calc(8 * var(--width-multiplier));
-}
-
-.sewing-form .field input[type=radio],
-.sewing-form .field input[type=checkbox] {
-  width: calc(16 * var(--width-multiplier));
-  height: calc(16 * var(--width-multiplier));
-  margin: 0;
-  margin-right: 10px;
-  vertical-align: middle;
 }
 
 .sewing-form .field select {
