@@ -161,7 +161,7 @@ input[type="checkbox"] {
   block-size: var(--size);
   margin: 0;
   margin-right: calc(8 * var(--width-multiplier));
-  border: 2px solid var(--dark, $dark);
+  border: calc(1 * var(--width-multiplier)) solid var(--dark, $dark);
   border-radius: calc(2 * var(--width-multiplier));
   place-content: center;
   background: #fff;
@@ -191,7 +191,7 @@ input[type="radio"] {
   margin-right: calc(8 * var(--width-multiplier));
   inline-size: var(--size);
   block-size: var(--size);
-  border: 2px solid var(--dark, $dark);
+  border: calc(1 * var(--width-multiplier)) solid var(--dark, $dark);
   border-radius: 50%;
   background: #fff;
   place-content: center;
