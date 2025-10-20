@@ -1515,10 +1515,6 @@
     gap: calc(16 * var(--width-multiplier));
     padding: calc(16 * var(--width-multiplier));
     border: calc(1 * var(--width-multiplier)) solid rgba(21, 21, 21, 0.1);
-    input[type="checkbox"] {
-      width: calc(16 * var(--width-multiplier));
-      height: calc(16 * var(--width-multiplier));
-    }
     @media (max-width: 767px) {
       gap: calc(12 * var(--width-multiplier));
       padding: calc(12 * var(--width-multiplier));
@@ -1675,10 +1671,6 @@
     align-items: center;
     gap: calc(8 * var(--width-multiplier));
     margin-bottom: calc(24 * var(--width-multiplier));
-    input {
-      width: calc(18 * var(--width-multiplier));
-      height: calc(18 * var(--width-multiplier));
-    }
     @media (max-width: 767px) {
       margin-bottom: calc(16 * var(--width-multiplier));
     }
@@ -1914,7 +1906,7 @@
         padding: calc(12 * var(--width-multiplier));
       }
     }
-    &__search {
+    &__search:not([type=checkbox]):not([type=radio]) {
       padding: calc(8 * var(--width-multiplier)) calc(12 * var(--width-multiplier));
       padding-left: calc(44 * var(--width-multiplier));
       background: url(../img/search.svg) no-repeat top 50% left calc(12 * var(--width-multiplier));
@@ -2035,7 +2027,7 @@
       }
     }
     .field {
-      input {
+      input:not([type=checkbox]):not([type=radio]) {
         @media (max-width: 767px) {
           font-size: calc(14 * var(--width-multiplier));
         }
@@ -2962,8 +2954,6 @@
       position: absolute;
       top: calc(16 * var(--width-multiplier));
       right: calc(16 * var(--width-multiplier));
-      width: calc(16 * var(--width-multiplier));
-      height: calc(16 * var(--width-multiplier));
     }
     &__name {
       font-weight: 700;
@@ -3523,15 +3513,6 @@
       display: flex;
       align-items: center;
       gap: calc(8 * var(--width-multiplier));
-      input {
-        width: calc(16 * var(--width-multiplier));
-        height: calc(16 * var(--width-multiplier));
-        border-radius: calc(2 * var(--width-multiplier));
-        @media (max-width: 767px) {
-          width: calc(14 * var(--width-multiplier));
-          height: calc(14 * var(--width-multiplier));
-        }
-      }
       label {
         cursor: pointer;
       }

@@ -2067,11 +2067,6 @@ h6 {
   border: calc(1 * var(--width-multiplier)) solid rgba(21, 21, 21, 0.1);
 }
 
-.basket__card input[type=checkbox] {
-  width: calc(16 * var(--width-multiplier));
-  height: calc(16 * var(--width-multiplier));
-}
-
 .basket__label {
   display: grid;
   grid-template-columns: calc(110 * var(--width-multiplier)) 1fr;
@@ -2207,11 +2202,6 @@ h6 {
   align-items: center;
   gap: calc(8 * var(--width-multiplier));
   margin-bottom: calc(24 * var(--width-multiplier));
-}
-
-.order__radio input {
-  width: calc(18 * var(--width-multiplier));
-  height: calc(18 * var(--width-multiplier));
 }
 
 .order__caption {
@@ -2429,7 +2419,7 @@ h6 {
   border-top: calc(1 * var(--width-multiplier)) solid rgba(21, 21, 21, 0.1);
 }
 
-.sewing-form__search {
+.sewing-form__search:not([type=checkbox]):not([type=radio]) {
   padding: calc(8 * var(--width-multiplier)) calc(12 * var(--width-multiplier));
   padding-left: calc(44 * var(--width-multiplier));
   background: url(../img/search.svg) no-repeat top 50% left calc(12 * var(--width-multiplier));
@@ -3414,8 +3404,6 @@ h6 {
   position: absolute;
   top: calc(16 * var(--width-multiplier));
   right: calc(16 * var(--width-multiplier));
-  width: calc(16 * var(--width-multiplier));
-  height: calc(16 * var(--width-multiplier));
 }
 
 .profile-card__name {
@@ -3940,12 +3928,6 @@ h6 {
   display: flex;
   align-items: center;
   gap: calc(8 * var(--width-multiplier));
-}
-
-.modal-form__remember input {
-  width: calc(16 * var(--width-multiplier));
-  height: calc(16 * var(--width-multiplier));
-  border-radius: calc(2 * var(--width-multiplier));
 }
 
 .modal-form__remember label {
@@ -4852,7 +4834,7 @@ h6 {
     align-items: flex-end;
   }
 
-  .sewing-form .field input {
+  .sewing-form .field input:not([type=checkbox]):not([type=radio]) {
     font-size: calc(14 * var(--width-multiplier));
   }
 
@@ -5082,11 +5064,6 @@ h6 {
 
   .modal-form__field input {
     font-size: calc(14 * var(--width-multiplier));
-  }
-
-  .modal-form__remember input {
-    width: calc(14 * var(--width-multiplier));
-    height: calc(14 * var(--width-multiplier));
   }
 
   .modal-order .modal__top {
