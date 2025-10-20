@@ -152,6 +152,13 @@ input, select, textarea {
   }
 }
 
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: var(--dark, $dark);
+  width: calc(16 * var(--width-multiplier));
+  height: calc(16 * var(--width-multiplier));
+}
+
 .field {
   span {
     display: none;
