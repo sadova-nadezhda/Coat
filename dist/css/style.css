@@ -52,6 +52,7 @@
 
 html {
   height: 100%;
+  scroll-behavior: smooth;
   scroll-padding-top: calc(100 * var(--width-multiplier));
 }
 
@@ -2755,11 +2756,13 @@ h6 {
   position: relative;
   display: grid;
   grid-template-columns: calc(225 * var(--width-multiplier)) 1fr;
+  align-items: flex-start;
   gap: calc(42 * var(--width-multiplier));
-  overflow: visible;
 }
 
 .service__aside {
+  position: sticky;
+  top: calc(12 * var(--width-multiplier));
   display: flex;
   flex-direction: column;
 }

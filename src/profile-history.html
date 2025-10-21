@@ -3,168 +3,164 @@
   @@include('html/head.html', { "title": "История заказов" })
   <body>
 
-    <div id="smooth-wrapper">
-      <div id="smooth-content">
-        @@include('html/header.html')
-        <main>
-          <section class="profile profile-history section-pad-bottom section-hidden">
-            <div class="container">
-              <div class="profile__container">
-                <ul class="profile__aside">
-                  <li><a href="profile.html">Личные данные</a></li>
-                  <li><a href="profile-payment.html">Профили оплат</a></li>
-                  <li><a href="profile-order.html">Текущие заказы</a></li>
-                  <li><a href="profile-history.html">История заказов</a></li>
-                </ul>
-                <div class="profile__wrap">
-                  <h1 class="profile__title title-indent text-up">История заказов</h1>
-                  <div class="profile-history__table">
-                    <div class="profile-history__heading">
-                      <div class="profile-history__col text-up">Заказ №</div>
-                      <div class="profile-history__col text-up">Дата</div>
-                      <div class="profile-history__col">Доставка</div>
-                      <div class="profile-history__col">Оплата</div>
-                      <div class="profile-history__col">Статус</div>
-                      <div class="profile-history__col">Сумма заказа</div>
+    @@include('html/header.html')
+    <main>
+      <section class="profile profile-history section-pad-bottom section-hidden">
+        <div class="container">
+          <div class="profile__container">
+            <ul class="profile__aside">
+              <li><a href="profile.html">Личные данные</a></li>
+              <li><a href="profile-payment.html">Профили оплат</a></li>
+              <li><a href="profile-order.html">Текущие заказы</a></li>
+              <li><a href="profile-history.html">История заказов</a></li>
+            </ul>
+            <div class="profile__wrap">
+              <h1 class="profile__title title-indent text-up">История заказов</h1>
+              <div class="profile-history__table">
+                <div class="profile-history__heading">
+                  <div class="profile-history__col text-up">Заказ №</div>
+                  <div class="profile-history__col text-up">Дата</div>
+                  <div class="profile-history__col">Доставка</div>
+                  <div class="profile-history__col">Оплата</div>
+                  <div class="profile-history__col">Статус</div>
+                  <div class="profile-history__col">Сумма заказа</div>
+                </div>
+                <div class="profile-history__accordion accordion">
+                  <div class="profile-history__item accordion__item">
+                    <button class="profile-history__header accordion__header text-l">
+                      <div class="profile-history__col text-up">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5 8L11 13.5L16.5 8" stroke="#151515"/>
+                        </svg>
+                        <span>№26453</span>
+                      </div>
+                      <div class="profile-history__col text-up">Май 10, 2025</div>
+                      <div class="profile-history__col">Самовывоз</div>
+                      <div class="profile-history__col">Оплачено</div>
+                      <div class="profile-history__col">В пути</div>
+                      <div class="profile-history__col profile-history__price">135 000 тг</div>
+                    </button>
+                    <div class="profile-history__content accordion__content">
+                      <div class="profile-history__box">
+                        <div class="profile-history__caption">Ваш заказ уже в пути</div>
+                        <div class="profile-history__label">Содержимое заказа</div>
+                        <div class="profile-history__inner">
+                          <div class="profile-history__row">
+                            <div class="profile-history__txt">Наименование</div>
+                            <div class="profile-history__txt">Цена</div>
+                            <div class="profile-history__txt">Скидка</div>
+                            <div class="profile-history__txt">Кол-во</div>
+                            <div class="profile-history__txt">Сумма</div>
+                          </div>
+                          <div class="profile-history__row">
+                            <div class="profile-history__txt profile-history__card">
+                              <div class="profile-history__img"><img src="@img/image-3.jpg" alt=""></div>
+                              <div class="profile-history__name">Пальто тигридо</div>
+                            </div>
+                            <div class="profile-history__txt">100 000 тг</div>
+                            <div class="profile-history__txt">5%</div>
+                            <div class="profile-history__txt">1 шт</div>
+                            <div class="profile-history__txt">95 000 тг</div>
+                          </div>
+                          <div class="profile-history__row">
+                            <div class="profile-history__txt profile-history__card">
+                              <div class="profile-history__img"><img src="@img/image-3.jpg" alt=""></div>
+                              <div class="profile-history__name">Пальто тигридо</div>
+                            </div>
+                            <div class="profile-history__txt">100 000 тг</div>
+                            <div class="profile-history__txt">5%</div>
+                            <div class="profile-history__txt">1 шт</div>
+                            <div class="profile-history__txt">95 000 тг</div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="profile-history__accordion accordion">
-                      <div class="profile-history__item accordion__item">
-                        <button class="profile-history__header accordion__header text-l">
-                          <div class="profile-history__col text-up">
-                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M5 8L11 13.5L16.5 8" stroke="#151515"/>
-                            </svg>
-                            <span>№26453</span>
+                  </div>
+                  <div class="profile-history__item accordion__item">
+                    <button class="profile-history__header accordion__header text-l">
+                      <div class="profile-history__col text-up">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5 8L11 13.5L16.5 8" stroke="#151515"/>
+                        </svg>
+                        <span>№26453</span>
+                      </div>
+                      <div class="profile-history__col text-up">Май 10, 2025</div>
+                      <div class="profile-history__col">Самовывоз</div>
+                      <div class="profile-history__col">Оплачено</div>
+                      <div class="profile-history__col">В пути</div>
+                      <div class="profile-history__col profile-history__price">135 000 тг</div>
+                    </button>
+                    <div class="profile-history__content accordion__content">
+                      <div class="profile-history__box">
+                        <div class="profile-history__caption">Ваш заказ уже в пути</div>
+                        <div class="profile-history__label">Содержимое заказа</div>
+                        <div class="profile-history__inner">
+                          <div class="profile-history__row">
+                            <div class="profile-history__txt">Наименование</div>
+                            <div class="profile-history__txt">Цена</div>
+                            <div class="profile-history__txt">Скидка</div>
+                            <div class="profile-history__txt">Кол-во</div>
+                            <div class="profile-history__txt">Сумма</div>
                           </div>
-                          <div class="profile-history__col text-up">Май 10, 2025</div>
-                          <div class="profile-history__col">Самовывоз</div>
-                          <div class="profile-history__col">Оплачено</div>
-                          <div class="profile-history__col">В пути</div>
-                          <div class="profile-history__col profile-history__price">135 000 тг</div>
-                        </button>
-                        <div class="profile-history__content accordion__content">
-                          <div class="profile-history__box">
-                            <div class="profile-history__caption">Ваш заказ уже в пути</div>
-                            <div class="profile-history__label">Содержимое заказа</div>
-                            <div class="profile-history__inner">
-                              <div class="profile-history__row">
-                                <div class="profile-history__txt">Наименование</div>
-                                <div class="profile-history__txt">Цена</div>
-                                <div class="profile-history__txt">Скидка</div>
-                                <div class="profile-history__txt">Кол-во</div>
-                                <div class="profile-history__txt">Сумма</div>
-                              </div>
-                              <div class="profile-history__row">
-                                <div class="profile-history__txt profile-history__card">
-                                  <div class="profile-history__img"><img src="@img/image-3.jpg" alt=""></div>
-                                  <div class="profile-history__name">Пальто тигридо</div>
-                                </div>
-                                <div class="profile-history__txt">100 000 тг</div>
-                                <div class="profile-history__txt">5%</div>
-                                <div class="profile-history__txt">1 шт</div>
-                                <div class="profile-history__txt">95 000 тг</div>
-                              </div>
-                              <div class="profile-history__row">
-                                <div class="profile-history__txt profile-history__card">
-                                  <div class="profile-history__img"><img src="@img/image-3.jpg" alt=""></div>
-                                  <div class="profile-history__name">Пальто тигридо</div>
-                                </div>
-                                <div class="profile-history__txt">100 000 тг</div>
-                                <div class="profile-history__txt">5%</div>
-                                <div class="profile-history__txt">1 шт</div>
-                                <div class="profile-history__txt">95 000 тг</div>
-                              </div>
+                          <div class="profile-history__row">
+                            <div class="profile-history__txt profile-history__card">
+                              <div class="profile-history__img"><img src="@img/image-3.jpg" alt=""></div>
+                              <div class="profile-history__name">Пальто тигридо</div>
                             </div>
+                            <div class="profile-history__txt">100 000 тг</div>
+                            <div class="profile-history__txt">5%</div>
+                            <div class="profile-history__txt">1 шт</div>
+                            <div class="profile-history__txt">95 000 тг</div>
                           </div>
                         </div>
                       </div>
-                      <div class="profile-history__item accordion__item">
-                        <button class="profile-history__header accordion__header text-l">
-                          <div class="profile-history__col text-up">
-                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M5 8L11 13.5L16.5 8" stroke="#151515"/>
-                            </svg>
-                            <span>№26453</span>
-                          </div>
-                          <div class="profile-history__col text-up">Май 10, 2025</div>
-                          <div class="profile-history__col">Самовывоз</div>
-                          <div class="profile-history__col">Оплачено</div>
-                          <div class="profile-history__col">В пути</div>
-                          <div class="profile-history__col profile-history__price">135 000 тг</div>
-                        </button>
-                        <div class="profile-history__content accordion__content">
-                          <div class="profile-history__box">
-                            <div class="profile-history__caption">Ваш заказ уже в пути</div>
-                            <div class="profile-history__label">Содержимое заказа</div>
-                            <div class="profile-history__inner">
-                              <div class="profile-history__row">
-                                <div class="profile-history__txt">Наименование</div>
-                                <div class="profile-history__txt">Цена</div>
-                                <div class="profile-history__txt">Скидка</div>
-                                <div class="profile-history__txt">Кол-во</div>
-                                <div class="profile-history__txt">Сумма</div>
-                              </div>
-                              <div class="profile-history__row">
-                                <div class="profile-history__txt profile-history__card">
-                                  <div class="profile-history__img"><img src="@img/image-3.jpg" alt=""></div>
-                                  <div class="profile-history__name">Пальто тигридо</div>
-                                </div>
-                                <div class="profile-history__txt">100 000 тг</div>
-                                <div class="profile-history__txt">5%</div>
-                                <div class="profile-history__txt">1 шт</div>
-                                <div class="profile-history__txt">95 000 тг</div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                    </div>
+                  </div>
+                  <div class="profile-history__item accordion__item">
+                    <button class="profile-history__header accordion__header text-l">
+                      <div class="profile-history__col text-up">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5 8L11 13.5L16.5 8" stroke="#151515"/>
+                        </svg>
+                        <span>№26453</span>
                       </div>
-                      <div class="profile-history__item accordion__item">
-                        <button class="profile-history__header accordion__header text-l">
-                          <div class="profile-history__col text-up">
-                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M5 8L11 13.5L16.5 8" stroke="#151515"/>
-                            </svg>
-                            <span>№26453</span>
+                      <div class="profile-history__col text-up">Май 10, 2025</div>
+                      <div class="profile-history__col">Самовывоз</div>
+                      <div class="profile-history__col">Оплачено</div>
+                      <div class="profile-history__col">В пути</div>
+                      <div class="profile-history__col profile-history__price">135 000 тг</div>
+                    </button>
+                    <div class="profile-history__content accordion__content">
+                      <div class="profile-history__box">
+                        <div class="profile-history__caption">Ваш заказ уже в пути</div>
+                        <div class="profile-history__label">Содержимое заказа</div>
+                        <div class="profile-history__inner">
+                          <div class="profile-history__row">
+                            <div class="profile-history__txt">Наименование</div>
+                            <div class="profile-history__txt">Цена</div>
+                            <div class="profile-history__txt">Скидка</div>
+                            <div class="profile-history__txt">Кол-во</div>
+                            <div class="profile-history__txt">Сумма</div>
                           </div>
-                          <div class="profile-history__col text-up">Май 10, 2025</div>
-                          <div class="profile-history__col">Самовывоз</div>
-                          <div class="profile-history__col">Оплачено</div>
-                          <div class="profile-history__col">В пути</div>
-                          <div class="profile-history__col profile-history__price">135 000 тг</div>
-                        </button>
-                        <div class="profile-history__content accordion__content">
-                          <div class="profile-history__box">
-                            <div class="profile-history__caption">Ваш заказ уже в пути</div>
-                            <div class="profile-history__label">Содержимое заказа</div>
-                            <div class="profile-history__inner">
-                              <div class="profile-history__row">
-                                <div class="profile-history__txt">Наименование</div>
-                                <div class="profile-history__txt">Цена</div>
-                                <div class="profile-history__txt">Скидка</div>
-                                <div class="profile-history__txt">Кол-во</div>
-                                <div class="profile-history__txt">Сумма</div>
-                              </div>
-                              <div class="profile-history__row">
-                                <div class="profile-history__txt profile-history__card">
-                                  <div class="profile-history__img"><img src="@img/image-3.jpg" alt=""></div>
-                                  <div class="profile-history__name">Пальто тигридо</div>
-                                </div>
-                                <div class="profile-history__txt">100 000 тг</div>
-                                <div class="profile-history__txt">5%</div>
-                                <div class="profile-history__txt">1 шт</div>
-                                <div class="profile-history__txt">95 000 тг</div>
-                              </div>
-                              <div class="profile-history__row">
-                                <div class="profile-history__txt profile-history__card">
-                                  <div class="profile-history__img"><img src="@img/image-3.jpg" alt=""></div>
-                                  <div class="profile-history__name">Пальто тигридо</div>
-                                </div>
-                                <div class="profile-history__txt">100 000 тг</div>
-                                <div class="profile-history__txt">5%</div>
-                                <div class="profile-history__txt">1 шт</div>
-                                <div class="profile-history__txt">95 000 тг</div>
-                              </div>
+                          <div class="profile-history__row">
+                            <div class="profile-history__txt profile-history__card">
+                              <div class="profile-history__img"><img src="@img/image-3.jpg" alt=""></div>
+                              <div class="profile-history__name">Пальто тигридо</div>
                             </div>
+                            <div class="profile-history__txt">100 000 тг</div>
+                            <div class="profile-history__txt">5%</div>
+                            <div class="profile-history__txt">1 шт</div>
+                            <div class="profile-history__txt">95 000 тг</div>
+                          </div>
+                          <div class="profile-history__row">
+                            <div class="profile-history__txt profile-history__card">
+                              <div class="profile-history__img"><img src="@img/image-3.jpg" alt=""></div>
+                              <div class="profile-history__name">Пальто тигридо</div>
+                            </div>
+                            <div class="profile-history__txt">100 000 тг</div>
+                            <div class="profile-history__txt">5%</div>
+                            <div class="profile-history__txt">1 шт</div>
+                            <div class="profile-history__txt">95 000 тг</div>
                           </div>
                         </div>
                       </div>
@@ -173,11 +169,11 @@
                 </div>
               </div>
             </div>
-          </section>
-        </main>
-        @@include('html/footer.html') 
-      </div>
-    </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('html/footer.html') 
 
     @@include('html/modals.html')
     @@include('html/foot.html')

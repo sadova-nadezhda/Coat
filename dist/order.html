@@ -6,16 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Оформление заказа</title>
   <link rel="shortcut icon" href="img/favicon.png" type="image/png">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20251021123415" />
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/cferdinandi/tabby/dist/css/tabby-ui.min.css?_v=20251021123415">
-  <link rel="stylesheet" href="css/style.css?_v=20251021123415" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20251021155509" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/cferdinandi/tabby/dist/css/tabby-ui.min.css?_v=20251021155509">
+  <link rel="stylesheet" href="css/style.css?_v=20251021155509" />
 </head>
 
   <body>
 
-    <div id="smooth-wrapper">
-      <div id="smooth-content">
-        <header class="header">
+    <header class="header">
   <div class="header__marquee marquee__wrap">
     <div class="marquee__row marquee">
       <div class="marquee__item">Бесплатная доставка по Казахстану при заказе от 100 000 ₸</div>
@@ -171,141 +169,141 @@
   </div>
 </header>
 
-        <main>
-          <section class="order section-pad-bottom section-hidden">
-            <div class="container">
-              <div class="order__container">
-                <h1 class="order__title title-indent text-up">Оформление заказа</h1>
-                <form class="order__form form">
-                  <div class="order__wrap">
-                    <div class="order__box order__payment">
-                      <div class="order__caption">Введите данные получателя</div>
-                      <div class="order__cards">
-                        <div class="profile__cards">
-                          <!-- если нет карточек то ничего не выводим -->
-                          <label class="profile__card profile-card" data-uid="c1">
-                            <input type="radio" name="card" id="card-1" checked>
-                            <div class="profile-card__name text-up">Анастасия Малинова</div>
-                            <div class="profile-card__group">
-                              <div class="profile-card__email">anastasiamali@gmail.com</div>
-                              <div class="profile-card__height">160 см</div>
-                            </div>
-                            <div class="profile-card__group">
-                              <div class="profile-card__tel">+7 747 502 0224</div>
-                              <a class="profile-card__link js-edit">Изменить</a>
-                            </div>
-                          </label>
-                          <label class="profile__card profile-card" data-uid="c2">
-                            <input type="radio" name="card" id="card-2">
-                            <div class="profile-card__name text-up">Екатерина Малинова</div>
-                            <div class="profile-card__group">
-                              <div class="profile-card__email">ekaterinamali@gmail.com</div>
-                              <div class="profile-card__height">170 см</div>
-                            </div>
-                            <div class="profile-card__group">
-                              <div class="profile-card__tel">+7 747 502 0224</div>
-                              <a class="profile-card__link js-edit">Изменить</a>
-                            </div>
-                          </label>
+    <main>
+      <section class="order section-pad-bottom section-hidden">
+        <div class="container">
+          <div class="order__container">
+            <h1 class="order__title title-indent text-up">Оформление заказа</h1>
+            <form class="order__form form">
+              <div class="order__wrap">
+                <div class="order__box order__payment">
+                  <div class="order__caption">Введите данные получателя</div>
+                  <div class="order__cards">
+                    <div class="profile__cards">
+                      <!-- если нет карточек то ничего не выводим -->
+                      <label class="profile__card profile-card" data-uid="c1">
+                        <input type="radio" name="card" id="card-1" checked>
+                        <div class="profile-card__name text-up">Анастасия Малинова</div>
+                        <div class="profile-card__group">
+                          <div class="profile-card__email">anastasiamali@gmail.com</div>
+                          <div class="profile-card__height">160 см</div>
                         </div>
-                        <button class="order__button button button-dark" type="button" id="addCardBtn">Добавить еще</button>
+                        <div class="profile-card__group">
+                          <div class="profile-card__tel">+7 747 502 0224</div>
+                          <a class="profile-card__link js-edit">Изменить</a>
+                        </div>
+                      </label>
+                      <label class="profile__card profile-card" data-uid="c2">
+                        <input type="radio" name="card" id="card-2">
+                        <div class="profile-card__name text-up">Екатерина Малинова</div>
+                        <div class="profile-card__group">
+                          <div class="profile-card__email">ekaterinamali@gmail.com</div>
+                          <div class="profile-card__height">170 см</div>
+                        </div>
+                        <div class="profile-card__group">
+                          <div class="profile-card__tel">+7 747 502 0224</div>
+                          <a class="profile-card__link js-edit">Изменить</a>
+                        </div>
+                      </label>
+                    </div>
+                    <button class="order__button button button-dark" type="button" id="addCardBtn">Добавить еще</button>
+                  </div>
+                  <div class="order__group">
+                    <div class="order__fields">
+                      <div class="order__field field">
+                        <input type="text" id="fName" placeholder="Имя*" required>
+                        <span>Пожалуйства введите имя</span>
                       </div>
-                      <div class="order__group">
-                        <div class="order__fields">
-                          <div class="order__field field">
-                            <input type="text" id="fName" placeholder="Имя*" required>
-                            <span>Пожалуйства введите имя</span>
-                          </div>
-                          <div class="order__field field">
-                            <input type="text" id="lName" placeholder="Фамилия*" required>
-                            <span>Пожалуйства введите фамилию</span>
-                          </div>
-                          <div class="order__field field">
-                            <input type="tel" id="phone" placeholder="Номер телефона*" required>
-                            <span>Пожалуйства введите номер телефона</span>
-                          </div>
-                          <div class="order__field field">
-                            <input type="email" id="email" placeholder="Электронная почта*" required>
-                            <span>Пожалуйства введите почту</span>
-                          </div>
-                          <div class="order__field field">
-                            <input type="text" id="height" placeholder="Ваш рост, см*" required>
-                            <span>Пожалуйства введите рост, см</span>
-                          </div>
-                        </div>
-                        <button class="order__button button button-dark"  type="button" id="continueBtn">Продолжить</button>
+                      <div class="order__field field">
+                        <input type="text" id="lName" placeholder="Фамилия*" required>
+                        <span>Пожалуйства введите фамилию</span>
+                      </div>
+                      <div class="order__field field">
+                        <input type="tel" id="phone" placeholder="Номер телефона*" required>
+                        <span>Пожалуйства введите номер телефона</span>
+                      </div>
+                      <div class="order__field field">
+                        <input type="email" id="email" placeholder="Электронная почта*" required>
+                        <span>Пожалуйства введите почту</span>
+                      </div>
+                      <div class="order__field field">
+                        <input type="text" id="height" placeholder="Ваш рост, см*" required>
+                        <span>Пожалуйства введите рост, см</span>
                       </div>
                     </div>
-                    <div class="order__box order__address">
-                      <div class="order__caption">Адрес доставки</div>
-                      <div class="order__fields">
-                        <div class="order__field field">
-                          <input type="text" placeholder="Страна*" required>
-                          <span>Пожалуйства введите страну</span>
-                        </div>
-                        <div class="order__field field">
-                          <input type="text" placeholder="Город*" required>
-                          <span>Пожалуйства введите город</span>
-                        </div>
-                        <div class="order__field field">
-                          <input type="text" placeholder="Улица*" required>
-                          <span>Пожалуйства введите улицу</span>
-                        </div>
-                        <div class="order__field field">
-                          <input type="text" placeholder="Дом*" required>
-                          <span>Пожалуйства введите дом</span>
-                        </div>
-                        <div class="order__field field s">
-                          <input type="text" placeholder="Подъезд*"required>
-                          <span>Пожалуйства введите подъезд</span>
-                        </div>
-                        <div class="order__field field s">
-                          <input type="text" placeholder="Этаж*"required>
-                          <span>Пожалуйства введите этаж</span>
-                        </div>
-                        <div class="order__field field s">
-                          <input type="text" placeholder="Квартиру*"required>
-                          <span>Пожалуйства введите квартиру</span>
-                        </div>
-                      </div>
+                    <button class="order__button button button-dark"  type="button" id="continueBtn">Продолжить</button>
+                  </div>
+                </div>
+                <div class="order__box order__address">
+                  <div class="order__caption">Адрес доставки</div>
+                  <div class="order__fields">
+                    <div class="order__field field">
+                      <input type="text" placeholder="Страна*" required>
+                      <span>Пожалуйства введите страну</span>
                     </div>
-                    <div class="order__box order__delivery">
-                      <div class="order__caption_s">Срок доставки:</div>
-                      <div class="order__info">
-                        Будет доставлено до вашего региона через 5-7 рабочих дней
-                      </div>
+                    <div class="order__field field">
+                      <input type="text" placeholder="Город*" required>
+                      <span>Пожалуйства введите город</span>
+                    </div>
+                    <div class="order__field field">
+                      <input type="text" placeholder="Улица*" required>
+                      <span>Пожалуйства введите улицу</span>
+                    </div>
+                    <div class="order__field field">
+                      <input type="text" placeholder="Дом*" required>
+                      <span>Пожалуйства введите дом</span>
+                    </div>
+                    <div class="order__field field s">
+                      <input type="text" placeholder="Подъезд*"required>
+                      <span>Пожалуйства введите подъезд</span>
+                    </div>
+                    <div class="order__field field s">
+                      <input type="text" placeholder="Этаж*"required>
+                      <span>Пожалуйства введите этаж</span>
+                    </div>
+                    <div class="order__field field s">
+                      <input type="text" placeholder="Квартиру*"required>
+                      <span>Пожалуйства введите квартиру</span>
                     </div>
                   </div>
-                  <div class="order__right order-result">
-                    <div class="order-result__top">
-                      <div class="order-result__caption">Ваш заказ</div>
-                      <div class="order-result__img">
-                        <img src="img/image-4.jpg" alt="">
-                        <img src="img/image-5.jpg" alt="">
-                      </div>
-                    </div>
-                    <div class="order-result__sum">
-                      <span>2 товар(а)</span>
-                      <div class="order-result__price">110 000 ₸</div>
-                    </div>
-                    <div class="order-result__sale">
-                      <span>Скидка</span>
-                      <div class="order-result__price">51 000 ₸</div>
-                    </div>
-                    <div class="order-result__total">
-                      <span>Итого</span>
-                      <div class="order-result__price">59 000 ₸</div>
-                    </div>
-                    <div class="order-result__bottom">
-                      <button class="order-result__button button button-dark text-up">Перейти к оплате</button>
-                    </div>
+                </div>
+                <div class="order__box order__delivery">
+                  <div class="order__caption_s">Срок доставки:</div>
+                  <div class="order__info">
+                    Будет доставлено до вашего региона через 5-7 рабочих дней
                   </div>
-                </form>
+                </div>
               </div>
-            </div>
-          </section>
-        </main>
-        <footer class="footer">
+              <div class="order__right order-result">
+                <div class="order-result__top">
+                  <div class="order-result__caption">Ваш заказ</div>
+                  <div class="order-result__img">
+                    <img src="img/image-4.jpg" alt="">
+                    <img src="img/image-5.jpg" alt="">
+                  </div>
+                </div>
+                <div class="order-result__sum">
+                  <span>2 товар(а)</span>
+                  <div class="order-result__price">110 000 ₸</div>
+                </div>
+                <div class="order-result__sale">
+                  <span>Скидка</span>
+                  <div class="order-result__price">51 000 ₸</div>
+                </div>
+                <div class="order-result__total">
+                  <span>Итого</span>
+                  <div class="order-result__price">59 000 ₸</div>
+                </div>
+                <div class="order-result__bottom">
+                  <button class="order-result__button button button-dark text-up">Перейти к оплате</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
   <div class="container">
     <div class="footer__container">
       <div class="footer__wrap">
@@ -373,8 +371,6 @@
   </div>
 </footer>
  
-      </div>
-    </div>
 
     <div class="modals">
   <div class="modal modal-order" data-type="order">
@@ -526,12 +522,12 @@
     </div>
   </div>
 </div>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20251021123415"></script>
-<script src="https://cdn.jsdelivr.net/gh/cferdinandi/tabby/dist/js/tabby.polyfills.min.js?_v=20251021123415"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js?_v=20251021123415"></script>
-<script src="https://cdn.prod.website-files.com/622b0a8557cc790ca01b97bb/66005a0997fdea31bc68d664_ScrollSmoother.min.js.txt?_v=20251021123415"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js?_v=20251021123415"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollToPlugin.min.js?_v=20251021123415"></script>
-<script src="js/app.js?_v=20251021123415"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20251021155509"></script>
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/tabby/dist/js/tabby.polyfills.min.js?_v=20251021155509"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js?_v=20251021155509"></script>
+<script src="https://cdn.prod.website-files.com/622b0a8557cc790ca01b97bb/66005a0997fdea31bc68d664_ScrollSmoother.min.js.txt?_v=20251021155509"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js?_v=20251021155509"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollToPlugin.min.js?_v=20251021155509"></script>
+<script src="js/app.js?_v=20251021155509"></script>
   </body>
 </html>

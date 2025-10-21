@@ -2257,13 +2257,15 @@
     position: relative;
     display: grid;
     grid-template-columns: calc(225 * var(--width-multiplier)) 1fr;
+    align-items: flex-start;
     gap:  calc(42 * var(--width-multiplier));
-    overflow: visible;
     @media (max-width: 1024px) {
       grid-template-columns: 1fr;
     }
   }
   &__aside {
+    position: sticky;
+    top: calc(12 * var(--width-multiplier));
     display: flex;
     flex-direction: column;
     a {

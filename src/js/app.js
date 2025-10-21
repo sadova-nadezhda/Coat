@@ -1,63 +1,6 @@
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
-
-const smoother = ScrollSmoother.create({
-  wrapper: '#smooth-wrapper',
-  content: '#smooth-content',
-  smooth: 2,
-  effects: true
-});
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const header   = document.querySelector('header');
-const aside    = document.querySelector('.my-sticky');
-const links    = gsap.utils.toArray('.service__aside a');
-const sections = gsap.utils.toArray('.service__group');
-
-ScrollTrigger.create({
-  trigger: '.service__wrap',
-  start: 'top 2%',
-  pin: '.my-sticky',
-  pinSpacing: false
-});
-
-links.forEach(a => {
-  a.addEventListener('click', (e) => {
-    const hash = a.getAttribute('href');
-    if (!hash || hash[0] !== '#') return;
-    e.preventDefault();
-    const y = smoother.offset(hash, 'top 2%');
-    smoother.scrollTo(y, true);
-    history.pushState(null, '', hash);
-  });
-});
-
-let currentId = null;
-const setActive = (id) => {
-  if (currentId === id) return;
-  currentId = id;
-  links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === `#${id}`));
-};
-
-sections.forEach(sec => {
-  ScrollTrigger.create({
-    trigger: sec,
-    start: 'top center',
-    end: 'bottom center',
-    onEnter:     () => setActive(sec.id),
-    onEnterBack: () => setActive(sec.id),
-    fastScrollEnd: true,
-    invalidateOnRefresh: true
-  });
-});
-
-const delayedRefresh = gsap.delayedCall(0.12, () => ScrollTrigger.refresh());
-
-document.addEventListener('tabby', () => delayedRefresh.restart(true), true);
-
-document.querySelectorAll('.faq__header').forEach(btn => {
-  btn.addEventListener('click', () => setTimeout(() => delayedRefresh.restart(true), 180));
-});
-
-window.addEventListener('resize', () => delayedRefresh.restart(true));
 
 window.addEventListener("load", function () {
   let link = document.querySelector(".header__burger");
@@ -131,14 +74,6 @@ window.addEventListener("load", function () {
       });
     }
   }
-
-  // GSAP
-  if (location.hash) {
-    const y = smoother.offset(location.hash, 'top top');
-    smoother.scrollTo(y, false);
-    setActive(location.hash.slice(1));
-  }
-  delayedRefresh.restart(true);
 
   function initAboutProduction() {
     const section = document.querySelector('.about-production');
@@ -447,6 +382,99 @@ window.addEventListener("load", function () {
   });
 
   input.addEventListener('blur', closeIfEmpty);
+
+  // Scroll Aside
+
+  (function () {
+    const menu = document.querySelector('.service__aside');
+    if (!menu) return;
+
+    const links = Array.from(menu.querySelectorAll('a[href^="#"]'));
+    if (!links.length) return;
+
+    const sections = links
+      .map(a => {
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        return el ? { id, el, link: a } : null;
+      })
+      .filter(Boolean);
+
+    const clearActive = () => links.forEach(a => a.classList.remove('active'));
+    const setActive = (id) => {
+      const item = sections.find(s => s.id === id);
+      if (!item) return;
+      clearActive();
+      item.link.classList.add('active');
+    };
+
+    menu.addEventListener('click', (e) => {
+      const a = e.target.closest('a[href^="#"]');
+      if (!a) return;
+      const id = a.getAttribute('href').slice(1);
+      setActive(id);
+    }, { passive: true });
+
+    links.forEach(a => {
+      a.addEventListener('click', (e) => {
+        const id = a.getAttribute('href').slice(1);
+        const target = document.getElementById(id);
+        if (!target) return;
+        e.preventDefault();
+        const headerOffset = 24;
+        const top = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+        window.scrollTo({ top, behavior: 'smooth' });
+        history.replaceState(null, '', `#${id}`);
+      });
+    });
+
+    let ioSupported = 'IntersectionObserver' in window;
+
+    if (ioSupported) {
+      const observer = new IntersectionObserver((entries) => {
+        entries
+          .filter(en => en.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)
+          .forEach(en => setActive(en.target.id));
+      }, {
+        root: null,
+        rootMargin: '-35% 0px -50% 0px',
+        threshold: [0.1, 0.25, 0.5, 0.75, 1]
+      });
+
+      sections.forEach(({ el }) => observer.observe(el));
+
+      if (location.hash) setActive(location.hash.slice(1));
+    } else {
+      const getViewportCenterY = () => window.scrollY + window.innerHeight * 0.4; // «зона внимания»
+      let ticking = false;
+
+      const onScroll = () => {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(() => {
+          const y = getViewportCenterY();
+          let currentId = sections[0].id;
+          for (const { id, el } of sections) {
+            const top = el.offsetTop;
+            if (top <= y) currentId = id;
+          }
+          setActive(currentId);
+          ticking = false;
+        });
+      };
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll);
+      onScroll();
+    }
+
+    const stickLastOnBottom = () => {
+      const nearBottom = (window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 2);
+      if (nearBottom) setActive(sections[sections.length - 1].id);
+    };
+    window.addEventListener('scroll', stickLastOnBottom, { passive: true });
+  })();
 
   // Modal
   (function () {
