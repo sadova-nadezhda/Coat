@@ -308,6 +308,7 @@
         height: 100%;
         background-color: rgba(21, 21, 21, 0.4);
         transition: background-color 0.3s ease-in-out;
+        transition-timing-function: cubic-bezier(.4, 0, .2, 1);
         z-index: -1;
       }
       img {
@@ -326,11 +327,14 @@
       }
       &:hover {
         &::before {
-          background-color: rgba(21, 21, 21, 0.6);
+          background-color: rgba(21, 21, 21, 0.45);
         }
         .main-catalog__button {
           color: var(--dark, $dark);
           background-color: var(--light, $light);
+          span {
+            animation: slotMachine 0.3s ease-out forwards;
+          }
         }
       }
       @media (max-width: 1024px) {
@@ -868,6 +872,9 @@
           transform: scale(1.1);
         }
       }
+      .product-card__favorite {
+        transform: translateY(calc(-4 * var(--width-multiplier)));
+      }
     }
     @media (max-width: 1024px) {
       &:nth-child(2n) {
@@ -935,6 +942,7 @@
       position: absolute;
       top: 0;
       right: 0;
+      transition: transform 0.3s ease-in-out;
       svg {
         min-width: calc(22 * var(--width-multiplier));
         width: calc(22 * var(--width-multiplier));
@@ -2516,7 +2524,9 @@
     &:hover {
       border-color: var(--blue, $blue);
       .collections__link {
-        color: var(--blue, $blue);
+        &::after {
+          width: 100%;
+        }
       }
     }
   }
@@ -2583,7 +2593,20 @@
     }
   }
   &__link {
+    position: relative;
+    display: inline-block;
+    width: max-content;
     transition: color 0.3s ease-in-out;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 0;
+      height: calc(1 * var(--width-multiplier));
+      background-color: rgba(28, 91, 180, 1);
+      transition: width 0.3s ease-in-out;
+    }
     @media (max-width: 767px) {
       font-size: calc(14 * var(--width-multiplier));
     }
@@ -2735,6 +2758,9 @@
       .materials__button {
         color: var(--dark, $dark);
         background-color: var(--light, $light);
+        span {
+          animation: slotMachine 0.15s ease-out forwards;
+        }
       }
     }
     @media (max-width: 1024px) {
@@ -3522,6 +3548,9 @@
         }
         &.open {
           background: url(../img/open.svg) center / contain no-repeat;
+        }
+        &:hover {
+          cursor: pointer;
         }
       }
       

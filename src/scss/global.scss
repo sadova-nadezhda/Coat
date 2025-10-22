@@ -263,8 +263,12 @@ textarea {
   border: calc(1 * var(--width-multiplier)) solid transparent;
   line-height: 1.5em;
   @include transition;
+  transition-timing-function: cubic-bezier(.4, 0, .2, 1);
   &:not(:disabled):hover {
     cursor: pointer;
+    span {
+      animation: slotMachine 0.15s ease-out forwards;
+    }
   }
   &:disabled {
     opacity: 0.5;
@@ -307,6 +311,20 @@ textarea {
   }
 }
 
+@keyframes slotMachine {
+	50% {
+		transform: translate3d(0,100%,0);
+		opacity: 0;
+	}
+	51% {
+		transform: translate3d(0,-100%,0);
+		opacity: 0;
+	}
+	100% {
+		transform: translate3d(0,0,0);
+		opacity: 1;
+	}
+}
 
 h1, h2 {
   font: 500 calc(24 * var(--width-multiplier))/1.1 Manrope;

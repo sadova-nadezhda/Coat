@@ -9,10 +9,24 @@
   &__container {
     border: 1px solid rgba(21, 21, 21, 0.1);
     line-height: 1.5em;
-    a {
-      transition: color 0.3s ease-in-out;
+    a:not(.footer__logo) {
+      position: relative;
+      display: inline-block;
+      width: max-content;
+      &::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 0;
+        height: calc(1 * var(--width-multiplier));
+        background-color: rgba(28, 91, 180, 1);
+        transition: width 0.3s ease-in-out;
+      }
       &:hover {
-        color: var(--blue, $blue);
+        &::after {
+          width: 100%;
+        }
       }
     }
     @media (max-width: 767px) {
