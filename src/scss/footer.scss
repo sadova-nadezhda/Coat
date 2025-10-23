@@ -9,7 +9,7 @@
   &__container {
     border: 1px solid rgba(21, 21, 21, 0.1);
     line-height: 1.5em;
-    a:not(.footer__logo) {
+    a:not(.footer__logo):not(.footer__policy a) {
       position: relative;
       display: inline-block;
       width: max-content;
@@ -111,6 +111,14 @@
     @media (max-width: 1024px) {
       display: flex;
       flex-direction: column;
+    }
+  }
+  &__policy {
+    a {
+      transition: color 0.3s ease-in-out;
+      &:hover {
+        color: var(--blue);
+      }
     }
   }
   &__copy {

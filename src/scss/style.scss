@@ -73,7 +73,7 @@
   &__wrap {
     position: relative;
     display: flex;
-    gap: calc(20 * var(--width-multiplier));
+    gap: calc(12 * var(--width-multiplier));
     padding: calc(6 * var(--width-multiplier)) 0;
     color: var(--light, $light);
     background-color: var(--dark, $dark);
@@ -83,13 +83,25 @@
   &__row {
     flex-shrink: 0;
     display: flex;
-    gap: calc(20 * var(--width-multiplier));
+    gap: calc(12 * var(--width-multiplier));
     counter-reset: item;
     justify-content: space-around;
     min-width: 100%;
   }
   &__item {
+    position: relative;
+    padding-right: calc(12 * var(--width-multiplier));
     font-size: calc(14 * var(--width-multiplier));
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      width: 1px;
+      height: 60%;
+      background-color: var(--light, $light);
+    }
   }
 }
 
