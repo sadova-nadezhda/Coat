@@ -434,10 +434,6 @@ h6 {
   text-transform: uppercase;
 }
 
-.header__menu li {
-  position: relative;
-}
-
 .header__menu li:first-child a::before {
   content: none;
   position: absolute;
@@ -4261,6 +4257,7 @@ h6 {
   }
 
   .header__menu li {
+    position: relative;
     width: 100%;
   }
 

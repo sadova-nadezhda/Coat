@@ -46,8 +46,8 @@
     font-size: calc(14 * var(--width-multiplier));
     text-transform: uppercase;
     li {
-      position: relative;
       @media(max-width: 1024px) {
+        position: relative;
         width: 100%;
       }
       &:first-child {
